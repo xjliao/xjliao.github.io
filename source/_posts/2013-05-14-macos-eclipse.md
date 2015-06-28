@@ -11,7 +11,7 @@ tags:
 eclipse 默认使用jdk 6，但macos 10.9已经不自带jdk6了  
 
 解决方案：  
-1、使用自定义jdk  
+##使用自定义jdk  
 安装好jdk后，修改文件。我这里使用得是jdk1.7.0_55
 
 ```bash
@@ -31,6 +31,6 @@ xjliao:xjliao.me lxj$ sudo vim /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk
 </array>
 {% endcodeblock %}
 
-2、按照提示去下载jdk6  
+##按照提示去下载jdk6  
 [下载：http://support.apple.com/kb/DL1572?viewlocale=en_US](http://support.apple.com/kb/DL1572?viewlocale=en_US)  
 安装后启动即可

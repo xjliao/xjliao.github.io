@@ -6,7 +6,7 @@ categories:
 tags:
 - Ios 
 
---- 
+---
 
 最近使用CocoaPods来添加第三方类库，无论是执行pod install还是pod update都卡在了Analyzing dependencies不动了，令人甚是DT。  
   

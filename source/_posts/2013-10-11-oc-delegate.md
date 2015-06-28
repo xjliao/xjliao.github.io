@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'lang:objc delegate'
+title: 'Objective-c delegate'
 categories:
 - Objective-c
 tags:
@@ -254,5 +254,4 @@ BIDVCBViewController.m
 @end
 {% endcodeblock %}
 
-xib文件就就不贴了,做完来个妹纸
-![](http://xjliao-images.qiniudn.com/mm.jpeg)
+xib文件就就不贴了

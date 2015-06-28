@@ -7,7 +7,7 @@ tags:
 - Objective-c
 
 
---- 
+---
 
 @property
 参数
@@ -32,7 +32,3 @@ readwrite  默认值 生成getter/setter方法
 getter 设置getter方法名  getter=getInfo
 
 stter 设置setter方法名  setter=setInfo:
-
-{% codeblock lang:objc  %}
-
-{% endcodeblock %}

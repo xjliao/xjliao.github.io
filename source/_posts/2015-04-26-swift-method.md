@@ -9,7 +9,7 @@ tags:
 
 ---
 ##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/  Swift_Programming_Language/Methods.html#//apple_ref/doc/  uid/TP40014097-CH15-ID234](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Methods.html#//apple_ref/doc/  uid/TP40014097-CH15-ID234](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
 ##实例方法
 {% codeblock lang:swift  %}
@@ -66,6 +66,7 @@ class 关键字类似java的static类方法和objective-c的+方法
 注:
 >class 变量apple暂未实现， 但方法可以使用
 >static 只用用于值类型，比如枚举和结构体
+
 {% codeblock lang:swift  %}
 class SomeClass {
   class func someTypeMethod() {

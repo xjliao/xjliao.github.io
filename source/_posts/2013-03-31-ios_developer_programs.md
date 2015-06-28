@@ -11,7 +11,7 @@ tags:
 
 ##IOS开发者账号类型及区别
 参考官网
-[https://developer.apple.com/programs/start/ios/]()
+[https://developer.apple.com/programs/start/ios/](https://developer.apple.com/programs/start/ios/)
 
 ![](http://xjliao-images.qiniudn.com/compare_programs.png)
 
@@ -67,4 +67,4 @@ tags:
 进入购买页, 确认购买信息,  购买后,是跳转到appstore付款页,  付款仅支持VISA、MasterCard信用卡付款.
 付款后——>激活
 
-此文word版![http://7xi4gg.com1.z0.glb.clouddn.com/ios_enroll_program.docx]()
+此文word版[http://7xi4gg.com1.z0.glb.clouddn.com/ios_enroll_program.docx](http://7xi4gg.com1.z0.glb.clouddn.com/ios_enroll_program.docx)

@@ -23,9 +23,11 @@ dataArray2 = [dataArray mutableCopy];
 [dataArray2 removeObjectAtIndex:0];
 {% endcodeblock %}
 >上面的这段代码,在内存中创建了一个新得dataArray副本,并复制了它的所有的元素,随后执行语句
+
 {% codeblock lang:objc%}
 [dataArray2 removeObjectAtIndex:0];
 {% endcodeblock %}
+
 删除了dataArray2中的第一个元素,但却不删除dataArray中的第一个元素,简单复制都会删除.
 
 demo1

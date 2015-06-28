@@ -6,9 +6,8 @@ categories:
 tags:
 - Swift
 
-
---- 
-[原文地址:https://developer.apple.com/library/prerelease/  ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Enumerations.html#//apple_ref/  doc/uid/TP40014097-CH12-ID145](hhttps://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-ID145)
+---
+[原文地址:https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-ID145](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-ID145)
 
 ##枚举语法
 {% codeblock lang:swift  %}

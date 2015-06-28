@@ -9,7 +9,7 @@ tags:
 
 ---
 ##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/Swift_Programming_Language/  Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
 ##函数的定义和调用
 {% codeblock lang:swift  %}
@@ -26,7 +26,7 @@ func sayHello(personName: String) -> String {
 }
 {% endcodeblock %}
 ##函数的参数与返回类型
-####1、多个输入参数
+###1、多个输入参数
 {% codeblock lang:swift  %}
 func halfOpenRangeLength(start: Int, end: Int) -> Int {
     return end - start
@@ -34,7 +34,7 @@ func halfOpenRangeLength(start: Int, end: Int) -> Int {
 println(halfOpenRangeLength(1, 10))
 // prints "9"
 {% endcodeblock %}
-####2、无参数函数
+###2、无参数函数
 {% codeblock lang:swift  %}
 func sayHelloWorld() -> String {
     return "hello, world"
@@ -42,7 +42,7 @@ func sayHelloWorld() -> String {
 println(sayHelloWorld())
 // prints "hello, world"
 {% endcodeblock %}
-####3、无返回值函数
+###3、无返回值函数
 {% codeblock lang:swift  %}
 func sayGoodbye(personName: String) {
     println("Goodbye, \(personName)!")
@@ -50,8 +50,8 @@ func sayGoodbye(personName: String) {
 sayGoodbye("Dave")
 // prints "Goodbye, Dave!
 {% endcodeblock %}
-##多个返回值函数
-####使用元组作为返回类型
+###多个返回值函数
+###使用元组作为返回类型
 {% codeblock lang:swift  %}
 func minMax(array: [Int]) -> (min: Int, max: Int) {
     var currentMin = array[0]
@@ -70,7 +70,7 @@ let bounds = minMax([8, -6, 2, 109, 3, 71])
 println("min is \(bounds.min) and max is \(bounds.max)")
 // prints "min is -6 and max is 109"
 {% endcodeblock %}
-##可选元组返回类型
+###可选元组返回类型
 {% codeblock lang:swift  %}
 func minMax(array: [Int]) -> (min: Int, max: Int)? {
     if array.isEmpty { return nil }
@@ -98,7 +98,7 @@ func someFunction(parameterName: Int) {
     // to refer to the argument value for that parameter
 }
 {% endcodeblock %}
-####1、外部参数名
+###1、外部参数名
 {% codeblock lang:swift  %}
 func someFunction(externalParameterName localParameterName: Int) {
     // function body goes here, and can use localParameterName
@@ -116,7 +116,7 @@ join(string: "hello", toString: "world", withJoiner: ", ")
 // returns "hello, world"
 {% endcodeblock %}
 
-####2、速记外部参数名
+###2、速记外部参数名
 {% codeblock lang:swift  %}
 func containsCharacter(#string: String, #characterToFind: Character) -> Bool {
     for character in string {
@@ -130,7 +130,7 @@ func containsCharacter(#string: String, #characterToFind: Character) -> Bool {
 let containsAVee = containsCharacter(string: "aardvark", characterToFind: "v")
 // containsAVee equals true, because "aardvark" contains a "v"
 {% endcodeblock %}
-####3、默认参数值
+###3、默认参数值
 {% codeblock lang:swift  %}
 func join(string s1: String, toString s2: String,
     withJoiner joiner: String = " ") -> String {
@@ -143,7 +143,7 @@ join(string: "hello", toString: "world", withJoiner: "-")
 join(string: "hello", toString: "world")
 // returns "hello world"
 {% endcodeblock %}
-####4、参数外部名默认值
+###4、参数外部名默认值
 {% codeblock lang:swift  %}
 func join(s1: String, s2: String, joiner: String = " ") -> String {
     return s1 + joiner + s2
@@ -152,7 +152,7 @@ func join(s1: String, s2: String, joiner: String = " ") -> String {
 join("hello", "world", joiner: "-")
 // returns "hello-world"
 {% endcodeblock %}
-####5、可变参数
+###5、可变参数
 {% codeblock lang:swift  %}
 func arithmeticMean(numbers: Double...) -> Double {
     var total: Double = 0
@@ -166,7 +166,7 @@ arithmeticMean(1, 2, 3, 4, 5)
 arithmeticMean(3, 8.25, 18.75)
 // returns 10.0, which is the arithmetic mean of these three numbers
 {% endcodeblock %}
-####6、常量和变量参数
+###6、常量和变量参数
 {% codeblock lang:swift  %}
 func alignRight(var string: String, totalLength: Int, pad: Character) -> String {
     let amountToPad = totalLength - count(string)
@@ -184,7 +184,7 @@ let paddedString = alignRight(originalString, 10, "-")
 // paddedString is equal to "-----hello"
 // originalString is still equal to "hello"
 {% endcodeblock %}
-####7、In-Out 参数
+###7、In-Out 参数
 {% codeblock lang:swift  %}
 func swapTwoInts(inout a: Int, inout b: Int) {
     let temporaryA = a
@@ -211,7 +211,7 @@ func printHelloWorld() {
     println("hello, world")
 }
 {% endcodeblock %}
-####1、使用函数类型
+###1、使用函数类型
 {% codeblock lang:swift  %}
 var mathFunction: (Int, Int) -> Int = addTwoInts
 
@@ -225,7 +225,7 @@ println("Result: \(mathFunction(2, 3))")
 let anotherMathFunction = addTwoInts
 // anotherMathFunction is inferred to be of type (Int, Int) -> Int
 {% endcodeblock %}
-####2、函数类型作为参数类型
+###2、函数类型作为参数类型
 {% codeblock lang:swift  %}
 func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int) {
     println("Result: \(mathFunction(a, b))")
@@ -233,7 +233,7 @@ func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int) {
 printMathResult(addTwoInts, 3, 5)
 // prints "Result: 8"
 {% endcodeblock %}
-####3、函数类型作为返回类型
+###3、函数类型作为返回类型
 {% codeblock lang:swift  %}
 func stepForward(input: Int) -> Int {
     return input + 1

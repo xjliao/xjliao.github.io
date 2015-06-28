@@ -8,7 +8,7 @@ tags:
 
 ---
 官网:<http://www.raspberrypi.org/>
-##1.安装
+##安装
 下载地址:http://www.raspberrypi.org/downloads/  
 推荐下载RASPBIAN版本   
 zip文件下载:<http://downloads.raspberrypi.org/raspbian_latest>   
@@ -18,7 +18,7 @@ zip文件下载:<http://downloads.raspberrypi.org/raspbian_latest>
 假如你的内存卡电脑已被识别
 (在mac上)
 
-#####查看设备:
+###查看设备:
 
 ```bash
 diskutil list
@@ -26,13 +26,13 @@ diskutil list
  
 记住设备号,下面的例子假设查看得到的设备为:disk1  
 
-#####卸载设备
+###卸载设备
 
 ```bash
 diskutil unmountDisk /dev/disk1
 ```
 
-#####刻入镜像
+###刻入镜像
 
 ```bash
 sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替换为rdisk1原始设备号,刻录速度会更快)
@@ -40,7 +40,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 等一会吧 刻录完成会有提示信息
 
-##2.连接
+##连接
 在这里首页你要得有跟网线连接上路由了,而且路由设置了dhcp 
 
 ssh默认开启,这里通过ssh连接上系统.  

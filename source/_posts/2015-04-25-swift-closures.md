@@ -7,7 +7,7 @@ tags:
 - Swift
 
 
---- 
+---
 [原文地址:http://fuckingclosuresyntax.com/](http://fuckingclosuresyntax.com/)
 
 How Do I Declare a Closure in Swift?

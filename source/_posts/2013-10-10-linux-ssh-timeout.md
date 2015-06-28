@@ -7,14 +7,15 @@ tags:
 - Linux
 
 ---
-方案一：在客户端设置  
+##方案一：在客户端设置  
 在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:  
 {% codeblock lang:bash %}
 ServerAliveInterval 60
 {% endcodeblock %}
 此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  
   
-方案二：在服务器端设置  
+
+##方案二：在服务器端设置  
 如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：  
 {% codeblock lang:bash %}
 ClientAliveInterval 300  

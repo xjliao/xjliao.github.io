@@ -7,11 +7,11 @@ tags:
 - Ios
 
 
---- 
+---
 
 关键点:
->需实现<UIPickerViewDataSource, UIPickerViewDelegate>这两个协议  
-1.UIPickerViewDataSource需要实现的方法:
+##需实现<UIPickerViewDataSource, UIPickerViewDelegate>这两个协议  
+###UIPickerViewDataSource需要实现的方法:
 {% codeblock lang:objc %}
 //设置选择框的个数  
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView  
@@ -29,7 +29,7 @@ tags:
 }
 {% endcodeblock %} 
 
->2.UIPickerViewDelegate需要实现的方法:   
+###UIPickerViewDelegate需要实现的方法:   
  
 {% codeblock lang:objc %}
 //设置每个选择框的内容  
@@ -50,8 +50,8 @@ tags:
 
 {% endcodeblock %}
 
-以下是demo
-依赖选择，联动
+##以下是demo
+###依赖选择，联动
 
 BIDDependentPickerViewController.h  
   
@@ -210,7 +210,7 @@ BIDDependentPickerViewController.m
 {% endcodeblock %}
 
 
-自定义UIPickerView  
+###自定义UIPickerView  
 
 BIDCustomPickerViewController.h  
 

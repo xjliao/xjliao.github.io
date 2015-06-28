@@ -7,7 +7,7 @@ tags:
 - Objective-c
 
 
---- 
+---
 [原文地址:http://nshipster.cn/nil/](http://nshipster.cn/nil/)  
 
 相关文章: <http://stackoverflow.com/questions/5908936/iphonedifference-between-nil-nil-and-null>  
@@ -50,9 +50,8 @@ NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
 mutableDictionary[@"someKey"] = [NSNull null]; // Sets value of NSNull singleton for `someKey`
 NSLog(@"Keys: %@", [mutableDictionary allKeys]); // @[@"someKey"]
 {% endcodeblock %}
-
-总的来说，这里的四个表达没有的值是每个Objective-C程序员都应该知道的：
-<table  width=600px>
+总的来说，这里的四个表达没有的值是每个Objective-C程序员都应该知道的:
+<table  width=auto >
 	<tr>
 		<th>标志</th>
 		<th>值</th>
@@ -79,3 +78,4 @@ NSLog(@"Keys: %@", [mutableDictionary allKeys]); // @[@"someKey"]
 		<td>用来表示零值的单独的对象</td>
 	</tr>		
 </table>
+

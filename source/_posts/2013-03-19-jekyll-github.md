@@ -12,30 +12,30 @@ tags:
 
 ---
 
-#一、gitHub
-## 注册github账户
+##gitHub
+### 注册github账户
 <https://github.com>
-## 创建Repository
+### 创建Repository
 创建的repository,名称格式:  
 用户名.github.io
 {% codeblock lang:bash %}
 username.github.io
 {% endcodeblock %}
-![create-repository]({{ site.tc }}/img/jekyll-github/create-repository.jpg)
+![create-repository](http://xjliao.qiniudn.com/img/jekyll-github/create-repository.jpg)
 
-#二、jekyll
+##jekyll
 jekyll是一个静态网站生成器
 
 官网：<http://jekyllrb.com/>,中文网站：<http://jekyllcn.com/>
 
-## jekyll安装
+### jekyll安装
 ####jekyll安装环境:
 - rvm
 - Ruby
 - RubyGems
 - Linux，Unix，or Mac OS X
 
-1)、rvm 安装
+#####rvm 安装
 
 rvm是ruby的管理器
 {% codeblock lang:bash %}
@@ -51,7 +51,7 @@ $ rvm -v
 {% endcodeblock %}
 如果有显示rvm版本信息，则安装成功
 
-2)、ruby安装   
+#####ruby安装   
 安装版本为1.9.3 
 {% codeblock lang:bash %}
 $ rvm install 1.9.3
@@ -74,7 +74,7 @@ $ gem source -r https://rubygems.org/
 {% codeblock lang:bash %}
 $ gem install jekyll
 {% endcodeblock %}
-###测试下
+####测试下
 {% codeblock lang:bash %}
 $ jekyll -v
 {% endcodeblock %}
@@ -83,15 +83,15 @@ $ jekyll -v
 $ jekyll new blog
 {% endcodeblock %}
 将在本目录生成目录名为blog，里面为jekyll所需文件框架
-###测试新建站点
+####测试新建站点
 {% codeblock lang:bash %}
 $ cd ./blog && jekyll server
 {% endcodeblock %}
 可以通过访问localhost:4000验证启动是否成功。
 如果看到下面这样的页面，就表示成功了！
-![jekyll-server-succ]({{ site.tc }}/img/jekyll-github/jekyll-server-succ.png)
+![jekyll-server-succ](http://xjliao.qiniudn.com/img/jekyll-github/jekyll-server-succ.png)
 
-## jekyll主题更换
+### jekyll主题更换
 官方推荐主题的：<https://github.com/jekyll/jekyll/wiki/Sites>
 从github上面把自己喜欢的git clone下来就行了！
 jekyll默认主题和推荐主题可能不符合你的口味，你可以使用其他主题，如：[jekyl bootstrap](http://jekyllbootstrap.com/)、[jekyll themes](http://jekyllthemes.org/)
@@ -191,13 +191,13 @@ xjliao.me
 购买注册就不多讲了，主要讲下指定A记录和DNS解析
 
 进入domains管理界面选择域名设置DNS
-![DNSSET]({{ site.tc }}/img/jekyll-github/godaddy-set-dns.png)
+![DNSSET](http://xjliao.qiniudn.com/img/jekyll-github/godaddy-set-dns.png)
 添加DNS，这里使用的是dnspod的解析服务
-![DNSSETPOD]({{ site.tc }}/img/jekyll-github/godaddy-set-dns-dnspod.png)
+![DNSSETPOD](http://xjliao.qiniudn.com/img/jekyll-github/godaddy-set-dns-dnspod.png)
 然后登陆dnspod添加下要设置A记录的域名
-![DNSSETPOD]({{ site.tc }}/img/jekyll-github/dns-pod-add-domain.png)
+![DNSSETPOD](http://xjliao.qiniudn.com/img/jekyll-github/dns-pod-add-domain.png)
 点击域名进入A记录设置界面
-![DNSSETPOD]({{ site.tc }}/img/jekyll-github/dns-pod-add-a-record.png)
+![DNSSETPOD](http://xjliao.qiniudn.com/img/jekyll-github/dns-pod-add-a-record.png)
 主机记录填写值  
 @ 直接解析主域名 xjliao.me、wwww 解析后的域名为 www.xjliao.me、* 泛解析，匹配其他所有域名 *.xjliao.me
 

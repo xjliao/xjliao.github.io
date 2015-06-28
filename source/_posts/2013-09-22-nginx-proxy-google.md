@@ -6,7 +6,7 @@ categories:
 tags:
 - Nginx 
 
---- 
+---
 
 首先你得有个国外主机,我用的虚拟主机是linode.com,服务器在日本,各方面还行,系统是centos6.5.  
 下载nginx,这里我使用的是nginx-1.6.2  

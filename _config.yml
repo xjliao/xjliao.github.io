@@ -5,18 +5,19 @@
 # Site
 title: xjliao 
 subtitle:
-description:
+description: A app & golang developer guy.
 author: xjliao 
 avatar: /images/avatar.png
 language: default 
 since: 2014
 timezone:
+tc: http://xjliao.qiniudn.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://xjliao.me
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title.html
 permalink_defaults:
 
 # Directory
@@ -60,7 +61,7 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 20
+per_page: 30
 pagination_dir: page
 
 # Extensions

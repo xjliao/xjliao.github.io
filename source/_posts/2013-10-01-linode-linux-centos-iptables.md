@@ -6,7 +6,7 @@ categories:
 tags:
 - Linux 
 
---- 
+---
 Linode官方在iptables里加了一个security的规则链，但Centos不支持。    
 于是就会有以下错误    
 
@@ -40,7 +40,7 @@ security)
 
 如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改
 
-{% codeblock sh %}
+{% codeblock lang:shell %}
 [xjliao@li539-59 ~] sudo vim /usr/bin/yum
 \#!/usr/bin/python2.6
 {% endcodeblock %}

@@ -9,7 +9,7 @@ tags:
 
 ---
 ##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/  Swift_Programming_Language/Properties.html#//apple_ref/  doc/uid/TP40014097-CH14-ID254](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Properties.html#//apple_ref/  doc/uid/TP40014097-CH14-ID254](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
 ##存储属性
 {% codeblock lang:swift  %}
@@ -23,11 +23,8 @@ rangeOfThreeItems.firstValue = 6
 // the range now represents integer values 6, 7, and 8return greeting
 }
 {% endcodeblock %}
-##常量结构体实例存储属性
-{% codeblock lang:swift  %}
-
-{% endcodeblock %}
-##延迟存储属性
+###常量结构体实例存储属性
+###延迟存储属性
 延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用lazy来标示一个延迟存储属性。
 
 注意：
@@ -59,11 +56,11 @@ manager.data.append("Some more data")
 
 println(manager.importer.fileName)
 {% endcodeblock %}
-##存储属性和实例变量
+###存储属性和实例变量
 如果您有过 Objective-C 经验，应该知道Objective-C为类实例存储值和引用提供两种方法。对于属性来说，也可以使用实例变量作为属性值的后端存储。
 
 Swift 编程语言中把这些理论统一用属性来实现。Swift 中的属性没有对应的实例变量，属性的后端存储也无法直接访问。这就避免了不同场景下访问方式的困扰，同时也将属性的定义简化成一个语句。 一个类型中属性的全部信息——包括命名、类型和内存管理特征——都在唯一一个地方（类型定义中）定义
-##计算属性
+###计算属性
 除存储属性外，类、结构体和枚举可以定义计算属性，计算属性不直接存储值，而是提供一个 getter 来获取值，一个可选的 setter 来间接设置其他属性或变量的值
 {% codeblock lang:swift  %}
 struct Point {
@@ -94,7 +91,7 @@ square.center = Point(x: 15.0, y: 15.0)
 println("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 // 输出 "square.origin is now at (10.0, 10.0)”
 {% endcodeblock %}
-##便捷 setter 声明
+###便捷 setter 声明
 如果计算属性的 setter 没有定义表示新值的参数名，则可以使用默认名称newValue。下面是使用了便捷 setter 声明的Rect结构体代码:
 {% codeblock lang:swift  %}
 struct AlternativeRect {
@@ -113,7 +110,7 @@ struct AlternativeRect {
     }
 }
 {% endcodeblock %}
-##只读属性计算
+###只读属性计算
 只有 getter 没有 setter 的计算属性就是只读计算属性。只读计算属性总是返回一个值，可以通过点运算符访问，但不能设置新的值。
 
 注意：
@@ -131,7 +128,7 @@ let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 println("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 // prints "the volume of fourByFiveByTwo is 40.0"
 {% endcodeblock %}
-##属性观察器
+###属性观察器
 性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，甚至新的值和现在的值相同的时候也不例外。
 
 可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重载属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。属性重载请参考继承一章的重载。
@@ -167,7 +164,7 @@ func someFunction(parameterName: Int) {
 注意：
 >全局的常量或变量都是延迟计算的，跟延迟存储属性相似，不同的地方在于，全局的常量或变量不需要标记lazy特性。
 局部范围的常量或变量不会延迟计算。
-####2、速记外部参数名
+###2、速记外部参数名
 {% codeblock lang:swift  %}
 func containsCharacter(#string: String, #characterToFind: Character) -> Bool {
     for character in string {
@@ -181,7 +178,7 @@ func containsCharacter(#string: String, #characterToFind: Character) -> Bool {
 let containsAVee = containsCharacter(string: "aardvark", characterToFind: "v")
 // containsAVee equals true, because "aardvark" contains a "v"
 {% endcodeblock %}
-####3、默认参数值
+###3、默认参数值
 {% codeblock lang:swift  %}
 func join(string s1: String, toString s2: String,
     withJoiner joiner: String = " ") -> String {
@@ -194,7 +191,7 @@ join(string: "hello", toString: "world", withJoiner: "-")
 join(string: "hello", toString: "world")
 // returns "hello world"
 {% endcodeblock %}
-####4、参数外部名默认值
+###4、参数外部名默认值
 {% codeblock lang:swift  %}
 func join(s1: String, s2: String, joiner: String = " ") -> String {
     return s1 + joiner + s2
@@ -203,7 +200,7 @@ func join(s1: String, s2: String, joiner: String = " ") -> String {
 join("hello", "world", joiner: "-")
 // returns "hello-world"
 {% endcodeblock %}
-####5、可变参数
+###5、可变参数
 {% codeblock lang:swift  %}
 func arithmeticMean(numbers: Double...) -> Double {
     var total: Double = 0
@@ -217,7 +214,7 @@ arithmeticMean(1, 2, 3, 4, 5)
 arithmeticMean(3, 8.25, 18.75)
 // returns 10.0, which is the arithmetic mean of these three numbers
 {% endcodeblock %}
-####6、常量和变量参数
+###6、常量和变量参数
 {% codeblock lang:swift  %}
 func alignRight(var string: String, totalLength: Int, pad: Character) -> String {
     let amountToPad = totalLength - count(string)
@@ -262,7 +259,7 @@ func printHelloWorld() {
     println("hello, world")
 }
 {% endcodeblock %}
-####1、使用函数类型
+###1、使用函数类型
 {% codeblock lang:swift  %}
 var mathFunction: (Int, Int) -> Int = addTwoInts
 
@@ -276,7 +273,7 @@ println("Result: \(mathFunction(2, 3))")
 let anotherMathFunction = addTwoInts
 // anotherMathFunction is inferred to be of type (Int, Int) -> Int
 {% endcodeblock %}
-####2、函数类型作为参数类型
+###2、函数类型作为参数类型
 {% codeblock lang:swift  %}
 func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int) {
     println("Result: \(mathFunction(a, b))")
@@ -284,7 +281,7 @@ func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int) {
 printMathResult(addTwoInts, 3, 5)
 // prints "Result: 8"
 {% endcodeblock %}
-####3、函数类型作为返回类型
+###3、函数类型作为返回类型
 {% codeblock lang:swift  %}
 func stepForward(input: Int) -> Int {
     return input + 1

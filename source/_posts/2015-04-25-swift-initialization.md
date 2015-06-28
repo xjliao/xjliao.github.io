@@ -8,10 +8,10 @@ tags:
 
 
 ---
-##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/  Swift_Programming_Language/Initialization.html#//  apple_ref/doc/uid/TP40014097-CH18-ID203](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)
+#官方教程
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Initialization.html#//  apple_ref/doc/uid/TP40014097-CH18-ID203](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)
 在此只记录比较特殊的情况
-##构造过程
+#构造过程
 {% codeblock lang:swift  %}
 init() {
     // perform some initialization here
@@ -32,13 +32,13 @@ var f = Fahrenheit()
 println("The default temperature is \(f.temperature)° Fahrenheit")
 // prints "The default temperature is 32.0° Fahrenheit"
 {% endcodeblock %}
-##默认属性值
+#默认属性值
 {% codeblock lang:swift  %}
 struct Fahrenheit {
     var temperature = 32.0
 }
 
 {% endcodeblock %}
-##自定义构造过程
-####1.初始化参数
-####3、无返回值函数
+#自定义构造过程
+##初始化参数
+##无返回值函数

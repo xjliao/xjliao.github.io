@@ -10,7 +10,7 @@ tags:
 - Python
 - Django
 
---- 
+---
 在安装或升级python之前,安装
 {% codeblock lang:bash %}
 [xjliao@li539-59 ~]$ sudo yum install sqlite-devel

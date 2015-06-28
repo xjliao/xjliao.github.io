@@ -8,21 +8,21 @@ tags:
 - Linux 
 - Mysql
 
---- 
+---
 
-1.安装mysql
+##安装mysql
 {% codeblock lang:bash %}
 [xjliao@li539-59 ~] sudo yum -y install mysql-server 
 [xjliao@li539-59 ~] sudo yum -y install mysql-devel
 [xjliao@li539-59 ~] sudo service mysqld start 
 {% endcodeblock %}
 
-2.修改root用户默认密码
+##修改root用户默认密码
 {% codeblock lang:bash %}
 [xjliao@li539-59 ~]$ mysqladmin -u root password 'root'
 {% endcodeblock %}
 
-3.开启远程连接权限
+##开启远程连接权限
 {% codeblock lang:bash %}
 [xjliao@li539-59 ~]$ mysql -u root -p
 Enter password: 
@@ -41,7 +41,7 @@ mysql> grant all privileges on *.* to root@'%' identified by '1';
 mysql> flush privileges;
 {% endcodeblock %}
 
-4.Mysql 配置/etc/my.cnf
+##Mysql 配置/etc/my.cnf
 {% codeblock lang:bash %}
 [mysqld]
 datadir=/var/lib/mysql
@@ -60,7 +60,7 @@ log-error=/var/log/mysqld.log
 pid-file=/var/run/mysqld/mysqld.pid
 {% endcodeblock %}
 
-5.设置mysql服务开机启动
+##设置mysql服务开机启动
 {% codeblock lang:bash %}
 [xjliao@li539-59 ~]$ sudo chkconfig mysqld on
 [xjliao@li539-59 ~]$ chkconfig --list mysqld

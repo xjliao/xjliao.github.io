@@ -9,7 +9,7 @@ tags:
 
 ---
 ##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/  Swift_Programming_Language/Inheritance.html#//apple_ref/  doc/uid/TP40014097-CH17-ID193](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID193)
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Inheritance.html#//apple_ref/  doc/uid/TP40014097-CH17-ID193](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID193)
 
 ##定义一个基类
 {% codeblock lang:swift  %}
@@ -35,7 +35,7 @@ class SomeClass: SomeSuperclass {
 }
 {% endcodeblock %}
 demo
-{% codeblock lang:swift lineos %}
+{% codeblock lang:swift %}
 class Bicycle: Vehicle {
 	var hasBasket = false
 }
@@ -72,7 +72,7 @@ override关键字会提醒 Swift 编译器去检查该类的超类（或其中�
 在方法someMethod的重写实现中，可以通过super.someMethod()来调用超类版本的someMethod方法。
 在属性someProperty的 getter 或 setter 的重写实现中，可以通过super.someProperty来访问超类版本的someProperty属性。
 在下标脚本的重写实现中，可以通过super[someIndex]来访问超类版本中的相同下标脚本。
-##重写方法
+###重写方法
 {% codeblock lang:swift  %}
 class Train: Vehicle {
 	override func makeNoise() {
@@ -83,11 +83,12 @@ class Train: Vehicle {
 let train = Train()
 train.makeNoise()
 {% endcodeblock %}
-##重写属性
+###重写属性
 你可以重写继承来的实例属性或类属性，提供自己定制的getter和setter，或添加属性观察器使重写的属性观察属性值什么时候发生改变
 ####重写属性的Getters和Setters
 注意：
 >如果你在重写属性中提供了 setter，那么你也一定要提供 getter。如果你不想在重写版本中的 getter 里修改继承来的属性值，你可以直接通过super.someProperty来返回继承来的值，其中someProperty是你要重写的属性的名字。
+
 {% codeblock lang:swift  %}
 class Car: Vehicle {
     var gear = 1
@@ -102,9 +103,10 @@ car.gear = 3
 println("Car: \(car.description)")
 {% endcodeblock %}
 
-##重写属性观察器
+####重写属性观察器
 注意：
 >你不可以为继承来的常量存储型属性或继承来的只读计算型属性添加属性观察器。这些属性的值是不可以被设置的，所以，为它们提供willSet或didSet实现是不恰当。此外还要注意，你不可以同时提供重写的 setter 和重写的属性观察器。如果你想观察属性值的变化，并且你已经为那个属性提供了定制的 setter，那么你在 setter 中就可以观察到任何值变化了。
+
 {% codeblock lang:swift  %}
 class AutomaticCar: Car {
     override var currentSpeed: Double {

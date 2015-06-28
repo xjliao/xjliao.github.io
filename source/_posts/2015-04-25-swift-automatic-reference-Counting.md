@@ -9,7 +9,7 @@ tags:
 
 ---
 ##官方教程
-[https://developer.apple.com/library/prerelease/ios/  documentation/Swift/Conceptual/  Swift_Programming_Language/  AutomaticReferenceCounting.html#//apple_ref/doc/uid/  TP40014097-CH20-ID48](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48)
+[https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/  TP40014097-CH20-ID48](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48)
 
 ##自动引用计数
 Swift 使用自动引用计数（ARC）这一机制来跟踪和管理你的应用程序的内存。通常情况下，Swift 的内存管理机制会一直起着作用，你无须自己来考虑内存的管理。ARC 会在类的实例不再被使用时，自动释放其占用的内存。
@@ -50,7 +50,7 @@ reference3 = reference1
 {% endcodeblock %}
 ##类实例之间的循环强引用
 
-##解决实例之间的循环强引用
+###解决实例之间的循环强引用
 {% codeblock lang:swift  %}
 func sayGoodbye(personName: String) {
     println("Goodbye, \(personName)!")
@@ -94,7 +94,7 @@ john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)
 
 john = nil
 {% endcodeblock %}
-##无主引用以及隐式解析可选属性
+###无主引用以及隐式解析可选属性
 上面弱引用和无主引用的例子涵盖了两种常用的需要打破循环强引用的场景。
 
 1.Person和Apartment的例子展示了两个属性的值都允许为nil，并会潜在的产生循环强引用。这种场景最适合用弱引用来解决。
@@ -104,7 +104,7 @@ john = nil
 3.然而，存在着第三种场景，在这种场景中，两个属性都必须有值，并且初始化完成后不能为nil。在这种场景中，需要一个类使用无主属性，而另外一个类使用隐式解析可选属性。
 
 这使两个属性在初始化完成后能被直接访问（不需要可选展开），同时避免了循环引用。这一节将为你展示如何建立这种关系。
-##闭包引起的循环强引用
+####闭包引起的循环强引用
 {% codeblock lang:swift  %}
 func minMax(array: [Int]) -> (min: Int, max: Int)? {
     if array.isEmpty { return nil }
@@ -125,7 +125,7 @@ if let bounds = minMax([8, -6, 2, 109, 3, 71]) {
 }
 {% endcodeblock %}
 
-##解决闭包引起的循环强引用
+####解决闭包引起的循环强引用
 {% codeblock lang:swift  %}
 func someFunction(parameterName: Int) {
     // function body goes here, and can use parameterName
@@ -163,158 +163,4 @@ func containsCharacter(#string: String, #characterToFind: Character) -> Bool {
 
 let containsAVee = containsCharacter(string: "aardvark", characterToFind: "v")
 // containsAVee equals true, because "aardvark" contains a "v"
-{% endcodeblock %}
-####3、默认参数值
-{% codeblock lang:swift  %}
-func join(string s1: String, toString s2: String,
-    withJoiner joiner: String = " ") -> String {
-        return s1 + joiner + s2
-}
-
-join(string: "hello", toString: "world", withJoiner: "-")
-// returns "hello-world"
-
-join(string: "hello", toString: "world")
-// returns "hello world"
-{% endcodeblock %}
-####4、参数外部名默认值
-{% codeblock lang:swift  %}
-func join(s1: String, s2: String, joiner: String = " ") -> String {
-    return s1 + joiner + s2
-}
-
-join("hello", "world", joiner: "-")
-// returns "hello-world"
-{% endcodeblock %}
-####5、可变参数
-{% codeblock lang:swift  %}
-func arithmeticMean(numbers: Double...) -> Double {
-    var total: Double = 0
-    for number in numbers {
-        total += number
-    }
-    return total / Double(numbers.count)
-}
-arithmeticMean(1, 2, 3, 4, 5)
-// returns 3.0, which is the arithmetic mean of these five numbers
-arithmeticMean(3, 8.25, 18.75)
-// returns 10.0, which is the arithmetic mean of these three numbers
-{% endcodeblock %}
-####6、常量和变量参数
-{% codeblock lang:swift  %}
-func alignRight(var string: String, totalLength: Int, pad: Character) -> String {
-    let amountToPad = totalLength - count(string)
-    if amountToPad < 1 {
-        return string
-    }
-    let padString = String(pad)
-    for _ in 1...amountToPad {
-        string = padString + string
-    }
-    return string
-}
-let originalString = "hello"
-let paddedString = alignRight(originalString, 10, "-")
-// paddedString is equal to "-----hello"
-// originalString is still equal to "hello"
-{% endcodeblock %}
-####7、In-Out 参数
-{% codeblock lang:swift  %}
-func swapTwoInts(inout a: Int, inout b: Int) {
-    let temporaryA = a
-    a = b
-    b = temporaryA
-}
-
-var someInt = 3
-var anotherInt = 107
-swapTwoInts(&someInt, &anotherInt)
-println("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
-// prints "someInt is now 107, and anotherInt is now 3"
-{% endcodeblock %}
-##函数类型
-{% codeblock lang:swift  %}
-func addTwoInts(a: Int, b: Int) -> Int {
-    return a + b
-}
-func multiplyTwoInts(a: Int, b: Int) -> Int {
-    return a * b
-}
-
-func printHelloWorld() {
-    println("hello, world")
-}
-{% endcodeblock %}
-####1、使用函数类型
-{% codeblock lang:swift  %}
-var mathFunction: (Int, Int) -> Int = addTwoInts
-
-println("Result: \(mathFunction(2, 3))")
-// prints "Result: 5"
-
-mathFunction = multiplyTwoInts
-println("Result: \(mathFunction(2, 3))")
-// prints "Result: 6"
-
-let anotherMathFunction = addTwoInts
-// anotherMathFunction is inferred to be of type (Int, Int) -> Int
-{% endcodeblock %}
-####2、函数类型作为参数类型
-{% codeblock lang:swift  %}
-func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int) {
-    println("Result: \(mathFunction(a, b))")
-}
-printMathResult(addTwoInts, 3, 5)
-// prints "Result: 8"
-{% endcodeblock %}
-####3、函数类型作为返回类型
-{% codeblock lang:swift  %}
-func stepForward(input: Int) -> Int {
-    return input + 1
-}
-func stepBackward(input: Int) -> Int {
-    return input - 1
-}
-
-func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
-    return backwards ? stepBackward : stepForward
-}
-
-var currentValue = 3
-let moveNearerToZero = chooseStepFunction(currentValue > 0)
-// moveNearerToZero now refers to the stepBackward() function
-
-println("Counting to zero:")
-// Counting to zero:
-while currentValue != 0 {
-    println("\(currentValue)... ")
-    currentValue = moveNearerToZero(currentValue)
-}
-println("zero!")
-// 3...
-// 2...
-// 1...
-// zero!
-{% endcodeblock %}
-
-##函数嵌套
-{% codeblock lang:swift  %}
-func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
-    func stepForward(input: Int) -> Int { return input + 1 }
-    func stepBackward(input: Int) -> Int { return input - 1 }
-    return backwards ? stepBackward : stepForward
-}
-var currentValue = -4
-let moveNearerToZero = chooseStepFunction(currentValue > 0)
-// moveNearerToZero now refers to the nested stepForward() function
-while currentValue != 0 {
-    println("\(currentValue)... ")
-    currentValue = moveNearerToZero(currentValue)
-}
-println("zero!")
-// -4...
-// -3...
-// -2...
-// -1...
-// zero!
 {% endcodeblock %}
