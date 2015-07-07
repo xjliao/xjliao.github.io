@@ -1,4 +1,5 @@
 title: Golang 快速入门 slice array map 函数闭包
+date: 2015-07-06 15:10:05
 categories:
 - Golang
 tags:
@@ -6,7 +7,7 @@ tags:
 
 ---
 
-Golang 快速入门 slice array map 函数闭包
+##Golang 快速入门 slice array map 函数闭包
 
 内容来自[https://tour.golang.org/]()
 

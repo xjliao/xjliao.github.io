@@ -1,4 +1,5 @@
 title: Golang 快速入门 流程控制语句 
+date: 2015-07-05 15:10:05
 categories:
 - Golang
 tags:
@@ -6,7 +7,7 @@ tags:
 
 ---
 
-Golang 快速入门 流程控制语句
+##Golang 快速入门 流程控制语句
 
 内容来自[https://tour.golang.org/]()
 

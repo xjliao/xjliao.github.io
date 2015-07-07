@@ -1,5 +1,5 @@
 title: Golang 快速入门 基础 包 变量 函数 
-date: 2015-07-01 10:10:05
+date: 2015-07-05 15:10:05
 categories:
 - Golang
 tags:
@@ -7,7 +7,7 @@ tags:
 
 ---
 
-Golang 快速入门 基础 包 变量 函数 
+##Golang 快速入门 基础 包 变量 函数 
 
 内容来自[https://tour.golang.org/]()
 
@@ -83,7 +83,7 @@ func needFloat(x float64) float64 {
 
 func main() {
 	//-->多值返回&命名返回值
-	lastname, firstname := swap("建", "廖新")
+	lastname, firstname := swap("jian", "liaoxin")
 	fmt.Println(lastname, firstname)
 	fmt.Println(split(100))
 
