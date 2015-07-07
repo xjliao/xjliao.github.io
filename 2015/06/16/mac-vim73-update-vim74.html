@@ -1,0 +1,651 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="EiqhAXIfWx-Emrr55KP_eyNESxlj6jWXA4Xmac5S8sQ" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="A app & golang developer guy." />
+
+
+
+  <meta name="keywords" content="Mac,Vim," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xjliao" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-49849624-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a5de7a16b42cff0e7c8add36f398ce48";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Mac vim7.3 update to vim7.4 // xjliao </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">xjliao</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'cy4cAaDcSmFXTgbbgz69','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Mac vim7.3 update to vim7.4
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-06-16
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Mac/">Mac</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Mac/Vim/">Vim</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <p>转自:<a href="http://zhouyichu.com/vim/Vim-in-Mac.html" target="_blank" rel="external">Mac中安装Vim7.4</a></p>
+<h2 id="Mac上的Vim">Mac上的Vim</h2><p>Mac本身其实是预装了Vim的，但是目前的系统中都是Vim7.3版本的，而最新的Vim已经是7.4版了，因此为了能够使用最新版的vim，必须要对Mac中的vim要么升级，要么重装。在折腾过程中，遇到了一些问题，这里记录，以鉴后人。</p>
+<h2 id="可选方案">可选方案</h2><h4 id="升级原生的Vim7-3">升级原生的Vim7.3</h4><p>这种方法貌似是最”干净”的，不会引入其他任何多余的东西，对于有洁癖的人这应该是一种比较好的方案。但是，这个方案也有缺点，那就是它会覆盖原生的Vim，会改变系统的默认设置，并且一旦升级过程中出现了问题，那你就再也没有可用的vim了。另外一个问题是，以后当你系统升级的时候，很有可能你自己的vim又会被新系统的vim给覆盖，这样会比较麻烦。</p>
+<h4 id="使用MacVim">使用MacVim</h4><p>这是一种比较好的方案，Vim官网上也是推荐使用这种方案的，MacVim是针对Mac系统特别定制的Vim版本，安装过程也很简单，网上一搜一大把。它功能上和vim完全一致，不会有任何的问题。要说这种方案其实已经算是一个完美的解决方案了，但是它有一点不太方便的地方，那就是不能直接在终端中使用vim，每次使用MacVim的时候都会单独开启一个窗口，有点类似于windows中的gvim。而我个人是比较习惯在终端中写代码的，因此这个方案还是不能满足我的需求。</p>
+<h4 id="自己编译">自己编译</h4><p>这是一种终极的方案，但是自己编译的时候注意要手动更改默认的安装目录，不然它就会覆盖原生的vim7.3，这样就会变成第一种方案了。将vim7.4安装在其他目录，然后在.bash_profile中添加一个vim命令的别名，将其指向新安装的vim7.4的目录，而不是原生的vim7.3目录。这个方案就能在终端中直接使用vim7.4了，并且不会对原生的vim7.3又任何影响。这个方案唯一的缺点大概就是会在系统中产生两个不同版本的vim了，这也许对一些有洁癖的人是难以接受的。</p>
+<p>我自己最终选择了第三套方案，也就是自己编译新版本的vim.</p>
+<h4 id="重新编译">重新编译</h4><p>好了，现在让我们开始折腾吧。</p>
+<p>首先上vim的官网下载vim7.4的源文件，地址是:<a href="http://www.vim.org/sources.php" target="_blank" rel="external">http://www.vim.org/sources.php</a></p>
+<p>新建目录/opt/loacl，这个目录就是用来存放我们新安装的vim7.4的，你也可以建立其他的目录，这里只是一个示例。</p>
+<p>进入vim的源文件目录中，在终端中运行命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-features=huge --enable-pythoninterp=yes  --enable-cscope --enable-fontset --enable-perlinterp --enable-rubyinterp --with-python-config-dir=/usr/lib/python2.<span class="number">6</span>/config --prefix=/opt/<span class="built_in">local</span></span><br></pre></td></tr></table></figure><br>这个命令是完成对vim的一些配置选项，启用了python和ruby的支持特性，这还是比较重要的，因为vim中有些插件会使用python和ruby的，如果没有开启这些特性，有些插件是无法运行的。在这些配置命令中，最后一个—prefix=/opt/local是用来指明安装目录的，你也可以修改成你自己的目录。</p>
+<p>在写配置命令的时候，需要注意的是，不能写上—enable-gui，这是开启gui特性的，但是我们是在终端环境下安装的，因此不能开启这个特性，否则会出现编译错误。</p>
+<p>在终端中执行make命令.在make过程中，会出现一个错误，如下所示:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">:info:build os_unix.c:<span class="number">830</span>:<span class="number">46</span>: warning: declaration of <span class="string">'struct sigaltstack'</span> will not be visible outside of this <span class="keyword">function</span> [-Wvisibility]</span><br><span class="line">:info:build         extern int sigaltstack __ARGS((const struct sigaltstack *ss, struct sigaltstack *oss));</span><br><span class="line">:info:build                                                     ^</span><br><span class="line">:info:build ./os_unix.h:<span class="number">88</span>:<span class="number">21</span>: note: expanded from macro <span class="string">'__ARGS'</span></span><br><span class="line">:info:build <span class="comment">#  define __ARGS(x) x</span></span><br><span class="line">:info:build                     ^</span><br><span class="line">:info:build os_unix.c:<span class="number">830</span>:<span class="number">13</span>: error: conflicting types <span class="keyword">for</span> <span class="string">'sigaltstack'</span></span><br><span class="line">:info:build         extern int sigaltstack __ARGS((const struct sigaltstack *ss, struct sigaltstack *oss));</span><br><span class="line">:info:build                    ^</span><br><span class="line">:info:build /usr/include/signal.h:<span class="number">89</span>:<span class="number">5</span>: note: previous declaration is here</span><br><span class="line">:info:build int     sigaltstack(const stack_t * __restrict, stack_t * __restrict)  __DARWIN_ALIAS(sigaltstack);</span><br><span class="line">:info:build         ^</span><br><span class="line">:info:build <span class="number">1</span> warning and <span class="number">1</span> error generated.</span><br><span class="line">:info:build make[<span class="number">1</span>]: *** [objects/os_unix.o] Error <span class="number">1</span></span><br><span class="line">:info:build make[<span class="number">1</span>]: *** Waiting <span class="keyword">for</span> unfinished <span class="built_in">jobs</span>….)</span><br></pre></td></tr></table></figure><br>解决方案也很简单，只需要在os_unix.h中加上#include <availabilitymacros.h>就可以了。</availabilitymacros.h></p>
+<p>执行make install.执行完成之后，vim7.4就安装完成了。</p>
+<p>添加vim命令的别名，在.bash_profile中添加一行alias vim=’/opt/local/bin/vim’，然后在终端中执行source ~/.bash_profile</p>
+<p>好了，现在你的Mac系统已经安装好了vim7.4了，现在可以开始愉快的工作了。</p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mac/"> #Mac </a>
+          
+            <a href="/tags/Vim/"> #Vim </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/17/golang.html">Golang</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/26/swift-subscripts.html">Swift subscripts</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="xjliao" />
+          <p class="site-author-name">xjliao</p>
+        </div>
+        <p class="site-description motion-element">A app & golang developer guy.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/xjliao" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/lxj12323" target="_blank">Twitter</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac上的Vim"><span class="nav-number">1.</span> <span class="nav-text">Mac上的Vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可选方案"><span class="nav-number">2.</span> <span class="nav-text">可选方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#升级原生的Vim7-3"><span class="nav-number">2.0.1.</span> <span class="nav-text">升级原生的Vim7.3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用MacVim"><span class="nav-number">2.0.2.</span> <span class="nav-text">使用MacVim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自己编译"><span class="nav-number">2.0.3.</span> <span class="nav-text">自己编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重新编译"><span class="nav-number">2.0.4.</span> <span class="nav-text">重新编译</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2013 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">xjliao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

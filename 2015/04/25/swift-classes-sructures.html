@@ -1,0 +1,669 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="EiqhAXIfWx-Emrr55KP_eyNESxlj6jWXA4Xmac5S8sQ" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="A app & golang developer guy." />
+
+
+
+  <meta name="keywords" content="Swift," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xjliao" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-49849624-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a5de7a16b42cff0e7c8add36f398ce48";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Swift Classes and Structures // xjliao </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">xjliao</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'cy4cAaDcSmFXTgbbgz69','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Swift Classes and Structures
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-04-25
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Swift/">Swift</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <h2 id="官方教程">官方教程</h2><p><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82</a></p>
+<h2 id="类和结构体对比">类和结构体对比</h2><p>Swift 中类和结构体有很多共同点。共同处在于：  </p>
+<blockquote>
+<p>定义属性用于存储值<br>定义方法用于提供功能<br>定义附属脚本用于访问值<br>定义构造器用于生成初始化值<br>通过扩展以增加默认实现的功能<br>符合协议以对某类提供标准功能</p>
+</blockquote>
+<p>更多信息请参见 属性，方法，下标脚本，初始过程，扩展，和协议。</p>
+<p>与结构体相比，类还有如下的附加功能：</p>
+<blockquote>
+<p>继承允许一个类继承另一个类的特征<br>类型转换允许在运行时检查和解释一个类实例的类型<br>解构器允许一个类实例释放任何其所被分配的资源<br>引用计数允许对一个类的多次引用</p>
+</blockquote>
+<p>更多信息请参见继承，类型转换，初始化，和自动引用计数。</p>
+<h2 id="定义语法">定义语法</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span> </span>&#123;</span><br><span class="line">    <span class="comment">// class definition goes here</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SomeStructure</span> </span>&#123;</span><br><span class="line">    <span class="comment">// structure definition goes here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Resolution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> width = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> height = <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VideoMode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> resolution = <span class="type">Resolution</span>()</span><br><span class="line">    <span class="keyword">var</span> interlaced = <span class="literal">false</span></span><br><span class="line">    <span class="keyword">var</span> frameRate = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">var</span> name: <span class="type">String</span>?</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="类和结构体实例">类和结构体实例</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someResolution = <span class="type">Resolution</span>()</span><br><span class="line"><span class="keyword">let</span> someVideoMode = <span class="type">VideoMode</span>()</span><br></pre></td></tr></table></figure>
+<h2 id="访问属性">访问属性</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println</span>(<span class="string">"The width of someResolution is <span class="subst">\(someResolution.width)</span>"</span>)</span><br><span class="line"><span class="comment">// prints "The width of someResolution is 0"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"The width of someVideoMode is <span class="subst">\(someVideoMode.resolution.width)</span>"</span>)</span><br><span class="line"><span class="comment">// prints "The width of someVideoMode is 0"</span></span><br><span class="line"></span><br><span class="line">someVideoMode.resolution.width = <span class="number">1280</span></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"The width of someVideoMode is now <span class="subst">\(someVideoMode.resolution.width)</span>"</span>)</span><br><span class="line"><span class="comment">// prints "The width of someVideoMode is now 1280"</span></span><br></pre></td></tr></table></figure>
+<h2 id="结构类型的成员初始化">结构类型的成员初始化</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vga = <span class="type">Resolution</span>(width: <span class="number">640</span>, height: <span class="number">480</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="结构体和枚举是值类型">结构体和枚举是值类型</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> hd = <span class="type">Resolution</span>(width: <span class="number">1920</span>, height: <span class="number">1080</span>)</span><br><span class="line"><span class="keyword">var</span> cinema = hd</span><br><span class="line">cinema.width = <span class="number">2048</span></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"cinema is now  <span class="subst">\(cinema.width)</span> pixels wide"</span>)</span><br><span class="line"><span class="comment">// 输出 "cinema is now 2048 pixels wide"</span></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"hd is still <span class="subst">\(hd.width    )</span> pixels wide"</span>)</span><br><span class="line"><span class="comment">// 输出 "hd is still 1920 pixels wide"</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">CompassPoint</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">North</span>, <span class="type">South</span>, <span class="type">East</span>, <span class="type">West</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> currentDirection = <span class="type">CompassPoint</span>.<span class="type">West</span></span><br><span class="line"><span class="keyword">let</span> rememberedDirection = currentDirection</span><br><span class="line">currentDirection = .<span class="type">East</span></span><br><span class="line"><span class="keyword">if</span> rememberDirection == .<span class="type">West</span> &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"The remembered direction is still .West"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出 "The remembered direction is still .West"</span></span><br></pre></td></tr></table></figure>
+<h2 id="类是引用类型">类是引用类型</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tenEighty = <span class="type">VideoMode</span>()</span><br><span class="line">tenEighty.resolution = hd</span><br><span class="line">tenEighty.interlaced = <span class="literal">true</span></span><br><span class="line">tenEighty.name = <span class="string">"1080i"</span></span><br><span class="line">tenEighty.frameRate = <span class="number">25.0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> alsoTenEighty = tenEighty</span><br><span class="line">alsoTenEighty.frameRate = <span class="number">30.0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"The frameRate property of tenEighty is now <span class="subst">\(tenEighty.frameRate)</span>"</span>)</span><br><span class="line"><span class="comment">// 输出 "The frameRate property of theEighty is now 30.0"</span></span><br></pre></td></tr></table></figure>
+<h2 id="恒等运算符">恒等运算符</h2><p>Swift 内建了两个恒等运算符:</p>
+<blockquote>
+<p>等价于 （ === ）<br>不等价于 （ !== ）</p>
+</blockquote>
+<p>以下是运用这两个运算符检测两个常量或者变量是否引用同一个实例：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> tenEighty === alsoTenTighty &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"tenTighty and alsoTenEighty refer to the same Resolution instance."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>请注意“等价于”（用三个等号表示，===） 与“等于”（用两个等号表示，==）的不同：  </p>
+<blockquote>
+<p>“等价于”表示两个类类型（class type）的常量或者变量引用同一个类实例。<br>“等于”表示两个实例的值“相等”或“相同”，判定时要遵照类设计者定义定义的评判标准，因此相比于“相等”，这是一种更加合适的叫法。</p>
+<h2 id="指针">指针</h2><p>如果你有 C，C++ 或者 Objective-C 语言的经验，那么你也许会知道这些语言使用指针来引用内存中的地址。一个 Swift 常量或者变量引用一个引用类型的实例与 C 语言中的指针类似，不同的是并不直接指向内存中的某个地址，而且也不要求你使用星号（*）来表明你在创建一个引用。Swift 中这些引用与其它的常量或变量的定义方式相同。</p>
+</blockquote>
+<h2 id="类和结构体的选择">类和结构体的选择</h2><p>在你的代码中，你可以使用类和结构体来定义你的自定义数据类型。  </p>
+<p>然而，结构体实例总是通过值传递，类实例总是通过引用传递。这意味两者适用不同的任务。当你在考虑一个工程项目的数据构造和功能的时候，你需要决定每个数据构造是定义成类还是结构体。  </p>
+<p>按照通用的准则，当符合一条或多条以下条件时，请考虑构建结构体：  </p>
+<blockquote>
+<p>结构体的主要目的是用来封装少量相关简单数据值。<br>有理由预计一个结构体实例在赋值或传递时，封装的数据将会被拷贝而不是被引用。<br>任何在结构体中储存的值类型属性，也将会被拷贝，而不是被引用。<br>结构体不需要去继承另一个已存在类型的属性或者行为  </p>
+</blockquote>
+<p>合适的结构体候选者包括：  </p>
+<blockquote>
+<p>几何形状的大小，封装一个width属性和height属性，两者均为Double类型。<br>一定范围内的路径，封装一个start属性和length属性，两者均为Int类型。<br>三维坐标系内一点，封装x，y和z属性，三者均为Double类型。  </p>
+</blockquote>
+<p>在所有其它案例中，定义一个类，生成一个它的实例，并通过引用来管理和传递。实际中，这意味着绝大部分的自定义数据构造都应该是类，而非结构体。</p>
+<h2 id="集合（Collection）类型的赋值和拷贝行为">集合（Collection）类型的赋值和拷贝行为</h2><p>Swift 中字符串（String）,数组（Array）和字典（Dictionary）类型均以结构体的形式实现。这意味着String，Array，Dictionary类型数据被赋值给新的常量(或变量），或者被传入函数（或方法）中时，它们的值会发生拷贝行为（值传递方式）。  </p>
+<p>Objective-C中字符串（NSString）,数组（NSArray）和字典（NSDictionary）类型均以类的形式实现，这与Swfit中以值传递方式是不同的。NSString，NSArray，NSDictionary在发生赋值或者传入函数（或方法）时，不会发生值拷贝，而是传递已存在实例的引用。</p>
+<blockquote>
+<p>注意： 以上是对于数组，字典，字符串和其它值的拷贝的描述。 在你的代码中，拷贝好像是确实是在有拷贝行为的地方产生过。然而，在 Swift 的后台中，只有确有必要，实际（actual）拷贝才会被执行。Swift 管理所有的值拷贝以确保性能最优化的性能，所以你也没有必要去避免赋值以保证最优性能。（实际赋值由系统管理优化)</p>
+</blockquote>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/"> #Swift </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/04/25/swift-advanced-operators.html">Swift Advanced Operators</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/03/24/cordova-frame-helloworld.html">Cordova 初步脚手架</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="xjliao" />
+          <p class="site-author-name">xjliao</p>
+        </div>
+        <p class="site-description motion-element">A app & golang developer guy.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/xjliao" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/lxj12323" target="_blank">Twitter</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方教程"><span class="nav-number">1.</span> <span class="nav-text">官方教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和结构体对比"><span class="nav-number">2.</span> <span class="nav-text">类和结构体对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义语法"><span class="nav-number">3.</span> <span class="nav-text">定义语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和结构体实例"><span class="nav-number">4.</span> <span class="nav-text">类和结构体实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问属性"><span class="nav-number">5.</span> <span class="nav-text">访问属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构类型的成员初始化"><span class="nav-number">6.</span> <span class="nav-text">结构类型的成员初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体和枚举是值类型"><span class="nav-number">7.</span> <span class="nav-text">结构体和枚举是值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类是引用类型"><span class="nav-number">8.</span> <span class="nav-text">类是引用类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恒等运算符"><span class="nav-number">9.</span> <span class="nav-text">恒等运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针"><span class="nav-number">10.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和结构体的选择"><span class="nav-number">11.</span> <span class="nav-text">类和结构体的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合（Collection）类型的赋值和拷贝行为"><span class="nav-number">12.</span> <span class="nav-text">集合（Collection）类型的赋值和拷贝行为</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2013 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">xjliao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

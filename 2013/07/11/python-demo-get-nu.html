@@ -1,0 +1,632 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="EiqhAXIfWx-Emrr55KP_eyNESxlj6jWXA4Xmac5S8sQ" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="A app & golang developer guy." />
+
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xjliao" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-49849624-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a5de7a16b42cff0e7c8add36f398ce48";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Python 抓取某通信号码 // xjliao </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">xjliao</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'cy4cAaDcSmFXTgbbgz69','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Python 抓取某通信号码
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-07-11
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <p>Python抓取某通信号码  </p>
+<p>code_zh.txt 内容格式：省编码-城市编码:省名-城市名 每行一条记录<br>code_en.txt 内容格式和code_zh一样，中文改为汉语拼音即可,例如:11-1101:BeiJing-BeiJing  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">11</span>-<span class="number">1101</span>:北京市-北京市</span><br><span class="line"><span class="number">31</span>-<span class="number">3101</span>:上海市-上海市</span><br><span class="line"><span class="number">32</span>-<span class="number">3201</span>:江苏省-南京市</span><br><span class="line"><span class="number">32</span>-<span class="number">3202</span>:江苏省-无锡市</span><br><span class="line"><span class="number">32</span>-<span class="number">3203</span>:江苏省-徐州市</span><br><span class="line"><span class="number">32</span>-<span class="number">3205</span>:江苏省-苏州市</span><br><span class="line"><span class="number">32</span>-<span class="number">3209</span>:江苏省-盐城市</span><br><span class="line"><span class="number">33</span>-<span class="number">3301</span>:浙江省-杭州市</span><br><span class="line"><span class="number">33</span>-<span class="number">3302</span>:浙江省-宁波市</span><br><span class="line"><span class="number">33</span>-<span class="number">3303</span>:浙江省-温州市</span><br><span class="line"><span class="number">33</span>-<span class="number">3307</span>:浙江省-金华市</span><br><span class="line"><span class="number">33</span>-<span class="number">3310</span>:浙江省-台州市</span><br><span class="line"><span class="number">44</span>-<span class="number">4401</span>:广东省-广州市</span><br><span class="line"><span class="number">44</span>-<span class="number">4403</span>:广东省-深圳市</span><br><span class="line"><span class="number">44</span>-<span class="number">4404</span>:广东省-珠海市</span><br><span class="line"><span class="number">44</span>-<span class="number">4406</span>:广东省-佛山市</span><br><span class="line"><span class="number">44</span>-<span class="number">4413</span>:广东省-惠州市</span><br><span class="line"><span class="number">44</span>-<span class="number">4419</span>:广东省-东莞市</span><br><span class="line"><span class="number">44</span>-<span class="number">4420</span>:广东省-中山市</span><br><span class="line"><span class="number">50</span>-<span class="number">5001</span>:重庆市-重庆市</span><br></pre></td></tr></table></figure>
+<p>send.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># encoding: utf-8</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="comment"># Test 数据</span></span><br><span class="line"><span class="comment"># proDics = &#123;"32":"JiangSu"&#125;;</span></span><br><span class="line"><span class="comment"># codeDics = [&#123;"32":"3201"&#125; ,&#123;"32":"3202"&#125;]</span></span><br><span class="line"><span class="comment"># cityDics = &#123;"323201":"NanJing", "323202":"XuZhou"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从文件读取省，城市编码</span></span><br><span class="line"><span class="comment"># 格式为：省编码-城市编码：省名称-城市名称</span></span><br><span class="line">codeFile = open(<span class="string">'code_zh.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#print f.readlines()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 存放省编码，地市编码，省包含的地市编码</span></span><br><span class="line"><span class="comment"># 格式为如下</span></span><br><span class="line"><span class="comment"># 省：proDics = &#123;"省编码":"省名称"&#125;</span></span><br><span class="line"><span class="comment"># 省包含的城市编码,一个省有多个地市：codeDics = [&#123;"省编码":"城市编码1"&#125;，&#123;"省编码":"城市编码2"&#125;]</span></span><br><span class="line"><span class="comment"># 城市：cityDics = &#123;"省编码 + 城市编码":"城市名称"&#125;</span></span><br><span class="line">proDics = &#123;&#125;</span><br><span class="line">codeDics = []</span><br><span class="line">cityDics = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历文件文件中的数据</span></span><br><span class="line"><span class="comment"># code 为文件中的每行数据, 格式:省编码-城市编码:省名称-城市名称</span></span><br><span class="line"><span class="keyword">for</span> code <span class="keyword">in</span> codeFile.readlines():</span><br><span class="line">	<span class="comment"># f为将省编码-城市编码:省名称-城市名称以':'分割</span></span><br><span class="line">	f = code.split(<span class="string">':'</span>)</span><br><span class="line">	<span class="comment"># f1为省编码-城市编码以'-'分割的数组，0为省编码，1为城市编码</span></span><br><span class="line">	f1 = f[<span class="number">0</span>].split(<span class="string">'-'</span>)</span><br><span class="line">	<span class="comment"># f1为省名称-城市名称以'-'分割的数组，0为省名称，1为城市名称</span></span><br><span class="line">	f2 = f[<span class="number">1</span>].split(<span class="string">'-'</span>)</span><br><span class="line">	<span class="comment"># 获取f1里的省编码</span></span><br><span class="line">	proCode = f1[<span class="number">0</span>]</span><br><span class="line">	<span class="comment"># 获取f2里面的省名称</span></span><br><span class="line">	proName = f2[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 存入省字典</span></span><br><span class="line">	proDics[proCode] = proName</span><br><span class="line">	<span class="comment"># 城市编码为f里0下标去掉-</span></span><br><span class="line">	cityCode = f1[<span class="number">1</span>]</span><br><span class="line">	<span class="comment"># 城市名称为f2里1下标的内容，\n为文件内容的换行符，需去掉</span></span><br><span class="line">	cityName = f2[<span class="number">1</span>].replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 存入城市字典</span></span><br><span class="line">	cityDics[cityCode] = cityName</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 省编码包含的城市编码</span></span><br><span class="line">	codeDic = &#123;&#125;</span><br><span class="line">	codeDic[proCode] = cityCode</span><br><span class="line">	codeDics.append(codeDic)</span><br><span class="line"></span><br><span class="line"><span class="comment">#print proDics</span></span><br><span class="line"><span class="comment">#print cityDics</span></span><br><span class="line"><span class="comment">#print codeDics	</span></span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &lt; <span class="number">2</span>):</span><br><span class="line">	<span class="comment"># codeDic为某个省包含的城市编码字典</span></span><br><span class="line">	<span class="keyword">for</span> codeDic <span class="keyword">in</span> codeDics:</span><br><span class="line">		<span class="comment"># codeKey=省编码，codeVal=城市编码</span></span><br><span class="line">		<span class="keyword">for</span> (codeKey, codeVal) <span class="keyword">in</span> codeDic.items():</span><br><span class="line">			<span class="comment"># 省名称</span></span><br><span class="line">			proName = proDics[codeKey]</span><br><span class="line">			<span class="comment"># 获取城市名称</span></span><br><span class="line">			city = cityDics[codeVal]</span><br><span class="line">			<span class="comment"># fName存放原始内容</span></span><br><span class="line">			<span class="comment"># newFName存放去重后的内容</span></span><br><span class="line">			<span class="comment"># allFname存放去重后的排序内容</span></span><br><span class="line">			fName = proName + <span class="string">'-'</span> + city + <span class="string">'-1.txt'</span></span><br><span class="line">			newFName = proName + <span class="string">'-'</span> + city + <span class="string">'-2.txt'</span></span><br><span class="line">			allFName = proName + <span class="string">'-'</span> + city + <span class="string">'.txt'</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (os.path.isfile(allFName)):</span><br><span class="line">				<span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">			<span class="comment"># 循环次数为n次，所以要追加到文件内容末尾</span></span><br><span class="line">			f = open(fName, <span class="string">'ar'</span>)</span><br><span class="line">			<span class="keyword">print</span> <span class="string">'  '</span> + city</span><br><span class="line">			<span class="comment"># curl为shell命令，访问链接</span></span><br><span class="line">			<span class="comment"># 靓号链接</span></span><br><span class="line">			cmd = <span class="string">"curl 'http://detailskip.taobao.com/json/dyn_combo.do?provCode="</span> + codeKey + <span class="string">"&amp;regionCode="</span> + codeVal + <span class="string">"&amp;model=WCDMA&amp;like=&amp;_tb_token_=07VtqGi1U9Va&amp;_input_charset=UTF-8&amp;_ksTS=1405003247995_1220&amp;callback=jsonp1221&amp;itemId=39865087221&amp;databiz=telenum&amp;numtype=contract&amp;telecomId=39865087221' -H 'Host: detailskip.taobao.com' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:30.0) Gecko/20100101 Firefox/30.0' -H 'Accept: */*' -H 'Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://detail.aliqin.tmall.com/item.htm?spm=a1z2p.7360257.1997908701.12.FhZgKg&amp;id=39865087221' -H 'Cookie: t=8176bd32cdb49af344b553b788b17784; cna=X3sXDFeu8WkCAZkDKBPAs7u8; uc3=nk2=&amp;id2=&amp;lg2=; tracknick=; _cc_=WqG3DMC9EA%3D%3D; tg=0; l=suplxj::1402643332571::11; lzstat_uv=241936811430198200|2185014; mt=ci=0_0; ck1=; _tb_token_=07VtqGi1U9Va; cookie2=99aedc28164de90d0fc6cda889928a8b; uc1=cookie14=UoW3uiiZyW5nQg%3D%3D; v=0' -H 'Connection: keep-alive'"</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment"># 普通号</span></span><br><span class="line">			<span class="comment">#cmd = "curl 'http://detailskip.taobao.com/json/dyn_combo.do?provCode=" + codeKey + "&amp;regionCode=" + codeVal + "&amp;model=WCDMA&amp;like=&amp;_tb_token_=07VtqGi1U9Va&amp;_input_charset=UTF-8&amp;_ksTS=1404996627874_3462&amp;callback=jsonp3463&amp;itemId=39990583842&amp;databiz=telenum&amp;numtype=main&amp;telecomId=39990583842&amp;offerId=111050001001' -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3' -H 'Connection: keep-alive' -H 'Cookie: t=8176bd32cdb49af344b553b788b17784; cna=X3sXDFeu8WkCAZkDKBPAs7u8; uc3=nk2=&amp;id2=&amp;lg2=; tracknick=; _cc_=WqG3DMC9EA%3D%3D; tg=0; l=suplxj::1402643332571::11; lzstat_uv=241936811430198200|2185014; mt=ci=0_0; ck1=; _tb_token_=07VtqGi1U9Va; cookie2=99aedc28164de90d0fc6cda889928a8b; uc1=cookie14=UoW3u5tb66%2BGhg%3D%3D; v=0' -H 'Host: detailskip.taobao.com' -H 'Referer: http://detail.aliqin.tmall.com/item.htm?spm=a1z2p.7360289.0.0.P5qmke&amp;id=39990583842' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:30.0) Gecko/20100101 Firefox/30.0'"</span></span><br><span class="line">						</span><br><span class="line">			<span class="comment"># 访问次链接n次</span></span><br><span class="line">			n = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> proName == <span class="string">'北京市'</span>:</span><br><span class="line">				n = n / <span class="number">2</span></span><br><span class="line">			<span class="keyword">elif</span> proName == <span class="string">'上海市'</span>:</span><br><span class="line">				n = n / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> x <span class="keyword">in</span> xrange(<span class="number">1</span>, n):</span><br><span class="line">				<span class="keyword">print</span> x</span><br><span class="line">				<span class="keyword">print</span> proName</span><br><span class="line">				<span class="keyword">print</span> <span class="string">'  '</span> + city</span><br><span class="line">				<span class="comment"># 执行访问命令, popen返回执行结果内容文件对象，system只返回执行后的状态0，1等	</span></span><br><span class="line">				returnFile = os.popen(cmd)</span><br><span class="line">				<span class="comment"># 读取返回的内容</span></span><br><span class="line">				fileContent = returnFile.read();</span><br><span class="line">				<span class="comment"># 处理返回内容</span></span><br><span class="line">				beginIndex = fileContent.index(<span class="string">'['</span>)</span><br><span class="line">				endIndex = fileContent.index(<span class="string">']'</span>)</span><br><span class="line"></span><br><span class="line">				phoneNumbers = fileContent[beginIndex + <span class="number">1</span>:endIndex]</span><br><span class="line">				phoneNumbers = phoneNumbers.replace(<span class="string">'"'</span>, <span class="string">""</span>)</span><br><span class="line">				phoneNumbers = phoneNumbers.split(<span class="string">','</span>)</span><br><span class="line"></span><br><span class="line">				<span class="comment"># 排序</span></span><br><span class="line">				phoneNumbers.sort()</span><br><span class="line"></span><br><span class="line">				<span class="comment"># 遍历每个号码，并存文件</span></span><br><span class="line">				<span class="keyword">for</span> phoneNumber <span class="keyword">in</span> phoneNumbers:</span><br><span class="line">					f.write(phoneNumber + <span class="string">'\n'</span>)</span><br><span class="line">					<span class="keyword">print</span> phoneNumber</span><br><span class="line"></span><br><span class="line">			f.close()</span><br><span class="line"></span><br><span class="line">			<span class="comment"># 去掉重复的号码， 使用set， 集合是无重复，无序的数据结果，并保存到另外一个文件</span></span><br><span class="line">			newF = open(newFName, <span class="string">'w'</span>)</span><br><span class="line">			fr = open(fName, <span class="string">'r'</span>)</span><br><span class="line">			newF.write(<span class="string">''</span>.join(set(fr.readlines())))</span><br><span class="line">			fr.close()</span><br><span class="line">			newF.close()</span><br><span class="line"></span><br><span class="line">			<span class="comment"># 对去重之后的数据进行排序， 并存入一个新文件</span></span><br><span class="line">			newFr = open(newFName, <span class="string">'r'</span>)	</span><br><span class="line">			allNumber =  newFr.readlines()</span><br><span class="line">			allNumber.sort()</span><br><span class="line">			fAllNumber = open(allFName, <span class="string">'w'</span>)</span><br><span class="line">			newFr.close()</span><br><span class="line"></span><br><span class="line">			<span class="comment"># 遍历去重之后的号码，写入文件</span></span><br><span class="line">			<span class="keyword">for</span> num <span class="keyword">in</span> allNumber:</span><br><span class="line">				fAllNumber.write(num)</span><br><span class="line"></span><br><span class="line">			fAllNumber.close()</span><br><span class="line">			<span class="comment"># 删除去重后的文件，只保留去重后，排序过的文件</span></span><br><span class="line">			os.remove(newFName)</span><br><span class="line">			<span class="comment"># 删除原始内容文件</span></span><br><span class="line">			os.remove(fName)</span><br></pre></td></tr></table></figure>
+<p>最后结果的出入文件名为每个省，城市独立文件存储，格式:省名称-城市名称.txt，例如:江苏省-南京市</p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/"> #Python </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/07/16/ios-uipickerview.html">Ios UIPickerView demo</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/05/31/IOS_1.html">Ios关闭键盘</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="xjliao" />
+          <p class="site-author-name">xjliao</p>
+        </div>
+        <p class="site-description motion-element">A app & golang developer guy.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/xjliao" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/lxj12323" target="_blank">Twitter</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2013 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">xjliao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

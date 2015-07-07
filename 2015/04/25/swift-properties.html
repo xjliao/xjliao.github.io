@@ -1,0 +1,679 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="EiqhAXIfWx-Emrr55KP_eyNESxlj6jWXA4Xmac5S8sQ" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="A app & golang developer guy." />
+
+
+
+  <meta name="keywords" content="Swift," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xjliao" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-49849624-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a5de7a16b42cff0e7c8add36f398ce48";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Swift properties // xjliao </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">xjliao</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'cy4cAaDcSmFXTgbbgz69','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Swift properties
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-04-25
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Swift/">Swift</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <h2 id="官方教程">官方教程</h2><p><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/  Swift_Programming_Language/Properties.html#//apple_ref/  doc/uid/TP40014097-CH14-ID254</a></p>
+<h2 id="存储属性">存储属性</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">FixedLengthRange</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> firstValue: <span class="type">Int</span></span><br><span class="line">    <span class="keyword">let</span> length: <span class="type">Int</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> rangeOfThreeItems = <span class="type">FixedLengthRange</span>(firstValue: <span class="number">0</span>, length: <span class="number">3</span>)</span><br><span class="line"><span class="comment">// the range represents integer values 0, 1, and 2</span></span><br><span class="line">rangeOfThreeItems.firstValue = <span class="number">6</span></span><br><span class="line"><span class="comment">// the range now represents integer values 6, 7, and 8return greeting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="常量结构体实例存储属性">常量结构体实例存储属性</h3><h3 id="延迟存储属性">延迟存储属性</h3><p>延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用lazy来标示一个延迟存储属性。</p>
+<p>注意：</p>
+<blockquote>
+<p>必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。</p>
+</blockquote>
+<p>延迟属性很有用，当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataImporter</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span><br><span class="line">    DataImporter 是一个将外部文件中的数据导入的类。</span><br><span class="line">    这个类的初始化会消耗不少时间。</span><br><span class="line">    */</span></span><br><span class="line">    <span class="keyword">var</span> fileName = <span class="string">"data.txt"</span></span><br><span class="line">    <span class="comment">// 这是提供数据导入功能</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataManager</span> </span>&#123;</span><br><span class="line">    lazy <span class="keyword">var</span> importer = <span class="type">DataImporter</span>()</span><br><span class="line">    <span class="keyword">var</span> data = [<span class="type">String</span>]()</span><br><span class="line">    <span class="comment">// 这是提供数据管理功能</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> manager = <span class="type">DataManager</span>()</span><br><span class="line">manager.data.append(<span class="string">"Some data"</span>)</span><br><span class="line">manager.data.append(<span class="string">"Some more data"</span>)</span><br><span class="line"><span class="comment">// DataImporter 实例的 importer 属性还没有被创建</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(manager.importer.fileName)</span><br></pre></td></tr></table></figure>
+<h3 id="存储属性和实例变量">存储属性和实例变量</h3><p>如果您有过 Objective-C 经验，应该知道Objective-C为类实例存储值和引用提供两种方法。对于属性来说，也可以使用实例变量作为属性值的后端存储。</p>
+<p>Swift 编程语言中把这些理论统一用属性来实现。Swift 中的属性没有对应的实例变量，属性的后端存储也无法直接访问。这就避免了不同场景下访问方式的困扰，同时也将属性的定义简化成一个语句。 一个类型中属性的全部信息——包括命名、类型和内存管理特征——都在唯一一个地方（类型定义中）定义</p>
+<h3 id="计算属性">计算属性</h3><p>除存储属性外，类、结构体和枚举可以定义计算属性，计算属性不直接存储值，而是提供一个 getter 来获取值，一个可选的 setter 来间接设置其他属性或变量的值<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">0.0</span>, y = <span class="number">0.0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Size</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> width = <span class="number">0.0</span>, height = <span class="number">0.0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Rect</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> origin = <span class="type">Point</span>()</span><br><span class="line">    <span class="keyword">var</span> size = <span class="type">Size</span>()</span><br><span class="line">    <span class="keyword">var</span> center: <span class="type">Point</span> &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> centerX = origin.x + (size.width / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">let</span> centerY = origin.y + (size.height / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="type">Point</span>(x: centerX, y: centerY)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">set</span>(newCenter) &#123;</span><br><span class="line">        origin.x = newCenter.x - (size.width / <span class="number">2</span>)</span><br><span class="line">        origin.y = newCenter.y - (size.height / <span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> square = <span class="type">Rect</span>(origin: <span class="type">Point</span>(x: <span class="number">0.0</span>, y: <span class="number">0.0</span>),</span><br><span class="line">    size: <span class="type">Size</span>(width: <span class="number">10.0</span>, height: <span class="number">10.0</span>))</span><br><span class="line"><span class="keyword">let</span> initialSquareCenter = square.center</span><br><span class="line">square.center = <span class="type">Point</span>(x: <span class="number">15.0</span>, y: <span class="number">15.0</span>)</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"square.origin is now at (<span class="subst">\(square.origin.x)</span>, <span class="subst">\(square.origin.y)</span>)"</span>)</span><br><span class="line"><span class="comment">// 输出 "square.origin is now at (10.0, 10.0)”</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="便捷_setter_声明">便捷 setter 声明</h3><p>如果计算属性的 setter 没有定义表示新值的参数名，则可以使用默认名称newValue。下面是使用了便捷 setter 声明的Rect结构体代码:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AlternativeRect</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> origin = <span class="type">Point</span>()</span><br><span class="line">    <span class="keyword">var</span> size = <span class="type">Size</span>()</span><br><span class="line">    <span class="keyword">var</span> center: <span class="type">Point</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> centerX = origin.x + (size.width / <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">let</span> centerY = origin.y + (size.height / <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="type">Point</span>(x: centerX, y: centerY)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            origin.x = newValue.x - (size.width / <span class="number">2</span>)</span><br><span class="line">            origin.y = newValue.y - (size.height / <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="只读属性计算">只读属性计算</h3><p>只有 getter 没有 setter 的计算属性就是只读计算属性。只读计算属性总是返回一个值，可以通过点运算符访问，但不能设置新的值。</p>
+<p>注意：</p>
+<blockquote>
+<p>必须使用var关键字定义计算属性，包括只读计算属性，因为它们的值不是固定的。let关键字只用来声明常量属性，表示初始化后再也无法修改的值。</p>
+</blockquote>
+<p>只读计算属性的声明可以去掉get关键字和花括号：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Cuboid</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> width = <span class="number">0.0</span>, height = <span class="number">0.0</span>, depth = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">var</span> volume: <span class="type">Double</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> width * height * depth</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> fourByFiveByTwo = <span class="type">Cuboid</span>(width: <span class="number">4.0</span>, height: <span class="number">5.0</span>, depth: <span class="number">2.0</span>)</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"the volume of fourByFiveByTwo is <span class="subst">\(fourByFiveByTwo.volume)</span>"</span>)</span><br><span class="line"><span class="comment">// prints "the volume of fourByFiveByTwo is 40.0"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="属性观察器">属性观察器</h3><p>性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，甚至新的值和现在的值相同的时候也不例外。</p>
+<p>可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重载属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。属性重载请参考继承一章的重载。</p>
+<p>注意：</p>
+<blockquote>
+<p>不需要为无法重载的计算属性添加属性观察器，因为可以通过 setter 直接监控和响应值的变化。</p>
+</blockquote>
+<p>可以为属性添加如下的一个或全部观察器：</p>
+<blockquote>
+<p>willSet在设置新的值之前调用<br>didSet在新的值被设置之后立即调用</p>
+</blockquote>
+<p>willSet观察器会将新的属性值作为固定参数传入，在willSet的实现代码中可以为这个参数指定一个名称，如果不指定则参数仍然可用，这时使用默认名称newValue表示。</p>
+<p>类似地，didSet观察器会将旧的属性值作为参数传入，可以为该参数命名或者使用默认参数名oldValue。</p>
+<p>注意：</p>
+<blockquote>
+<p>willSet和didSet观察器在属性初始化过程中不会被调用，它们只会当属性的值在初始化之外的地方被设置时被调用。</p>
+</blockquote>
+<p>这里是一个willSet和didSet的实际例子，其中定义了一个名为StepCounter的类，用来统计当人步行时的总步数，可以跟计步器或其他日常锻炼的统计装置的输入数据配合使用<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">someFunction</span><span class="params">(parameterName: Int)</span></span> &#123;</span><br><span class="line">    <span class="comment">// function body goes here, and can use parameterName</span></span><br><span class="line">    <span class="comment">// to refer to the argument value for that parameter</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="全局变量和局部变量">全局变量和局部变量</h2><p>计算属性和属性观察器所描述的模式也可以用于全局变量和局部变量，全局变量是在函数、方法、闭包或任何类型之外定义的变量，局部变量是在函数、方法或闭包内部定义的变量。</p>
+<p>前面章节提到的全局或局部变量都属于存储型变量，跟存储属性类似，它提供特定类型的存储空间，并允许读取和写入。</p>
+<p>另外，在全局或局部范围都可以定义计算型变量和为存储型变量定义观察器，计算型变量跟计算属性一样，返回一个计算的值而不是存储值，声明格式也完全一样。</p>
+<p>注意：</p>
+<blockquote>
+<p>全局的常量或变量都是延迟计算的，跟延迟存储属性相似，不同的地方在于，全局的常量或变量不需要标记lazy特性。<br>局部范围的常量或变量不会延迟计算。</p>
+<h3 id="2、速记外部参数名">2、速记外部参数名</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">containsCharacter</span><span class="params">(#string: String, #characterToFind: Character)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> character <span class="keyword">in</span> string &#123;</span><br><span class="line">        <span class="keyword">if</span> character == characterToFind &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> containsAVee = containsCharacter(string: <span class="string">"aardvark"</span>, characterToFind: <span class="string">"v"</span>)</span><br><span class="line"><span class="comment">// containsAVee equals true, because "aardvark" contains a "v"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、默认参数值">3、默认参数值</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">join</span><span class="params">(string s1: String, <span class="built_in">toString</span> s2: String,</span><br><span class="line">    withJoiner joiner: String = <span class="string">" "</span>)</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> s1 + joiner + s2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">join</span>(string: <span class="string">"hello"</span>, <span class="built_in">toString</span>: <span class="string">"world"</span>, withJoiner: <span class="string">"-"</span>)</span><br><span class="line"><span class="comment">// returns "hello-world"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">join</span>(string: <span class="string">"hello"</span>, <span class="built_in">toString</span>: <span class="string">"world"</span>)</span><br><span class="line"><span class="comment">// returns "hello world"</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、参数外部名默认值">4、参数外部名默认值</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">join</span><span class="params">(s1: String, s2: String, joiner: String = <span class="string">" "</span>)</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> s1 + joiner + s2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">join</span>(<span class="string">"hello"</span>, <span class="string">"world"</span>, joiner: <span class="string">"-"</span>)</span><br><span class="line"><span class="comment">// returns "hello-world"</span></span><br></pre></td></tr></table></figure>
+<h3 id="5、可变参数">5、可变参数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">arithmeticMean</span><span class="params">(numbers: Double...)</span></span> -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> total: <span class="type">Double</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</span><br><span class="line">        total += number</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total / <span class="type">Double</span>(numbers.<span class="built_in">count</span>)</span><br><span class="line">&#125;</span><br><span class="line">arithmeticMean(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// returns 3.0, which is the arithmetic mean of these five numbers</span></span><br><span class="line">arithmeticMean(<span class="number">3</span>, <span class="number">8.25</span>, <span class="number">18.75</span>)</span><br><span class="line"><span class="comment">// returns 10.0, which is the arithmetic mean of these three numbers</span></span><br></pre></td></tr></table></figure>
+<h3 id="6、常量和变量参数">6、常量和变量参数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">alignRight</span><span class="params">(<span class="keyword">var</span> string: String, totalLength: Int, pad: Character)</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> amountToPad = totalLength - <span class="built_in">count</span>(string)</span><br><span class="line">    <span class="keyword">if</span> amountToPad &lt; <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> string</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> padString = <span class="type">String</span>(pad)</span><br><span class="line">    <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...amountToPad &#123;</span><br><span class="line">        string = padString + string</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> string</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> originalString = <span class="string">"hello"</span></span><br><span class="line"><span class="keyword">let</span> paddedString = alignRight(originalString, <span class="number">10</span>, <span class="string">"-"</span>)</span><br><span class="line"><span class="comment">// paddedString is equal to "-----hello"</span></span><br><span class="line"><span class="comment">// originalString is still equal to "hello"</span></span><br></pre></td></tr></table></figure>
+<h4 id="7、In-Out_参数">7、In-Out 参数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">swapTwoInts</span><span class="params">(<span class="keyword">inout</span> a: Int, <span class="keyword">inout</span> b: Int)</span></span> &#123;</span><br><span class="line">    <span class="keyword">let</span> temporaryA = a</span><br><span class="line">    a = b</span><br><span class="line">    b = temporaryA</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> someInt = <span class="number">3</span></span><br><span class="line"><span class="keyword">var</span> anotherInt = <span class="number">107</span></span><br><span class="line">swapTwoInts(&amp;someInt, &amp;anotherInt)</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"someInt is now <span class="subst">\(someInt)</span>, and anotherInt is now <span class="subst">\(anotherInt)</span>"</span>)</span><br><span class="line"><span class="comment">// prints "someInt is now 107, and anotherInt is now 3"</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数类型">函数类型</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">addTwoInts</span><span class="params">(a: Int, b: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">multiplyTwoInts</span><span class="params">(a: Int, b: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a * b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">printHelloWorld</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"hello, world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1、使用函数类型">1、使用函数类型</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mathFunction: (<span class="type">Int</span>, <span class="type">Int</span>) -&gt; <span class="type">Int</span> = addTwoInts</span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"Result: <span class="subst">\(mathFunction(<span class="number">2</span>, <span class="number">3</span>)</span>)"</span>)</span><br><span class="line"><span class="comment">// prints "Result: 5"</span></span><br><span class="line"></span><br><span class="line">mathFunction = multiplyTwoInts</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"Result: <span class="subst">\(mathFunction(<span class="number">2</span>, <span class="number">3</span>)</span>)"</span>)</span><br><span class="line"><span class="comment">// prints "Result: 6"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> anotherMathFunction = addTwoInts</span><br><span class="line"><span class="comment">// anotherMathFunction is inferred to be of type (Int, Int) -&gt; Int</span></span><br></pre></td></tr></table></figure>
+<h3 id="2、函数类型作为参数类型">2、函数类型作为参数类型</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">printMathResult</span><span class="params">(mathFunction: <span class="params">(Int, Int)</span></span></span> -&gt; <span class="type">Int</span>, a: <span class="type">Int</span>, b: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"Result: <span class="subst">\(mathFunction(a, b)</span>)"</span>)</span><br><span class="line">&#125;</span><br><span class="line">printMathResult(addTwoInts, <span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// prints "Result: 8"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、函数类型作为返回类型">3、函数类型作为返回类型</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">stepForward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> input + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">stepBackward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> input - <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">chooseStepFunction</span><span class="params">(backwards: Bool)</span></span> -&gt; (<span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> backwards ? stepBackward : stepForward</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> currentValue = <span class="number">3</span></span><br><span class="line"><span class="keyword">let</span> moveNearerToZero = chooseStepFunction(currentValue &gt; <span class="number">0</span>)</span><br><span class="line"><span class="comment">// moveNearerToZero now refers to the stepBackward() function</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(<span class="string">"Counting to zero:"</span>)</span><br><span class="line"><span class="comment">// Counting to zero:</span></span><br><span class="line"><span class="keyword">while</span> currentValue != <span class="number">0</span> &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"<span class="subst">\(currentValue)</span>... "</span>)</span><br><span class="line">    currentValue = moveNearerToZero(currentValue)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"zero!"</span>)</span><br><span class="line"><span class="comment">// 3...</span></span><br><span class="line"><span class="comment">// 2...</span></span><br><span class="line"><span class="comment">// 1...</span></span><br><span class="line"><span class="comment">// zero!</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="函数嵌套">函数嵌套</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">chooseStepFunction</span><span class="params">(backwards: Bool)</span></span> -&gt; (<span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">stepForward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123; <span class="keyword">return</span> input + <span class="number">1</span> &#125;</span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">stepBackward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123; <span class="keyword">return</span> input - <span class="number">1</span> &#125;</span><br><span class="line">    <span class="keyword">return</span> backwards ? stepBackward : stepForward</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> currentValue = -<span class="number">4</span></span><br><span class="line"><span class="keyword">let</span> moveNearerToZero = chooseStepFunction(currentValue &gt; <span class="number">0</span>)</span><br><span class="line"><span class="comment">// moveNearerToZero now refers to the nested stepForward() function</span></span><br><span class="line"><span class="keyword">while</span> currentValue != <span class="number">0</span> &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"<span class="subst">\(currentValue)</span>... "</span>)</span><br><span class="line">    currentValue = moveNearerToZero(currentValue)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">println</span>(<span class="string">"zero!"</span>)</span><br><span class="line"><span class="comment">// -4...</span></span><br><span class="line"><span class="comment">// -3...</span></span><br><span class="line"><span class="comment">// -2...</span></span><br><span class="line"><span class="comment">// -1...</span></span><br><span class="line"><span class="comment">// zero!</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/"> #Swift </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/04/26/swift-inheritance.html">Swift inheritance</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/25/swift-nested-types.html">Swift nested types</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="xjliao" />
+          <p class="site-author-name">xjliao</p>
+        </div>
+        <p class="site-description motion-element">A app & golang developer guy.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/xjliao" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/lxj12323" target="_blank">Twitter</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方教程"><span class="nav-number">1.</span> <span class="nav-text">官方教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储属性"><span class="nav-number">2.</span> <span class="nav-text">存储属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常量结构体实例存储属性"><span class="nav-number">2.1.</span> <span class="nav-text">常量结构体实例存储属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延迟存储属性"><span class="nav-number">2.2.</span> <span class="nav-text">延迟存储属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储属性和实例变量"><span class="nav-number">2.3.</span> <span class="nav-text">存储属性和实例变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算属性"><span class="nav-number">2.4.</span> <span class="nav-text">计算属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#便捷_setter_声明"><span class="nav-number">2.5.</span> <span class="nav-text">便捷 setter 声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只读属性计算"><span class="nav-number">2.6.</span> <span class="nav-text">只读属性计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性观察器"><span class="nav-number">2.7.</span> <span class="nav-text">属性观察器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量和局部变量"><span class="nav-number">3.</span> <span class="nav-text">全局变量和局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2、速记外部参数名"><span class="nav-number">3.1.</span> <span class="nav-text">2、速记外部参数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、默认参数值"><span class="nav-number">3.2.</span> <span class="nav-text">3、默认参数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、参数外部名默认值"><span class="nav-number">3.3.</span> <span class="nav-text">4、参数外部名默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、可变参数"><span class="nav-number">3.4.</span> <span class="nav-text">5、可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、常量和变量参数"><span class="nav-number">3.5.</span> <span class="nav-text">6、常量和变量参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7、In-Out_参数"><span class="nav-number">3.5.1.</span> <span class="nav-text">7、In-Out 参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数类型"><span class="nav-number">4.</span> <span class="nav-text">函数类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、使用函数类型"><span class="nav-number">4.1.</span> <span class="nav-text">1、使用函数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、函数类型作为参数类型"><span class="nav-number">4.2.</span> <span class="nav-text">2、函数类型作为参数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、函数类型作为返回类型"><span class="nav-number">4.3.</span> <span class="nav-text">3、函数类型作为返回类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数嵌套"><span class="nav-number">5.</span> <span class="nav-text">函数嵌套</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2013 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">xjliao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

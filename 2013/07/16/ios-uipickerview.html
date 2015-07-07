@@ -1,0 +1,637 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="EiqhAXIfWx-Emrr55KP_eyNESxlj6jWXA4Xmac5S8sQ" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="A app & golang developer guy." />
+
+
+
+  <meta name="keywords" content="Ios," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xjliao" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-49849624-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a5de7a16b42cff0e7c8add36f398ce48";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Ios UIPickerView demo // xjliao </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">xjliao</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'cy4cAaDcSmFXTgbbgz69','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Ios UIPickerView demo
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-07-16
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Ios/">Ios</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <p>关键点:</p>
+<h2 id="需实现这两个协议">需实现<uipickerviewdatasource, uipickerviewdelegate="">这两个协议</uipickerviewdatasource,></h2><h3 id="UIPickerViewDataSource需要实现的方法:">UIPickerViewDataSource需要实现的方法:</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置选择框的个数  </span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)numberOfComponentsInPickerView:(<span class="built_in">UIPickerView</span> *)pickerView  </span><br><span class="line">&#123;  </span><br><span class="line">      <span class="keyword">return</span> <span class="number">2</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">//设置每个选择框的数量  </span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView numberOfRowsInComponent:(<span class="built_in">NSInteger</span>)component &#123;  </span><br><span class="line">    <span class="keyword">if</span> (component == kStateComponent) &#123;  </span><br><span class="line">            <span class="keyword">return</span> [[<span class="keyword">self</span> provinces] count];  </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">        <span class="keyword">return</span> [[<span class="keyword">self</span> countrys] count];  </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+<h3 id="UIPickerViewDelegate需要实现的方法:">UIPickerViewDelegate需要实现的方法:</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置每个选择框的内容  </span></span><br><span class="line">- (<span class="built_in">NSString</span> *)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView titleForRow:(<span class="built_in">NSInteger</span>)row forComponent:(<span class="built_in">NSInteger</span>)component &#123;</span><br><span class="line">    <span class="keyword">if</span> (component == kStateComponent) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span><span class="variable">.provinces</span>[row];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span><span class="variable">.countrys</span>[row];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">//可选实现方法，自定义picker 显示图片</span></span><br><span class="line">- (<span class="built_in">UIView</span> *)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView viewForRow:(<span class="built_in">NSInteger</span>)row forComponent:(<span class="built_in">NSInteger</span>)component reusingView:(<span class="built_in">UIView</span> *)view</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">UIImage</span> *image = <span class="keyword">self</span><span class="variable">.images</span>[row];</span><br><span class="line">    <span class="built_in">UIImageView</span> *imageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:image];</span><br><span class="line">    <span class="keyword">return</span> imageView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="以下是demo">以下是demo</h2><h3 id="依赖选择，联动">依赖选择，联动</h3><p>BIDDependentPickerViewController.h  </p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  BIDDependentPickerViewController.h</span></span><br><span class="line"><span class="comment">//  Pickers</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by xjliao on 14-7-1.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2014年 xjl. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#define kStateComponent 0</span></span><br><span class="line"><span class="preprocessor">#define kZipComponent 1</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">BIDDependentPickerViewController</span> : <span class="title">UIViewController</span> &lt;<span class="title">UIPickerViewDataSource</span>, <span class="title">UIPickerViewDelegate</span>&gt;</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIPickerView</span> *dependentPicker;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">UIButton</span> *btn;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSDictionary</span> *provinceDics;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSArray</span> *provinces;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSArray</span> *countrys;</span><br><span class="line"></span><br><span class="line"><span class="comment">//@property (strong, nonatomic) NSDictionary *stateZips;</span></span><br><span class="line"><span class="comment">//@property (strong, nonatomic) NSArray *states;</span></span><br><span class="line"><span class="comment">//@property (strong, nonatomic) NSArray *zips;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)btnPressed;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>BIDDependentPickerViewController.m  </p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  BIDDependentPickerViewController.m</span></span><br><span class="line"><span class="comment">//  Pickers</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by xjliao on 14-7-1.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2014年 xjl. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#import <span class="title">"BIDDependentPickerViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">BIDDependentPickerViewController</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">BIDDependentPickerViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">id</span>)initWithNibName:(<span class="built_in">NSString</span> *)nibNameOrNil bundle:(<span class="built_in">NSBundle</span> *)nibBundleOrNil</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> initWithNibName:nibNameOrNil bundle:nibBundleOrNil];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="comment">// Custom initialization</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="built_in">UIButton</span> *btn = [[<span class="built_in">UIButton</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">150</span>, <span class="number">300</span>, <span class="number">100</span>, <span class="number">100</span>)];</span><br><span class="line">    [btn setTitle:<span class="string">@"单击"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [btn setTitleColor:[<span class="built_in">UIColor</span> redColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:btn];</span><br><span class="line">    [btn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(btnPressed) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSBundle</span> *boundle = [<span class="built_in">NSBundle</span> mainBundle];</span><br><span class="line">    <span class="built_in">NSURL</span> *plistURL = [boundle URLForResource:<span class="string">@"statedictionary"</span> withExtension:<span class="string">@"plist"</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span><span class="variable">.provinceDics</span> = [<span class="built_in">NSDictionary</span> dictionaryWithContentsOfURL:plistURL];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSArray</span> *allprovinces = [<span class="keyword">self</span><span class="variable">.provinceDics</span> allKeys];</span><br><span class="line">    <span class="built_in">NSArray</span> *sortedprovinces = [allprovinces sortedArrayUsingSelector:<span class="keyword">@selector</span>(compare:)];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span><span class="variable">.provinces</span> = sortedprovinces;</span><br><span class="line">    <span class="built_in">NSString</span> *selectedState = <span class="keyword">self</span><span class="variable">.provinces</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.countrys</span> = <span class="keyword">self</span><span class="variable">.provinceDics</span>[selectedState];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> didReceiveMemoryWarning];</span><br><span class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//每个选择组件里的内容的数量</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView numberOfRowsInComponent:(<span class="built_in">NSInteger</span>)component &#123;</span><br><span class="line">    <span class="keyword">if</span> (component == kStateComponent) &#123;</span><br><span class="line">        <span class="keyword">return</span> [[<span class="keyword">self</span> provinces] count];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> [[<span class="keyword">self</span> countrys] count];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//选择组件的数量，多少个选择项</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)numberOfComponentsInPickerView:(<span class="built_in">UIPickerView</span> *)pickerView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//选择组件的内容</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView titleForRow:(<span class="built_in">NSInteger</span>)row forComponent:(<span class="built_in">NSInteger</span>)component &#123;</span><br><span class="line">    <span class="keyword">if</span> (component == kStateComponent) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span><span class="variable">.provinces</span>[row];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span><span class="variable">.countrys</span>[row];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)btnPressed &#123;</span><br><span class="line">    <span class="built_in">NSInteger</span> stateRow = [<span class="keyword">self</span><span class="variable">.dependentPicker</span> selectedRowInComponent:kStateComponent];</span><br><span class="line">    <span class="built_in">NSInteger</span> zipRow = [<span class="keyword">self</span><span class="variable">.dependentPicker</span> selectedRowInComponent:kZipComponent];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSString</span> *state = <span class="keyword">self</span><span class="variable">.provinces</span>[stateRow];</span><br><span class="line">    <span class="built_in">NSString</span> *zip = <span class="keyword">self</span><span class="variable">.countrys</span>[zipRow];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSString</span> *title = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"你选择的省分为:%@"</span>, state];</span><br><span class="line">    <span class="built_in">NSString</span> *msg = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"你选择的省份:%@, 城市:%@"</span>, state, zip];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIAlertView</span> *alertView = [[<span class="built_in">UIAlertView</span> alloc] initWithTitle:title message:msg delegate:<span class="literal">nil</span> cancelButtonTitle:<span class="string">@"取消"</span> otherButtonTitles:<span class="literal">nil</span>, <span class="literal">nil</span>];</span><br><span class="line">    </span><br><span class="line">    [alertView show];</span><br><span class="line"><span class="comment">//    </span></span><br><span class="line"><span class="comment">//    UIAlertView *uav = [[UIAlertView alloc] initWithTitle:@"fdojf" message:@"Nothing" delegate:nil cancelButtonTitle:@"cancle" otherButtonTitles:nil, nil];</span></span><br><span class="line"><span class="comment">//    [uav show];</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//拖动左边的齿轮时，右边的数据相应的Reload更新</span></span><br><span class="line">- (<span class="keyword">void</span>)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView didSelectRow:(<span class="built_in">NSInteger</span>)row inComponent:(<span class="built_in">NSInteger</span>)component</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (component == kStateComponent) &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *selectedState = <span class="keyword">self</span><span class="variable">.provinces</span>[row];</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.countrys</span> = <span class="keyword">self</span><span class="variable">.provinceDics</span>[selectedState];</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.dependentPicker</span> reloadComponent:kZipComponent];</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.dependentPicker</span> selectRow:<span class="number">0</span> inComponent:kZipComponent animated:<span class="literal">YES</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">#pragma mark - Navigation</span><br><span class="line"></span><br><span class="line">// In a storyboard-based application, you will often want to do a little preparation before navigation</span><br><span class="line">- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender</span><br><span class="line">&#123;</span><br><span class="line">    // Get the new view controller using [segue destinationViewController].</span><br><span class="line">    // Pass the selected object to the new view controller.</span><br><span class="line">&#125;</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="自定义UIPickerView">自定义UIPickerView</h3><p>BIDCustomPickerViewController.h  </p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  BIDCustomPickerViewController.h</span></span><br><span class="line"><span class="comment">//  Pickers</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by xjliao on 14-7-1.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2014年 xjl. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">BIDCustomPickerViewController</span> : <span class="title">UIViewController</span>&lt;<span class="title">UIPickerViewDataSource</span>, <span class="title">UIPickerViewDelegate</span>, <span class="title">UIAlertViewDelegate</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">UIPickerView</span> *picker;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">UIButton</span> *btn;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">UILabel</span> *winLabel;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSArray</span> *images;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)btnPressed;</span><br><span class="line">- (<span class="keyword">void</span>)spin;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>BIDCustomPickerViewController.m</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  BIDCustomPickerViewController.m</span></span><br><span class="line"><span class="comment">//  Pickers</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by xjliao on 14-7-1.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2014年 xjl. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#import <span class="title">"BIDCustomPickerViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">BIDCustomPickerViewController</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">BIDCustomPickerViewController</span></span></span><br><span class="line"><span class="keyword">@synthesize</span> picker, btn, images, winLabel;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)loadView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">UIView</span> *view = [[<span class="built_in">UIView</span> alloc] initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen] applicationFrame]];</span><br><span class="line">    view<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> blueColor];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.view</span> = view;</span><br><span class="line">    [view release];</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">super</span> loadView];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">id</span>)initWithNibName:(<span class="built_in">NSString</span> *)nibNameOrNil bundle:(<span class="built_in">NSBundle</span> *)nibBundleOrNil</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> initWithNibName:nibNameOrNil bundle:nibBundleOrNil];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="comment">// Custom initialization</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view.</span></span><br><span class="line">    btn = [[<span class="built_in">UIButton</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">150</span>, <span class="number">150</span>, <span class="number">100</span>, <span class="number">100</span>)];</span><br><span class="line">    [btn setTitle:<span class="string">@"按我啊"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [btn setTitleColor:[<span class="built_in">UIColor</span> greenColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [btn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(btnPressed) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:btn];</span><br><span class="line">    </span><br><span class="line">    winLabel = [[<span class="built_in">UILabel</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">200</span>, <span class="number">200</span>, <span class="number">100</span>, <span class="number">100</span>)];</span><br><span class="line">    [winLabel setTextColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:winLabel];</span><br><span class="line">    </span><br><span class="line">    picker = [[<span class="built_in">UIPickerView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">200</span>)];</span><br><span class="line">    picker<span class="variable">.dataSource</span> = <span class="keyword">self</span>;</span><br><span class="line">    picker<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:picker];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span><span class="variable">.images</span> = @[[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"Custom"</span>], [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"Date"</span>],</span><br><span class="line">                    [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"Dependent"</span>], [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"Double"</span>],</span><br><span class="line">                    [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"Single"</span>]];</span><br><span class="line">    </span><br><span class="line">    srandom(time(<span class="literal">NULL</span>));</span><br><span class="line"><span class="comment">//    picker</span></span><br><span class="line"><span class="comment">//    []</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSInteger</span>)numberOfComponentsInPickerView:(<span class="built_in">UIPickerView</span> *)pickerView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">self</span><span class="variable">.images</span> count];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSInteger</span>)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView numberOfRowsInComponent:(<span class="built_in">NSInteger</span>)component</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">self</span><span class="variable">.images</span> count];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//picker 显示图片</span></span><br><span class="line">- (<span class="built_in">UIView</span> *)pickerView:(<span class="built_in">UIPickerView</span> *)pickerView viewForRow:(<span class="built_in">NSInteger</span>)row forComponent:(<span class="built_in">NSInteger</span>)component reusingView:(<span class="built_in">UIView</span> *)view</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">UIImage</span> *image = <span class="keyword">self</span><span class="variable">.images</span>[row];</span><br><span class="line">    <span class="built_in">UIImageView</span> *imageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:image];</span><br><span class="line">    <span class="keyword">return</span> imageView;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> didReceiveMemoryWarning];</span><br><span class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)btnPressed</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span> spin];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)spin</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">BOOL</span> win = <span class="literal">NO</span>;</span><br><span class="line">    <span class="keyword">int</span> numInRow = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> lastVal = -<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> newValue = random() % [<span class="keyword">self</span><span class="variable">.images</span> count];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (newValue == lastVal) &#123;</span><br><span class="line">            numInRow++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            numInRow = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        lastVal = newValue;</span><br><span class="line">        </span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.picker</span> selectRow:newValue inComponent:i animated:<span class="literal">YES</span>];</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.picker</span> reloadComponent:i];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (numInRow &gt;= <span class="number">3</span>) &#123;</span><br><span class="line">            win = <span class="literal">YES</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (win) &#123;</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.winLabel</span><span class="variable">.text</span> = <span class="string">@"恭喜您，赢了！"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.winLabel</span><span class="variable">.text</span> = <span class="string">@"很遗憾，就差一点了，不要灰心，继续努力"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">#pragma mark - Navigation</span><br><span class="line"></span><br><span class="line">// In a storyboard-based application, you will often want to do a little preparation before navigation</span><br><span class="line">- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender</span><br><span class="line">&#123;</span><br><span class="line">    // Get the new view controller using [segue destinationViewController].</span><br><span class="line">    // Pass the selected object to the new view controller.</span><br><span class="line">&#125;</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ios/"> #Ios </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/08/07/objective-c-block.html">Objective-c block</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/07/11/python-demo-get-nu.html">Python 抓取某通信号码</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="xjliao" />
+          <p class="site-author-name">xjliao</p>
+        </div>
+        <p class="site-description motion-element">A app & golang developer guy.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/xjliao" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/lxj12323" target="_blank">Twitter</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需实现这两个协议"><span class="nav-number">1.</span> <span class="nav-text">需实现这两个协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIPickerViewDataSource需要实现的方法:"><span class="nav-number">1.1.</span> <span class="nav-text">UIPickerViewDataSource需要实现的方法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIPickerViewDelegate需要实现的方法:"><span class="nav-number">1.2.</span> <span class="nav-text">UIPickerViewDelegate需要实现的方法:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以下是demo"><span class="nav-number">2.</span> <span class="nav-text">以下是demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖选择，联动"><span class="nav-number">2.1.</span> <span class="nav-text">依赖选择，联动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义UIPickerView"><span class="nav-number">2.2.</span> <span class="nav-text">自定义UIPickerView</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2013 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">xjliao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>
