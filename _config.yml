@@ -109,7 +109,7 @@ google_analytics: UA-49849624-1
 baidu_analytics: a5de7a16b42cff0e7c8add36f398ce48 
 
 # Swift search
-swiftype_key: cy4cAaDcSmFXTgbbgz69 
+# swiftype_key: cy4cAaDcSmFXTgbbgz69 
 
 # 站点起始时间
 since: 2013
