@@ -172,6 +172,88 @@
           
           
             
+              <a class="post-title-link" href="/2015/07/09/golang-cross-complie.html">
+                Golang 交叉编译
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-07-09
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在此之前假设你的Golang环境已经设置好了  </p>
+<p>mac 二进制包安装golang默认可以使用linux/windows/freebsd, GOARCH为amd64的交叉编译， 386需要手动添加</p>
+<h2 id=""> </h2><h2 id="准备目标平台的包和工具文件">准备目标平台的包和工具文件</h2><p>以下过程不是重新编译，安装go，而是添加对其他平台的支持。</p>
+<h3 id="方式一">方式一</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/go/src</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=linux GOARCH=<span class="number">386</span> ./make.bash</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=windows GOARCH=<span class="number">386</span> ./make.bash</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=freebsd GOARCH=<span class="number">386</span> ./make.bash</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>CGO_ENABLED=0 表示交叉编译禁用cgo<br>如果go文件夹是owner为root， 请使用sudo  </p>
+</blockquote>
+<p>如果需要提高编译速度，加入。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./make.bash --no-clean</span><br></pre></td></tr></table></figure></p>
+<h3 id="方式二">方式二</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cross-compile-all go</span><br></pre></td></tr></table></figure>
+<p>安装完成后，我们可以看到 Go的安装目录下 多了这个平台特有的几个命令行工具。</p>
+<p>各平台的GOOS和GOARCH参考 </p>
+<table><br><br></table>
+
+<p>OS                   ARCH                          OS version<br>linux                386 / amd64 / arm             &gt;= Linux 2.6<br>darwin               386 / amd64                   OS X (Snow Leopard + Lion)<br>freebsd              386 / amd64                   &gt;= FreeBSD 7<br>windows              386 / amd64                   &gt;= Windows 2000</p>
+<h2 id="编译成对应平台下的执行文件">编译成对应平台下的执行文件</h2><p>到源代码目录下执行:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=linux GOARCH=amd64 go build</span><br></pre></td></tr></table></figure>
+<p>不带前面参数的 go build 只是编译出开发环境适用的执行文件。</p>
+<h2 id="golang-crosscompile工具">golang-crosscompile工具</h2><p>下载地址<br><a href="">github.com/davecheney/golang-crosscompile</a><br>使用方法<br><a href="">http://dave.cheney.net/2012/09/08/an-introduction-to-cross-compilation-with-go</a></p>
+<h3 id="下载脚本">下载脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://github.com/davecheney/golang-crosscompile.git</span><br><span class="line">$ <span class="built_in">source</span> golang-crosscompile/crosscompile.bash</span><br></pre></td></tr></table></figure>
+<h3 id="编译支持所有平台">编译支持所有平台</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go-crosscompile-build-all</span><br></pre></td></tr></table></figure>
+<p>这个时间要花个几分钟</p>
+<h3 id="查看平台的包">查看平台的包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span> $(go env GOROOT)/pkg</span><br></pre></td></tr></table></figure>
+<h3 id="使用交叉编译">使用交叉编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go-linux-arm build</span><br></pre></td></tr></table></figure>
+<p>要不同平台的编译，替换即可, 如<code>go-windows-386 build</code>。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/07/2015-7-07-golang-method-intreface.html">
                 Golang 快速入门 方法 接口
               </a>
@@ -320,80 +402,6 @@
           
           
             
-              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-basic-package-var-constant-function-copy.html">
-                Golang 快速入门 基础 包 变量 函数
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-07-05
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Golang/">Golang</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Golang_快速入门_基础_包_变量_函数">Golang 快速入门 基础 包 变量 函数</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
-<p>格式说明:</p>
-<blockquote>
-<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
-</blockquote>
-<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 包</span></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式1</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式2</span></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"math/cmplx"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多值返回</span></span><br><span class="line"><span class="keyword">func</span> swap(lastname <span class="typename">string</span>, firstname <span class="typename">string</span>) (<span class="typename">string</span>, <span class="typename">string</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> firstname, lastname</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名返回值</span></span><br><span class="line"><span class="keyword">func</span> split(sum <span class="typename">int</span>) (x, y, sm <span class="typename">int</span>) &#123;</span><br><span class="line">	sm = sum</span><br><span class="line">	x = sum * <span class="number">4</span> / <span class="number">9</span></span><br><span class="line">	y = sum - x</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量</span></span><br><span class="line"><span class="keyword">var</span> c, python, java <span class="typename">bool</span></span><br><span class="line"><span class="keyword">var</span> x <span class="typename">int</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化变量</span></span><br><span class="line"><span class="keyword">var</span> v, u <span class="typename">int</span> = <span class="number">2</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量组</span></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	<span class="comment">// Go 基本数据类型</span></span><br><span class="line">	<span class="comment">// bool, string, int, int8, int16, int32, int64,</span></span><br><span class="line">	<span class="comment">// uint, uint8, uint16, uint32, uint64, uintptr,</span></span><br><span class="line">	<span class="comment">// byte(unit8的别名), rune(int32的别名，代表一个Unicode码)</span></span><br><span class="line">	<span class="comment">// float32, float64</span></span><br><span class="line">	ToBe   <span class="typename">bool</span>       = <span class="constant">false</span></span><br><span class="line">	MaxInt <span class="typename">uint64</span>     = <span class="number">1</span>&lt;&lt;<span class="number">64</span> - <span class="number">1</span></span><br><span class="line">	z      <span class="typename">complex128</span> = cmplx.Sqrt(-<span class="number">5</span> + <span class="number">12i</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 常量(常量不能使用 := 语法定义)</span></span><br><span class="line"><span class="keyword">const</span> Pi = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"><span class="comment">//数值常量(数值常量是高精度的值)</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	Big   = <span class="number">1</span> &lt;&lt; <span class="number">100</span></span><br><span class="line">	Small = Big &gt;&gt; <span class="number">99</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needInt(x <span class="typename">int</span>) <span class="typename">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x*<span class="number">10</span> + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needFloat(x <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x * <span class="number">0.1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">//--&gt;多值返回&amp;命名返回值</span></span><br><span class="line">	lastname, firstname := swap(<span class="string">"jian"</span>, <span class="string">"liaoxin"</span>)</span><br><span class="line">	fmt.Println(lastname, firstname)</span><br><span class="line">	fmt.Println(split(<span class="number">100</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;变量</span></span><br><span class="line">	<span class="keyword">var</span> i <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> y <span class="typename">int</span></span><br><span class="line">	fmt.Println(i, c, python, java, x, y)</span><br><span class="line">	fmt.Println(v, u)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 短声明变量，只能在函数内使用，函数外的必须以关键字var, func 等等开头</span></span><br><span class="line">	k := <span class="number">100</span></span><br><span class="line">	fmt.Println(k)</span><br><span class="line">	<span class="comment">//--&gt;Go基本数据类型</span></span><br><span class="line">	fmt.Println(ToBe, MaxInt, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//零值</span></span><br><span class="line">	<span class="keyword">var</span> q <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> f <span class="typename">float64</span></span><br><span class="line">	<span class="keyword">var</span> w <span class="typename">bool</span></span><br><span class="line">	<span class="keyword">var</span> s <span class="typename">string</span></span><br><span class="line">	fmt.Printf(<span class="string">"%v %v %v %q\n"</span>, q, f, w, s)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型转换</span></span><br><span class="line">	<span class="keyword">var</span> x, g <span class="typename">int</span> = <span class="number">3</span>, <span class="number">4</span></span><br><span class="line">	<span class="keyword">var</span> r <span class="typename">float64</span> = math.Sqrt(<span class="typename">float64</span>(x*x + g*g))</span><br><span class="line">	<span class="keyword">var</span> z <span class="typename">int</span> = <span class="typename">int</span>(r)</span><br><span class="line">	fmt.Println(x, g, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型推导</span></span><br><span class="line">	v := <span class="number">42</span></span><br><span class="line">	fmt.Printf(<span class="string">"v的类型是%T\n"</span>, v)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;常量</span></span><br><span class="line">	<span class="keyword">const</span> World = <span class="string">"世界"</span></span><br><span class="line">	fmt.Println(<span class="string">"你好"</span>, World)</span><br><span class="line">	fmt.Println(<span class="string">"原周率Pi="</span>, Pi)</span><br><span class="line">	<span class="keyword">const</span> Truth = <span class="constant">true</span></span><br><span class="line">	fmt.Println(<span class="string">"Go rules?"</span>, Truth)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;数值常量</span></span><br><span class="line">	fmt.Println(needInt(Small))</span><br><span class="line">	fmt.Println(needFloat(Small))</span><br><span class="line">	fmt.Println(needFloat(Big))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">
                 Golang 快速入门 流程控制语句
               </a>
@@ -439,6 +447,80 @@
 <p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
 </blockquote>
 <figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"runtime"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> sqrt(x <span class="typename">float64</span>) <span class="typename">string</span> &#123;</span><br><span class="line">	<span class="comment">// if</span></span><br><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> sqrt(-x) + <span class="string">"i"</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"x &lt; 0"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> fmt.Sprint(math.Sqrt(x))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// if 便捷语句</span></span><br><span class="line"><span class="keyword">func</span> pow(x, n, lim <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> v := math.Pow(x, n); v &lt; lim &#123;</span><br><span class="line">		<span class="keyword">return</span> v</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> lim</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">// for</span></span><br><span class="line">	sum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">		sum += i</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sum)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// for 续</span></span><br><span class="line">	sumb := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumb &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumb += sumb</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumb)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// while 用for表示， 所以没有while了</span></span><br><span class="line">	sumc := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumc &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumc += sumc</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumc)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 无限循环 这里先注释掉， 要不然后面无法执行</span></span><br><span class="line">	<span class="comment">//for &#123;</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if else</span></span><br><span class="line">	fmt.Println(sqrt(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if 便捷语句</span></span><br><span class="line">	fmt.Println(pow(<span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">// switch 当符合</span></span><br><span class="line">	<span class="comment">// fallthrough  这个关键字的作用和java的switch 不加break的</span></span><br><span class="line">	<span class="comment">// 执行顺序有上而下，匹配成功停止</span></span><br><span class="line">	fmt.Print(<span class="string">"Go runs on "</span>)</span><br><span class="line">	<span class="keyword">switch</span> os := runtime.GOOS; os &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"linux"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Linux."</span>)</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"darwin"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"OS X"</span>)</span><br><span class="line">		<span class="comment">// 当进入这里时，使用fallthrough，还会执行defluat</span></span><br><span class="line">		<span class="keyword">fallthrough</span></span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="comment">// freebsd, openbsd,</span></span><br><span class="line">		fmt.Println(<span class="string">"%s"</span>, os)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 没有条件的switch</span></span><br><span class="line">	<span class="comment">// 和 switch true &#123;</span></span><br><span class="line">	<span class="comment">//case:</span></span><br><span class="line">	<span class="comment">//default:</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line">	<span class="comment">// 一样</span></span><br><span class="line">	t := time.Now()</span><br><span class="line">	<span class="keyword">switch</span> &#123;</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good morning."</span>)</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">17</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good afternoon."</span>)</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good evening."</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// defer 延迟函数的执行直到上层函数返回</span></span><br><span class="line">	<span class="comment">// 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用</span></span><br><span class="line">	<span class="keyword">defer</span> World()</span><br><span class="line">	fmt.Println(<span class="string">"hello"</span>)</span><br><span class="line">	<span class="comment">// defer 栈</span></span><br><span class="line">	fmt.Println(<span class="string">"counting....."</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">		<span class="keyword">defer</span> fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">"done"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> World() &#123;</span><br><span class="line">	fmt.Println(<span class="string">"world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-basic-package-var-constant-function-copy.html">
+                Golang 快速入门 基础 包 变量 函数
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-07-05
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Golang/">Golang</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Golang_快速入门_基础_包_变量_函数">Golang 快速入门 基础 包 变量 函数</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
+<p>格式说明:</p>
+<blockquote>
+<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
+</blockquote>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 包</span></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式1</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式2</span></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"math/cmplx"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多值返回</span></span><br><span class="line"><span class="keyword">func</span> swap(lastname <span class="typename">string</span>, firstname <span class="typename">string</span>) (<span class="typename">string</span>, <span class="typename">string</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> firstname, lastname</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名返回值</span></span><br><span class="line"><span class="keyword">func</span> split(sum <span class="typename">int</span>) (x, y, sm <span class="typename">int</span>) &#123;</span><br><span class="line">	sm = sum</span><br><span class="line">	x = sum * <span class="number">4</span> / <span class="number">9</span></span><br><span class="line">	y = sum - x</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量</span></span><br><span class="line"><span class="keyword">var</span> c, python, java <span class="typename">bool</span></span><br><span class="line"><span class="keyword">var</span> x <span class="typename">int</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化变量</span></span><br><span class="line"><span class="keyword">var</span> v, u <span class="typename">int</span> = <span class="number">2</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量组</span></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	<span class="comment">// Go 基本数据类型</span></span><br><span class="line">	<span class="comment">// bool, string, int, int8, int16, int32, int64,</span></span><br><span class="line">	<span class="comment">// uint, uint8, uint16, uint32, uint64, uintptr,</span></span><br><span class="line">	<span class="comment">// byte(unit8的别名), rune(int32的别名，代表一个Unicode码)</span></span><br><span class="line">	<span class="comment">// float32, float64</span></span><br><span class="line">	ToBe   <span class="typename">bool</span>       = <span class="constant">false</span></span><br><span class="line">	MaxInt <span class="typename">uint64</span>     = <span class="number">1</span>&lt;&lt;<span class="number">64</span> - <span class="number">1</span></span><br><span class="line">	z      <span class="typename">complex128</span> = cmplx.Sqrt(-<span class="number">5</span> + <span class="number">12i</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 常量(常量不能使用 := 语法定义)</span></span><br><span class="line"><span class="keyword">const</span> Pi = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"><span class="comment">//数值常量(数值常量是高精度的值)</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	Big   = <span class="number">1</span> &lt;&lt; <span class="number">100</span></span><br><span class="line">	Small = Big &gt;&gt; <span class="number">99</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needInt(x <span class="typename">int</span>) <span class="typename">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x*<span class="number">10</span> + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needFloat(x <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x * <span class="number">0.1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">//--&gt;多值返回&amp;命名返回值</span></span><br><span class="line">	lastname, firstname := swap(<span class="string">"jian"</span>, <span class="string">"liaoxin"</span>)</span><br><span class="line">	fmt.Println(lastname, firstname)</span><br><span class="line">	fmt.Println(split(<span class="number">100</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;变量</span></span><br><span class="line">	<span class="keyword">var</span> i <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> y <span class="typename">int</span></span><br><span class="line">	fmt.Println(i, c, python, java, x, y)</span><br><span class="line">	fmt.Println(v, u)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 短声明变量，只能在函数内使用，函数外的必须以关键字var, func 等等开头</span></span><br><span class="line">	k := <span class="number">100</span></span><br><span class="line">	fmt.Println(k)</span><br><span class="line">	<span class="comment">//--&gt;Go基本数据类型</span></span><br><span class="line">	fmt.Println(ToBe, MaxInt, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//零值</span></span><br><span class="line">	<span class="keyword">var</span> q <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> f <span class="typename">float64</span></span><br><span class="line">	<span class="keyword">var</span> w <span class="typename">bool</span></span><br><span class="line">	<span class="keyword">var</span> s <span class="typename">string</span></span><br><span class="line">	fmt.Printf(<span class="string">"%v %v %v %q\n"</span>, q, f, w, s)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型转换</span></span><br><span class="line">	<span class="keyword">var</span> x, g <span class="typename">int</span> = <span class="number">3</span>, <span class="number">4</span></span><br><span class="line">	<span class="keyword">var</span> r <span class="typename">float64</span> = math.Sqrt(<span class="typename">float64</span>(x*x + g*g))</span><br><span class="line">	<span class="keyword">var</span> z <span class="typename">int</span> = <span class="typename">int</span>(r)</span><br><span class="line">	fmt.Println(x, g, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型推导</span></span><br><span class="line">	v := <span class="number">42</span></span><br><span class="line">	fmt.Printf(<span class="string">"v的类型是%T\n"</span>, v)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;常量</span></span><br><span class="line">	<span class="keyword">const</span> World = <span class="string">"世界"</span></span><br><span class="line">	fmt.Println(<span class="string">"你好"</span>, World)</span><br><span class="line">	fmt.Println(<span class="string">"原周率Pi="</span>, Pi)</span><br><span class="line">	<span class="keyword">const</span> Truth = <span class="constant">true</span></span><br><span class="line">	fmt.Println(<span class="string">"Go rules?"</span>, Truth)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;数值常量</span></span><br><span class="line">	fmt.Println(needInt(Small))</span><br><span class="line">	fmt.Println(needFloat(Small))</span><br><span class="line">	fmt.Println(needFloat(Big))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
     </div>
@@ -2507,81 +2589,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/11/oc-perform-nsmethodsignature-nsinvocation.html">
-                Objective-c NSMethodSignature NSInvocation
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Objective-c/">Objective-c</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>给某个对象发送消息后者说调用某个对象的方法<br>有两种方式:</p>
-<h2 id="第一种方式">第一种方式</h2><p>delay表示多少秒后执行</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)performSelector:(SEL)aSelector withObject:(<span class="keyword">id</span>)anArgument afterDelay:(<span class="built_in">NSTimeInterval</span>)delay;</span><br></pre></td></tr></table></figure> 
-<h2 id="第二种方式:">第二种方式:</h2><p>NSMethodSignature  NSInvocation</p>
-<p>实现的第一种方式的delay，需要配合下面使用<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">NSTimer</span> *)timerWithTimeInterval:(<span class="built_in">NSTimeInterval</span>)ti invocation:(<span class="built_in">NSInvocation</span> *)invocation repeats:(<span class="built_in">BOOL</span>)yesOrNo;</span><br></pre></td></tr></table></figure> </p>
-<h2 id="demo">demo</h2><p>10秒后执行<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">SEL mySelector = <span class="keyword">@selector</span>(postRequest);</span><br><span class="line"><span class="comment">// 第一种方式</span></span><br><span class="line">[<span class="keyword">self</span> performSelector:mySelector withObject:<span class="keyword">self</span> afterDelay:<span class="number">10</span>];</span><br><span class="line"><span class="comment">// 第二种方式</span></span><br><span class="line"><span class="comment">// 需要调用方法所在class</span></span><br><span class="line"><span class="built_in">NSMethodSignature</span> *sig = [[InvokeMethodClass class] instanceMethodSignatureForSelector:mySelector];</span><br><span class="line"><span class="built_in">NSInvocation</span> *iv = [<span class="built_in">NSInvocation</span> invocationWithMethodSignature:sig];</span><br><span class="line">[iv setSelector:mySelector];</span><br><span class="line"><span class="comment">// 需要调用方法所在的target</span></span><br><span class="line">[iv setTarget:<span class="keyword">self</span>];</span><br><span class="line"><span class="comment">//  timerWithTimeInterval:多少秒后出发 repeats:是否重复执行 </span></span><br><span class="line"><span class="comment">// 如果不适用定时器， 则需要[iv invoke];</span></span><br><span class="line">[<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">10</span> invocation:iv repeats:<span class="literal">NO</span>];</span><br><span class="line">    </span><br><span class="line">- (<span class="keyword">void</span>)postRequest &#123;</span><br><span class="line">	<span class="comment">// Do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2620,7 +2627,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-count">81</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
