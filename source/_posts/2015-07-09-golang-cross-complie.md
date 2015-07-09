@@ -2,7 +2,7 @@ title: Golang 交叉编译
 date: 2015-07-09 14:44:32
 tags:
  - Golang
-categries:
+categories:
  - Golang
  
 ---
