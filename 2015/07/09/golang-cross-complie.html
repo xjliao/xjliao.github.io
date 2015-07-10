@@ -229,8 +229,9 @@
 <p>这个时间要花个几分钟</p>
 <h3 id="查看平台的包">查看平台的包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span> $(go env GOROOT)/pkg</span><br></pre></td></tr></table></figure>
 <h3 id="使用交叉编译">使用交叉编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go-linux-arm build</span><br></pre></td></tr></table></figure>
-<p>要不同平台的编译，替换即可, 如<code>go-windows-386 build</code>。</p>
-
+<p>要不同平台的编译，替换即可, 如:go-windows-386 build </p>
+<p>为方面以后使用,将下面的加入到.bashrc或.zshrc</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/.golang-crosscomplie</span><br><span class="line">$ cp golang-crosscompile/crosscompile.bash  ~./golang-crosscomplie</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
       
     </div>
 
