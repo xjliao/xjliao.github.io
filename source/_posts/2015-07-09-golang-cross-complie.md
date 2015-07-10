@@ -88,4 +88,12 @@ $ ls -1 $(go env GOROOT)/pkg
 $ go-linux-arm build
 ```
 
-要不同平台的编译，替换即可, 如```go-windows-386 build```。
+要不同平台的编译，替换即可, 如:go-windows-386 build 
+
+为方面以后使用,将下面的加入到.bashrc或.zshrc
+
+```bash
+$ mkdir ~/.golang-crosscomplie
+$ cp golang-crosscompile/crosscompile.bash  ~./golang-crosscomplie
+$ source ~/.zshrc
+```
