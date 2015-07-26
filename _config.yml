@@ -132,7 +132,7 @@ deploy:
 - type: ftpsync
   host: 106.186.19.59
   user: xjliao 
-  pass: SUPlxj169
+  pass: qaz[;. 
   remote: /blogserver/html
   port: 21 
   connections: 2
