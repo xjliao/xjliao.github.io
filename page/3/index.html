@@ -404,6 +404,84 @@
           
           
             
+              <a class="post-title-link" href="/2013/07/26/linux-ddos-defense.html">
+                Linux ddos defense
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-07-26
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><a href="http://deflate.medialayer.com/" target="_blank" rel="external">官网:http://deflate.medialayer.com/</a></p>
+<h2 id="About">About</h2><p>(D)DoS Deflate is a lightweight bash shell script designed to assist in the process of blocking a denial of service attack. It utilizes the command below to create a list of IP addresses connected to the server, along with their total number of connections. It is one of the simplest and easiest to install solutions at the software level.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntu | awk <span class="string">'&#123;print $5&#125;'</span> | cut <span class="operator">-d</span>: <span class="operator">-f</span>1 | sort | uniq -c | sort -n</span><br></pre></td></tr></table></figure>
+<p>IP addresses with over a pre-configured number of connections are automatically blocked in the server’s firewall, which can be direct iptables or Advanced Policy Firewall (APF). (We highly recommend that you use APF on your server in general, but deflate will work without it.)</p>
+<h2 id="Notable_Features">Notable Features</h2><p>It is possible to whitelist IP addresses, via /usr/local/ddos/ignore.ip.list.<br>Simple configuration file: /usr/local/ddos/ddos.conf<br>IP addresses are automatically unblocked after a preconfigured time limit (default: 600 seconds)<br>The script can run at a chosen frequency via the configuration file (default: 1 minute)<br>You can receive email alerts when IP addresses are blocked.</p>
+<h2 id="Installation">Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.inetbase.com/scripts/ddos/install.sh</span><br><span class="line">chmod <span class="number">0700</span> install.sh</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+<h2 id="Uninstallation">Uninstallation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.inetbase.com/scripts/ddos/uninstall.ddos</span><br><span class="line">chmod <span class="number">0700</span> uninstall.ddos</span><br><span class="line">./uninstall.ddos</span><br></pre></td></tr></table></figure>
+<h2 id="Questions?">Questions?</h2><p>Although most things are explained on this page, if you have any further questions, you may contact the original developer of the script, Zaf.</p>
+<h2 id="Ban_ping">Ban ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p icmp --icmp-type <span class="number">8</span> <span class="operator">-s</span> <span class="number">0</span>/<span class="number">0</span> -j DROP</span><br></pre></td></tr></table></figure>
+<h2 id="Allow_ping">Allow ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -D INPUT -p icmp --icmp-type <span class="number">8</span> <span class="operator">-s</span> <span class="number">0</span>/<span class="number">0</span> -j DROP</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/07/16/ios-uipickerview.html">
                 Ios UIPickerView demo
               </a>
@@ -1845,6 +1923,78 @@
           
           
             
+              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
+                ssh 无密码登陆
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-03-19
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="operator">-f</span> ~/.ssh/id_rsa</span><br><span class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@<span class="number">106.186</span>.<span class="number">19.59</span>:/home/xjliao/</span><br><span class="line">xjliao@<span class="number">106.186</span>.<span class="number">19.59</span><span class="string">'s password: </span><br><span class="line">id_rsa.pub                                                                                                                  100% 219</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span><br><span class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~] exit</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span></span><br></pre></td></tr></table></figure>
+<p>哦了</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/03/19/jekyll-github.html">
                 jekyll+github 搭建博客
               </a>
@@ -1965,78 +2115,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
-                ssh 无密码登陆
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-03-19
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="operator">-f</span> ~/.ssh/id_rsa</span><br><span class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@<span class="number">106.186</span>.<span class="number">19.59</span>:/home/xjliao/</span><br><span class="line">xjliao@<span class="number">106.186</span>.<span class="number">19.59</span><span class="string">'s password: </span><br><span class="line">id_rsa.pub                                                                                                                  100% 219</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span><br><span class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~] exit</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span></span><br></pre></td></tr></table></figure>
-<p>哦了</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2075,7 +2153,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">81</span>
+              <span class="site-state-item-count">82</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

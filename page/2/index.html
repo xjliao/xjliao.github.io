@@ -1642,8 +1642,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
-                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
+              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
+                Linux python 安装或者升级
               </a>
             
           
@@ -1659,7 +1659,7 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Centos/">Centos</a>
+              <a href="/categories/Python/">Python</a>
 
               
               
@@ -1667,15 +1667,7 @@
               
 
             
-              <a href="/categories/Centos/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/Django/">Django</a>
+              <a href="/categories/Python/Linux/">Linux</a>
 
               
               
@@ -1697,7 +1689,10 @@
 
       
         
-          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo yum install sqlite-devel</span><br></pre></td></tr></table></figure></p>
+          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ python --version</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ wget https://www.python.org/ftp/python/<span class="number">2.7</span>.<span class="number">8</span>/Python-<span class="number">2.7</span>.<span class="number">8</span>.tar.xz</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ tar -Jxvf ./Python-<span class="number">2.7</span>.<span class="number">8</span>.tar.xz</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ <span class="built_in">cd</span> ./Python-<span class="number">2.7</span>.<span class="number">8</span></span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-<span class="number">2.7</span>.<span class="number">8</span>/ &amp;&amp; sudo make &amp;&amp; sudo make install</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo cp /usr/<span class="built_in">local</span>/python-<span class="number">2.7</span>.<span class="number">8</span>/bin/python /usr/bin/python</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ python --version</span><br></pre></td></tr></table></figure></p>
+<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~] sudo vim /usr/bin/yum</span><br><span class="line"><span class="comment">#!/usr/bin/python2.6</span></span><br></pre></td></tr></table></figure>
+<p>修改为原来的版本即可</p>
 
         
       
@@ -1965,8 +1960,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
-                Linux python 安装或者升级
+              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
+                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
               </a>
             
           
@@ -1982,7 +1977,7 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/Centos/">Centos</a>
 
               
               
@@ -1990,7 +1985,15 @@
               
 
             
-              <a href="/categories/Python/Linux/">Linux</a>
+              <a href="/categories/Centos/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/Django/">Django</a>
 
               
               
@@ -2012,10 +2015,7 @@
 
       
         
-          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ python --version</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ wget https://www.python.org/ftp/python/<span class="number">2.7</span>.<span class="number">8</span>/Python-<span class="number">2.7</span>.<span class="number">8</span>.tar.xz</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ tar -Jxvf ./Python-<span class="number">2.7</span>.<span class="number">8</span>.tar.xz</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ <span class="built_in">cd</span> ./Python-<span class="number">2.7</span>.<span class="number">8</span></span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-<span class="number">2.7</span>.<span class="number">8</span>/ &amp;&amp; sudo make &amp;&amp; sudo make install</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo cp /usr/<span class="built_in">local</span>/python-<span class="number">2.7</span>.<span class="number">8</span>/bin/python /usr/bin/python</span><br><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ python --version</span><br></pre></td></tr></table></figure></p>
-<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~] sudo vim /usr/bin/yum</span><br><span class="line"><span class="comment">#!/usr/bin/python2.6</span></span><br></pre></td></tr></table></figure>
-<p>修改为原来的版本即可</p>
+          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[xjliao@li539-<span class="number">59</span> ~]$ sudo yum install sqlite-devel</span><br></pre></td></tr></table></figure></p>
 
         
       
@@ -2556,7 +2556,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">81</span>
+              <span class="site-state-item-count">82</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
