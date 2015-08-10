@@ -172,6 +172,88 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/10/linux-nginx-init-script-autostart.html">
+                Linux nginx autostart scripts
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-08-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Linux/Nginx/">Nginx</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Should work on RHEL, Fedora, CentOS. Tested on CentOS 5.</p>
+<p>Save this file as [/etc/init.d/nginx]</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># nginx - this script starts and stops the nginx daemon</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># chkconfig:   - 85 15 </span></span><br><span class="line"><span class="comment"># description:  Nginx is an HTTP(S) server, HTTP(S) reverse \</span></span><br><span class="line"><span class="comment">#               proxy and IMAP/POP3 proxy server</span></span><br><span class="line"><span class="comment"># processname: nginx</span></span><br><span class="line"><span class="comment"># config:      /etc/nginx/nginx.conf</span></span><br><span class="line"><span class="comment"># config:      /etc/sysconfig/nginx</span></span><br><span class="line"><span class="comment"># pidfile:     /var/run/nginx.pid</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"> </span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line">[ <span class="string">"<span class="variable">$NETWORKING</span>"</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Your nginx config </span></span><br><span class="line">nginx=<span class="string">"/usr/sbin/nginx"</span></span><br><span class="line">prog=$(basename <span class="variable">$nginx</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Your nginx config </span></span><br><span class="line">NGINX_CONF_FILE=<span class="string">"/etc/nginx/nginx.conf"</span></span><br><span class="line"> </span><br><span class="line">[ <span class="operator">-f</span> /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx</span><br><span class="line"> </span><br><span class="line">lockfile=/var/lock/subsys/nginx</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">make_dirs</span></span>() &#123;</span><br><span class="line">   <span class="comment"># make required directories</span></span><br><span class="line">   user=`<span class="variable">$nginx</span> -V <span class="number">2</span>&gt;&amp;<span class="number">1</span> | grep <span class="string">"configure arguments:"</span> | sed <span class="string">'s/[^*]*--user=\([^ ]*\).*/\1/g'</span> -`</span><br><span class="line">   <span class="keyword">if</span> [ -z <span class="string">"`grep <span class="variable">$user</span> /etc/passwd`"</span> ]; <span class="keyword">then</span></span><br><span class="line">       useradd -M <span class="operator">-s</span> /bin/nologin <span class="variable">$user</span></span><br><span class="line">   <span class="keyword">fi</span></span><br><span class="line">   options=`<span class="variable">$nginx</span> -V <span class="number">2</span>&gt;&amp;<span class="number">1</span> | grep <span class="string">'configure arguments:'</span>`</span><br><span class="line">   <span class="keyword">for</span> opt <span class="keyword">in</span> <span class="variable">$options</span>; <span class="keyword">do</span></span><br><span class="line">       <span class="keyword">if</span> [ `<span class="built_in">echo</span> <span class="variable">$opt</span> | grep <span class="string">'.*-temp-path'</span>` ]; <span class="keyword">then</span></span><br><span class="line">           value=`<span class="built_in">echo</span> <span class="variable">$opt</span> | cut <span class="operator">-d</span> <span class="string">"="</span> <span class="operator">-f</span> <span class="number">2</span>`</span><br><span class="line">           <span class="keyword">if</span> [ ! <span class="operator">-d</span> <span class="string">"<span class="variable">$value</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">               <span class="comment"># echo "creating" $value</span></span><br><span class="line">               mkdir -p <span class="variable">$value</span> &amp;&amp; chown -R <span class="variable">$user</span> <span class="variable">$value</span></span><br><span class="line">           <span class="keyword">fi</span></span><br><span class="line">       <span class="keyword">fi</span></span><br><span class="line">   <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line">    [ -x <span class="variable">$nginx</span> ] || <span class="built_in">exit</span> <span class="number">5</span></span><br><span class="line">    [ <span class="operator">-f</span> <span class="variable">$NGINX_CONF_FILE</span> ] || <span class="built_in">exit</span> <span class="number">6</span></span><br><span class="line">    make_<span class="built_in">dirs</span></span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">    daemon <span class="variable">$nginx</span> -c <span class="variable">$NGINX_CONF_FILE</span></span><br><span class="line">    retval=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">    [ <span class="variable">$retval</span> <span class="operator">-eq</span> <span class="number">0</span> ] &amp;&amp; touch <span class="variable">$lockfile</span></span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$retval</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">    killproc <span class="variable">$prog</span> -QUIT</span><br><span class="line">    retval=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">    [ <span class="variable">$retval</span> <span class="operator">-eq</span> <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> <span class="variable">$lockfile</span></span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$retval</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">restart</span></span>() &#123;</span><br><span class="line">    configtest || <span class="built_in">return</span> $?</span><br><span class="line">    stop</span><br><span class="line">    sleep <span class="number">1</span></span><br><span class="line">    start</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line">    configtest || <span class="built_in">return</span> $?</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">    killproc <span class="variable">$nginx</span> -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">force_reload</span></span>() &#123;</span><br><span class="line">    restart</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">configtest</span></span>() &#123;</span><br><span class="line">  <span class="variable">$nginx</span> -t -c <span class="variable">$NGINX_CONF_FILE</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">rh_status</span></span>() &#123;</span><br><span class="line">    status <span class="variable">$prog</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">rh_status_q</span></span>() &#123;</span><br><span class="line">    rh_status &gt;/dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">    start)</span><br><span class="line">        rh_status_q &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">        <span class="variable">$1</span></span><br><span class="line">        ;;</span><br><span class="line">    stop)</span><br><span class="line">        rh_status_q || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">        <span class="variable">$1</span></span><br><span class="line">        ;;</span><br><span class="line">    restart|configtest)</span><br><span class="line">        <span class="variable">$1</span></span><br><span class="line">        ;;</span><br><span class="line">    reload)</span><br><span class="line">        rh_status_q || <span class="built_in">exit</span> <span class="number">7</span></span><br><span class="line">        <span class="variable">$1</span></span><br><span class="line">        ;;</span><br><span class="line">    force-reload)</span><br><span class="line">        force_reload</span><br><span class="line">        ;;</span><br><span class="line">    status)</span><br><span class="line">        rh_status</span><br><span class="line">        ;;</span><br><span class="line">    condrestart|try-restart)</span><br><span class="line">        rh_status_q || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">            ;;</span><br><span class="line">    *)</span><br><span class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$0</span> &#123;start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest&#125;"</span></span><br><span class="line">        <span class="built_in">exit</span> <span class="number">2</span></span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/init.d/nginx</span><br><span class="line">sudo chkconfig --add /etc/init.d/nginx</span><br><span class="line">sudo chkconfig nginx on</span><br></pre></td></tr></table></figure>
+<p>from:<br><a href="http://wiki.nginx.org/RedHatNginxInitScript" target="_blank" rel="external">http://wiki.nginx.org/RedHatNginxInitScript</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/09/golang-cross-complie.html">
                 Golang 交叉编译
               </a>
@@ -414,80 +496,6 @@
           
           
             
-              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">
-                Golang 快速入门 流程控制语句
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-07-05
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Golang/">Golang</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Golang_快速入门_流程控制语句">Golang 快速入门 流程控制语句</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
-<p>格式说明:</p>
-<blockquote>
-<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
-</blockquote>
-<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"runtime"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> sqrt(x <span class="typename">float64</span>) <span class="typename">string</span> &#123;</span><br><span class="line">	<span class="comment">// if</span></span><br><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> sqrt(-x) + <span class="string">"i"</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"x &lt; 0"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> fmt.Sprint(math.Sqrt(x))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// if 便捷语句</span></span><br><span class="line"><span class="keyword">func</span> pow(x, n, lim <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> v := math.Pow(x, n); v &lt; lim &#123;</span><br><span class="line">		<span class="keyword">return</span> v</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> lim</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">// for</span></span><br><span class="line">	sum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">		sum += i</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sum)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// for 续</span></span><br><span class="line">	sumb := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumb &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumb += sumb</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumb)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// while 用for表示， 所以没有while了</span></span><br><span class="line">	sumc := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumc &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumc += sumc</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumc)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 无限循环 这里先注释掉， 要不然后面无法执行</span></span><br><span class="line">	<span class="comment">//for &#123;</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if else</span></span><br><span class="line">	fmt.Println(sqrt(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if 便捷语句</span></span><br><span class="line">	fmt.Println(pow(<span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">// switch 当符合</span></span><br><span class="line">	<span class="comment">// fallthrough  这个关键字的作用和java的switch 不加break的</span></span><br><span class="line">	<span class="comment">// 执行顺序有上而下，匹配成功停止</span></span><br><span class="line">	fmt.Print(<span class="string">"Go runs on "</span>)</span><br><span class="line">	<span class="keyword">switch</span> os := runtime.GOOS; os &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"linux"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Linux."</span>)</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"darwin"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"OS X"</span>)</span><br><span class="line">		<span class="comment">// 当进入这里时，使用fallthrough，还会执行defluat</span></span><br><span class="line">		<span class="keyword">fallthrough</span></span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="comment">// freebsd, openbsd,</span></span><br><span class="line">		fmt.Println(<span class="string">"%s"</span>, os)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 没有条件的switch</span></span><br><span class="line">	<span class="comment">// 和 switch true &#123;</span></span><br><span class="line">	<span class="comment">//case:</span></span><br><span class="line">	<span class="comment">//default:</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line">	<span class="comment">// 一样</span></span><br><span class="line">	t := time.Now()</span><br><span class="line">	<span class="keyword">switch</span> &#123;</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good morning."</span>)</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">17</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good afternoon."</span>)</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good evening."</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// defer 延迟函数的执行直到上层函数返回</span></span><br><span class="line">	<span class="comment">// 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用</span></span><br><span class="line">	<span class="keyword">defer</span> World()</span><br><span class="line">	fmt.Println(<span class="string">"hello"</span>)</span><br><span class="line">	<span class="comment">// defer 栈</span></span><br><span class="line">	fmt.Println(<span class="string">"counting....."</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">		<span class="keyword">defer</span> fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">"done"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> World() &#123;</span><br><span class="line">	fmt.Println(<span class="string">"world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-basic-package-var-constant-function-copy.html">
                 Golang 快速入门 基础 包 变量 函数
               </a>
@@ -533,6 +541,80 @@
 <p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
 </blockquote>
 <figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 包</span></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式1</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式2</span></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"math/cmplx"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多值返回</span></span><br><span class="line"><span class="keyword">func</span> swap(lastname <span class="typename">string</span>, firstname <span class="typename">string</span>) (<span class="typename">string</span>, <span class="typename">string</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> firstname, lastname</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名返回值</span></span><br><span class="line"><span class="keyword">func</span> split(sum <span class="typename">int</span>) (x, y, sm <span class="typename">int</span>) &#123;</span><br><span class="line">	sm = sum</span><br><span class="line">	x = sum * <span class="number">4</span> / <span class="number">9</span></span><br><span class="line">	y = sum - x</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量</span></span><br><span class="line"><span class="keyword">var</span> c, python, java <span class="typename">bool</span></span><br><span class="line"><span class="keyword">var</span> x <span class="typename">int</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化变量</span></span><br><span class="line"><span class="keyword">var</span> v, u <span class="typename">int</span> = <span class="number">2</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量组</span></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	<span class="comment">// Go 基本数据类型</span></span><br><span class="line">	<span class="comment">// bool, string, int, int8, int16, int32, int64,</span></span><br><span class="line">	<span class="comment">// uint, uint8, uint16, uint32, uint64, uintptr,</span></span><br><span class="line">	<span class="comment">// byte(unit8的别名), rune(int32的别名，代表一个Unicode码)</span></span><br><span class="line">	<span class="comment">// float32, float64</span></span><br><span class="line">	ToBe   <span class="typename">bool</span>       = <span class="constant">false</span></span><br><span class="line">	MaxInt <span class="typename">uint64</span>     = <span class="number">1</span>&lt;&lt;<span class="number">64</span> - <span class="number">1</span></span><br><span class="line">	z      <span class="typename">complex128</span> = cmplx.Sqrt(-<span class="number">5</span> + <span class="number">12i</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 常量(常量不能使用 := 语法定义)</span></span><br><span class="line"><span class="keyword">const</span> Pi = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"><span class="comment">//数值常量(数值常量是高精度的值)</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	Big   = <span class="number">1</span> &lt;&lt; <span class="number">100</span></span><br><span class="line">	Small = Big &gt;&gt; <span class="number">99</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needInt(x <span class="typename">int</span>) <span class="typename">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x*<span class="number">10</span> + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> needFloat(x <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> x * <span class="number">0.1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//-----</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">//--&gt;多值返回&amp;命名返回值</span></span><br><span class="line">	lastname, firstname := swap(<span class="string">"jian"</span>, <span class="string">"liaoxin"</span>)</span><br><span class="line">	fmt.Println(lastname, firstname)</span><br><span class="line">	fmt.Println(split(<span class="number">100</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;变量</span></span><br><span class="line">	<span class="keyword">var</span> i <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> y <span class="typename">int</span></span><br><span class="line">	fmt.Println(i, c, python, java, x, y)</span><br><span class="line">	fmt.Println(v, u)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 短声明变量，只能在函数内使用，函数外的必须以关键字var, func 等等开头</span></span><br><span class="line">	k := <span class="number">100</span></span><br><span class="line">	fmt.Println(k)</span><br><span class="line">	<span class="comment">//--&gt;Go基本数据类型</span></span><br><span class="line">	fmt.Println(ToBe, MaxInt, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//零值</span></span><br><span class="line">	<span class="keyword">var</span> q <span class="typename">int</span></span><br><span class="line">	<span class="keyword">var</span> f <span class="typename">float64</span></span><br><span class="line">	<span class="keyword">var</span> w <span class="typename">bool</span></span><br><span class="line">	<span class="keyword">var</span> s <span class="typename">string</span></span><br><span class="line">	fmt.Printf(<span class="string">"%v %v %v %q\n"</span>, q, f, w, s)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型转换</span></span><br><span class="line">	<span class="keyword">var</span> x, g <span class="typename">int</span> = <span class="number">3</span>, <span class="number">4</span></span><br><span class="line">	<span class="keyword">var</span> r <span class="typename">float64</span> = math.Sqrt(<span class="typename">float64</span>(x*x + g*g))</span><br><span class="line">	<span class="keyword">var</span> z <span class="typename">int</span> = <span class="typename">int</span>(r)</span><br><span class="line">	fmt.Println(x, g, z)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型推导</span></span><br><span class="line">	v := <span class="number">42</span></span><br><span class="line">	fmt.Printf(<span class="string">"v的类型是%T\n"</span>, v)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;常量</span></span><br><span class="line">	<span class="keyword">const</span> World = <span class="string">"世界"</span></span><br><span class="line">	fmt.Println(<span class="string">"你好"</span>, World)</span><br><span class="line">	fmt.Println(<span class="string">"原周率Pi="</span>, Pi)</span><br><span class="line">	<span class="keyword">const</span> Truth = <span class="constant">true</span></span><br><span class="line">	fmt.Println(<span class="string">"Go rules?"</span>, Truth)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;数值常量</span></span><br><span class="line">	fmt.Println(needInt(Small))</span><br><span class="line">	fmt.Println(needFloat(Small))</span><br><span class="line">	fmt.Println(needFloat(Big))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">
+                Golang 快速入门 流程控制语句
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-07-05
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Golang/">Golang</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Golang_快速入门_流程控制语句">Golang 快速入门 流程控制语句</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
+<p>格式说明:</p>
+<blockquote>
+<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
+</blockquote>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">	<span class="string">"runtime"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> sqrt(x <span class="typename">float64</span>) <span class="typename">string</span> &#123;</span><br><span class="line">	<span class="comment">// if</span></span><br><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> sqrt(-x) + <span class="string">"i"</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"x &lt; 0"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> fmt.Sprint(math.Sqrt(x))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// if 便捷语句</span></span><br><span class="line"><span class="keyword">func</span> pow(x, n, lim <span class="typename">float64</span>) <span class="typename">float64</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> v := math.Pow(x, n); v &lt; lim &#123;</span><br><span class="line">		<span class="keyword">return</span> v</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> lim</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	<span class="comment">// for</span></span><br><span class="line">	sum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">		sum += i</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sum)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// for 续</span></span><br><span class="line">	sumb := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumb &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumb += sumb</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumb)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// while 用for表示， 所以没有while了</span></span><br><span class="line">	sumc := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> sumc &lt; <span class="number">1000</span> &#123;</span><br><span class="line">		sumc += sumc</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(sumc)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 无限循环 这里先注释掉， 要不然后面无法执行</span></span><br><span class="line">	<span class="comment">//for &#123;</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if else</span></span><br><span class="line">	fmt.Println(sqrt(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//--&gt;if 便捷语句</span></span><br><span class="line">	fmt.Println(pow(<span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>))</span><br><span class="line"></span><br><span class="line">	<span class="comment">// switch 当符合</span></span><br><span class="line">	<span class="comment">// fallthrough  这个关键字的作用和java的switch 不加break的</span></span><br><span class="line">	<span class="comment">// 执行顺序有上而下，匹配成功停止</span></span><br><span class="line">	fmt.Print(<span class="string">"Go runs on "</span>)</span><br><span class="line">	<span class="keyword">switch</span> os := runtime.GOOS; os &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"linux"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Linux."</span>)</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"darwin"</span>:</span><br><span class="line">		fmt.Println(<span class="string">"OS X"</span>)</span><br><span class="line">		<span class="comment">// 当进入这里时，使用fallthrough，还会执行defluat</span></span><br><span class="line">		<span class="keyword">fallthrough</span></span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="comment">// freebsd, openbsd,</span></span><br><span class="line">		fmt.Println(<span class="string">"%s"</span>, os)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 没有条件的switch</span></span><br><span class="line">	<span class="comment">// 和 switch true &#123;</span></span><br><span class="line">	<span class="comment">//case:</span></span><br><span class="line">	<span class="comment">//default:</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line">	<span class="comment">// 一样</span></span><br><span class="line">	t := time.Now()</span><br><span class="line">	<span class="keyword">switch</span> &#123;</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good morning."</span>)</span><br><span class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">17</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good afternoon."</span>)</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		fmt.Println(<span class="string">"Good evening."</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// defer 延迟函数的执行直到上层函数返回</span></span><br><span class="line">	<span class="comment">// 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用</span></span><br><span class="line">	<span class="keyword">defer</span> World()</span><br><span class="line">	fmt.Println(<span class="string">"hello"</span>)</span><br><span class="line">	<span class="comment">// defer 栈</span></span><br><span class="line">	fmt.Println(<span class="string">"counting....."</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">		<span class="keyword">defer</span> fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">"done"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> World() &#123;</span><br><span class="line">	fmt.Println(<span class="string">"world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
     </div>
@@ -2530,77 +2612,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/11/xcode-arc.html">
-                xcode arc 打开 关闭
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Xcode/">Xcode</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="对整个项目打开或关闭arc">对整个项目打开或关闭arc</h3><p>XCODE5 Automatic Reference Counting(ARC)关闭方法<br>1).找到Build Settings下的 Apple LLVM 5.0 -Language -Objectvie C<br>2).将其中 名为Objective-C Automatic Reference Counting 的值设为NO</p>
-<h3 id="单个文件打开或关闭arc">单个文件打开或关闭arc</h3><p>1).在Build Phases下找到Compile Sources<br>2).对单个文件关闭arc,找到需要设置的.m 双击,输入 -fno-objc-arc<br>3).对单个文件打开arc,找到需要设置的.m 双击,并输入 -fobjc-arc  </p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2639,14 +2650,14 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
