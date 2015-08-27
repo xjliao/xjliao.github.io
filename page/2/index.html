@@ -172,6 +172,87 @@
           
           
             
+              <a class="post-title-link" href="/2014/10/11/raspberrypi.html">
+                玩 Raspberry
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2014-10-11
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Raspberry/">Raspberry</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>官网:<a href="http://www.raspberrypi.org/" target="_blank" rel="external">http://www.raspberrypi.org/</a></p>
+<h2 id="安装">安装</h2><p>下载地址:<a href="http://www.raspberrypi.org/downloads/" target="_blank" rel="external">http://www.raspberrypi.org/downloads/</a><br>推荐下载RASPBIAN版本<br>zip文件下载:<a href="http://downloads.raspberrypi.org/raspbian_latest" target="_blank" rel="external">http://downloads.raspberrypi.org/raspbian_latest</a><br>种子下载:<a href="http://downloads.raspberrypi.org/" target="_blank" rel="external">http://downloads.raspberrypi.org/</a></p>
+<p>需要一个大一点的内存卡(8G以上最好,分区格式为fat32)<br>假如你的内存卡电脑已被识别<br>(在mac上)</p>
+<h3 id="查看设备:">查看设备:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure>
+<p>记住设备号,下面的例子假设查看得到的设备为:disk1  </p>
+<h3 id="卸载设备">卸载设备</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmountDisk /dev/disk1</span><br></pre></td></tr></table></figure>
+<h3 id="刻入镜像">刻入镜像</h3><p><code>`bash
+sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替换为rdisk1原始设备号,刻录速度会更快)</code></p>
+<p>等一会吧 刻录完成会有提示信息</p>
+<h2 id="连接">连接</h2><p>在这里首页你要得有跟网线连接上路由了,而且路由设置了dhcp </p>
+<p>ssh默认开启,这里通过ssh连接上系统.<br>账号:pi   密码:raspberry</p>
+<p>ip查看这里可以通过进入路由器查看dhcp列表,会有一台叫raspberrypi的机器,对应的ip就是了.这样我们就可以连接上了<br>反正不管你用啥办法,都要搞到ip</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/11/xcode-arc.html">
                 xcode arc 打开 关闭
               </a>
@@ -2399,116 +2480,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/09/07/vim-map.html">
-                Vim mode and map
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-09-07
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Linux/Vim/">Vim</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Map是Vim强大的一个重要原因，可以自定义各种快捷键，用起来自然得心应手。<br>vim里最基本的map用法也就是  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map c a</span><br></pre></td></tr></table></figure>
-<p>这里把c映射成了a，在map生效的情况下，按下c就等同于按下了a<br>当然，常用的Ctrl,Shift,Alt自然也是支持的。  </p>
-<p>令Ctrl+a对应到a</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;C<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure>
-<p>令Alt+a对应到a</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;A<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure>
-<p>令Ctrl+Alt+a对应到a<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;C-A<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure></p>
-<p>到此，我们已经可以做很多事情了。<br>但是map命令远不只这一种，在不同的模式下，同一组按键可以被映射到不同的组合上。<br>Vim的模式众多，但是一般被提及的也就是这么几种:  </p>
-<p>Normal Mode<br>也就是最一般的普通模式，默认进入vim之后，处于这种模式。  </p>
-<p>Visual Mode<br>一般译作可视模式，在这种模式下选定一些字符、行、多列。<br>在普通模式下，可以按v进入。  </p>
-<p>Insert Mode<br>插入模式，其实就是指处在编辑输入的状态。普通模式下，可以按i进入。  </p>
-<p>Select Mode<br>在gvim下常用的模式，可以叫作选择模式吧。用鼠标拖选区域的时候，就进入了选择模式。<br>和可视模式不同的是，在这个模式下，选择完了高亮区域后，敲任何按键就直接输入并替换选择的文本了。<br>和windows下的编辑器选定编辑的效果一致。普通模式下，可以按gh进入。  </p>
-<p>Command-Line/Ex Mode<br>就叫命令行模式和Ex模式吧。两者略有不同，普通模式下按冒号(:)进入Command-Line模式，可以输入各种命令，<br>使用vim的各种强大功能。普通模式下按Q进入Ex模式，其实就是多行的Command-Line模式。  </p>
-<p>对于Map，有几个基本的概念  </p>
-<p>命令的组合<br>同Vim下的其他命令一样，命令的名字往往由好几段组成。前缀作为命令本身的修饰符，微调命令的效果。<br>对于map而言，可能有这么几种前缀  </p>
-<p>nore<br>表示非递归，见下面的介绍  </p>
-<p>n<br>表示在普通模式下生效  </p>
-<p>v<br>表示在可视模式下生效  </p>
-<p>i<br>表示在插入模式下生效  </p>
-<p>c<br>表示在命令行模式下生效  </p>
-<p>Recursive Mapping<br>递归的映射。其实很好理解，也就是如果键a被映射成了b，c又被映射成了a，如果映射是递归的，那么c就被映射成了b。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:map a b</span><br><span class="line">:map c a</span><br></pre></td></tr></table></figure><br>对于c效果等同于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map c b</span><br></pre></td></tr></table></figure><br>默认的map就是递归的。如果遇到[nore]这种前缀，比如:noremap，就表示这种map是非递归的。</p>
-<p>unmap<br>unmap后面跟着一个按键组合，表示删除这个映射。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:unmap c</span><br></pre></td></tr></table></figure></p>
-<p>那么在map生效模式下，c不再被映射到a上。  </p>
-<p>同样，unmap可以加各种前缀，表示影响到的模式。  </p>
-<p>mapclear<br>mapclear直接清除相关模式下的所有映射。<br>同样，mapclear可以加各种前缀，表示影响到的模式。  </p>
-<p>这里列出常用的一些map命令，默认map命令影响到普通模式和可视模式。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:map :noremap :unmap :mapclear</span><br><span class="line">:nmap :nnoremap :nunmap :nmapclear</span><br><span class="line">:vmap :vnoremap :vunmap :vmapclear</span><br><span class="line">:imap :inoremap :iunmap :imapclear</span><br><span class="line">:cmap :cnoremap :cunmap :cmapclear</span><br></pre></td></tr></table></figure>
-<p>可以试试这些命令  </p>
-<p>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap b a</span><br></pre></td></tr></table></figure></p>
-<p>现在普通模式下，按b，可以进入插入模式，随便输入一些字符<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmap b d</span><br></pre></td></tr></table></figure></p>
-<p>现在普通模式下，按V，进入了可视模式，并且选定了一整行，按下b，可以删除整行<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imap b a</span><br></pre></td></tr></table></figure><br>现在试着给正在编辑的这个文件输入一个字符”b”吧 :p<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmap b c</span><br></pre></td></tr></table></figure><br>命令行模式下， 按下b，会出来一个a<br>好了，到此vim的按键已经被你弄得乱七八糟了，试着用unmap和mapclear清除这些mapping吧。:]</p>
-<p><a href="http://haoxiang.org/2011/09/vim-modes-and-mappin/" target="_blank" rel="external">原文地址</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2547,7 +2518,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">84</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
