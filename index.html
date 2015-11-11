@@ -172,6 +172,94 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/27/shadowsocks-golang-server.html">
+                Deloy shadowsocks-goalang server
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-08-27
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Linux/shadowsocks/">shadowsocks</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Get_golang_and_set_golang_path">Get golang and set golang path</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">5.1</span>.linux-amd64.tar.gz</span><br><span class="line">tar -zxvf /home/xjliao/go1.<span class="number">5.1</span>.linux-amd64.tar.gz</span><br><span class="line">mkdir /home/xjliao/goworkspace</span><br><span class="line">sudo vim /etc/profile</span><br><span class="line">go</span><br></pre></td></tr></table></figure>
+<p>Use go cmd to test.  </p>
+<p>add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GOROOT=<span class="variable">$HOME</span>/go</span><br><span class="line">GOPATH=<span class="variable">$HOME</span>/goworkspace</span><br><span class="line"></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> GOROOT GOPATH PATH</span><br></pre></td></tr></table></figure></p>
+<h2 id="Get_shadowsocks-goalang">Get shadowsocks-goalang</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server</span><br></pre></td></tr></table></figure>
+<p>And then. We can look for a execute file at $GOPATH/bin name’s shadowsocks-server.<br>Ok. We need a configuration file to run the shadowsocks-server command.<br>So….   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
+<p>add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"server"</span>:<span class="string">"0.0.0.0"</span>,</span><br><span class="line">    <span class="string">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="string">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="string">"port_password"</span>:&#123;</span><br><span class="line">        <span class="string">"8383"</span>:<span class="string">"1"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"timeout"</span>:<span class="number">600</span>,</span><br><span class="line">    <span class="string">"method"</span>:<span class="string">"aes-128-cfb"</span>,</span><br><span class="line">    <span class="string">"fast_open"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Execute shadowsocks-server command. if do right steps, it will run at listener your set port and work well.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/xjliao/goworkspace/bin/shadowsocks-server/ -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure></p>
+<h2 id="Make_it_autostart_when_system_start_or_reboot-">Make it autostart when system start or reboot.</h2><p>Install supervisor and edit configuration file.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install supervisor</span><br><span class="line">sudo vim /etc/supervisord.conf</span><br><span class="line">sudo chkconfig supervisord on</span><br></pre></td></tr></table></figure>
+<p>Add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[program:shadowsocks-server]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/goworkspace/bin/shadowsocks-server -c /etc/shadowsocks.json</span><br><span class="line">autostart=<span class="literal">true</span>              ; start at supervisord start (default: <span class="literal">true</span>)</span><br><span class="line">autorestart=<span class="literal">true</span>            ; retstart at unexpected quit (default: <span class="literal">true</span>)</span><br></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html">
                 Linux yum install last stable version for nginx
               </a>
@@ -2541,77 +2629,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/19/lua-install.html">
-                macos install lua
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-03-19
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Lua/">Lua</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="1-源码安装">1.源码安装</h2><p>需要使用make命令, 安装xcode即可解决<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -R -O http://www.lua.org/ftp/lua-<span class="number">5.3</span>.0.tar.gz</span><br><span class="line">tar -zxvf ./lua-<span class="number">5.3</span>.0.tar.gz</span><br><span class="line">cd ./lua-<span class="number">5.3</span>.0</span><br><span class="line">make macosx</span><br><span class="line">make test</span><br><span class="line">sudo make install</span><br><span class="line">lua</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-二进制文件">2.二进制文件</h2><p>直接下载,解压,设置path或者直接在解压文件夹内执行命令,这里就不演示了</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2650,21 +2667,21 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">84</span>
+              <span class="site-state-item-count">85</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

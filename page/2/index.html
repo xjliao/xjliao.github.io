@@ -172,6 +172,77 @@
           
           
             
+              <a class="post-title-link" href="/2015/03/19/lua-install.html">
+                macos install lua
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-03-19
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Lua/">Lua</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="1-源码安装">1.源码安装</h2><p>需要使用make命令, 安装xcode即可解决<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -R -O http://www.lua.org/ftp/lua-<span class="number">5.3</span>.0.tar.gz</span><br><span class="line">tar -zxvf ./lua-<span class="number">5.3</span>.0.tar.gz</span><br><span class="line">cd ./lua-<span class="number">5.3</span>.0</span><br><span class="line">make macosx</span><br><span class="line">make test</span><br><span class="line">sudo make install</span><br><span class="line">lua</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-二进制文件">2.二进制文件</h2><p>直接下载,解压,设置path或者直接在解压文件夹内执行命令,这里就不演示了</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2014/10/11/raspberrypi.html">
                 玩 Raspberry
               </a>
@@ -2405,81 +2476,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/09/09/python-mysqldb.html">
-                python mysql
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-09-09
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>下载地址<br>使用1.2.4版本<br><a href="http://pypi.python.org/pypi/MySQL-python/1.2.4" target="_blank" rel="external">http://pypi.python.org/pypi/MySQL-python/1.2.4</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xjl:MySQL-python-<span class="number">1.2</span>.<span class="number">4</span> xjliao$ python ./setup.py install</span><br></pre></td></tr></table></figure>
-<p>常见错误<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EnvironmentError: /usr/<span class="built_in">local</span>/bin/mysql_config not found</span><br></pre></td></tr></table></figure></p>
-<p>解决方案:<br>打开当前目录下的site.cfg, 并去掉#mysql_config = /usr/local/bin/mysql_config,<br>改为安装的mysql目录下的mysql_config,<br>我的目录:/usr/local/mysql/bin/mysql_config</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Referenced from: /Library/Python/<span class="number">2.7</span>/site-packages/MySQL_python-<span class="number">1.2</span>.<span class="number">4</span>-py2.<span class="number">7</span>-macosx-<span class="number">10.9</span>-intel.egg/_mysql.so</span><br><span class="line"> Reason: image not found</span><br></pre></td></tr></table></figure>
-<p>解决方案:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/mysql/lib/libmysqlclient.<span class="number">18</span>.dylib /usr/lib/libmysqlclient.<span class="number">18</span>.dylib</span><br></pre></td></tr></table></figure></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2518,21 +2514,21 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">84</span>
+              <span class="site-state-item-count">85</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
