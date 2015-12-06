@@ -5,7 +5,7 @@
   <subtitle><![CDATA[xjliao]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://xjliao.me//"/>
-  <updated>2015-11-11T15:12:49.000Z</updated>
+  <updated>2015-11-11T15:24:20.000Z</updated>
   <id>http://xjliao.me//</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Deloy shadowsocks-goalang server]]></title>
+    <title><![CDATA[Deploy shadowsocks-goalang server]]></title>
     <link href="http://xjliao.me/2015/08/27/shadowsocks-golang-server.html"/>
     <id>http://xjliao.me/2015/08/27/shadowsocks-golang-server.html</id>
     <published>2015-08-27T03:55:49.000Z</published>
-    <updated>2015-11-11T15:12:49.000Z</updated>
+    <updated>2015-11-11T15:24:20.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Get_golang_and_set_golang_path">Get golang and set golang path</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">5.1</span>.linux-amd64.tar.gz</span><br><span class="line">tar -zxvf /home/xjliao/go1.<span class="number">5.1</span>.linux-amd64.tar.gz</span><br><span class="line">mkdir /home/xjliao/goworkspace</span><br><span class="line">sudo vim /etc/profile</span><br><span class="line">go</span><br></pre></td></tr></table></figure>
 <p>Use go cmd to test.  </p>
 <p>add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GOROOT=<span class="variable">$HOME</span>/go</span><br><span class="line">GOPATH=<span class="variable">$HOME</span>/goworkspace</span><br><span class="line"></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> GOROOT GOPATH PATH</span><br></pre></td></tr></table></figure></p>
