@@ -172,7 +172,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/06/install-supervisor-on-centpos.html">
+              <a class="post-title-link" href="/2015/12/06/install-supervisor-on-centos.html">
                 Install Supervisor on CentOS
               </a>
             
@@ -221,6 +221,87 @@
 <h2 id="Sample_Supervisor_App">Sample Supervisor App</h2><p>Here is a sample of Django App to be controlled and monitored by Supervisor, just put it:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/supervisord.conf</span><br><span class="line"></span><br><span class="line">:</span><br><span class="line">[program:shadowsocks-server]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/goworkspace/bin/shadowsocks-server -c /etc/shadowsocks.json</span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[program:nginx-blogserver]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/blogserver/sbin/nginx</span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">:</span><br></pre></td></tr></table></figure>
 <p>from:<br><a href="https://rayed.com/wordpress/?p=1496" target="_blank" rel="external">https://rayed.com/wordpress/?p=1496</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html">
+                Linux yum install last stable version for nginx
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-08-27
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Linux/Nginx/">Nginx</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure>
+<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
 
         
       
@@ -309,87 +390,6 @@
 <h2 id="Make_it_autostart_when_system_start_or_reboot-">Make it autostart when system start or reboot.</h2><p>Install supervisor and edit configuration file.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install supervisor</span><br><span class="line">sudo vim /etc/supervisord.conf</span><br><span class="line">sudo chkconfig supervisord on</span><br></pre></td></tr></table></figure>
 <p>Add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[program:shadowsocks-server]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/goworkspace/bin/shadowsocks-server -c /etc/shadowsocks.json</span><br><span class="line">autostart=<span class="literal">true</span>              ; start at supervisord start (default: <span class="literal">true</span>)</span><br><span class="line">autorestart=<span class="literal">true</span>            ; retstart at unexpected quit (default: <span class="literal">true</span>)</span><br></pre></td></tr></table></figure></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html">
-                Linux yum install last stable version for nginx
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-08-27
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Linux/Nginx/">Nginx</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure>
-<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
 
         
       

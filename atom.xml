@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[Install Supervisor on CentOS]]></title>
-    <link href="http://xjliao.me/2015/12/06/install-supervisor-on-centpos.html"/>
-    <id>http://xjliao.me/2015/12/06/install-supervisor-on-centpos.html</id>
+    <link href="http://xjliao.me/2015/12/06/install-supervisor-on-centos.html"/>
+    <id>http://xjliao.me/2015/12/06/install-supervisor-on-centos.html</id>
     <published>2015-12-06T14:30:23.000Z</published>
     <updated>2015-12-06T14:42:08.000Z</updated>
     <content type="html"><![CDATA[<p>CentOS default repository is very limited, and even if you install EPEL you will get old packages, in my case I needed to install Supervisor to manage my Django application, after trying to do it manually and through EPEL I ended up with the following setup.</p>
@@ -39,6 +39,31 @@
       <category term="Linux" scheme="http://xjliao.me/tags/Linux/"/>
     
       <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux yum install last stable version for nginx]]></title>
+    <link href="http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html"/>
+    <id>http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html</id>
+    <published>2015-08-27T03:55:49.000Z</published>
+    <updated>2015-08-27T04:04:15.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure>
+<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span clas]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://xjliao.me/tags/Linux/"/>
+    
+      <category term="Nginx" scheme="http://xjliao.me/tags/Nginx/"/>
+    
+      <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
+    
+      <category term="Nginx" scheme="http://xjliao.me/categories/Linux/Nginx/"/>
     
   </entry>
   
@@ -71,31 +96,6 @@
       <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
     
       <category term="shadowsocks" scheme="http://xjliao.me/categories/Linux/shadowsocks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Linux yum install last stable version for nginx]]></title>
-    <link href="http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html"/>
-    <id>http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html</id>
-    <published>2015-08-27T03:55:49.000Z</published>
-    <updated>2015-08-27T04:04:15.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure>
-<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line">enabled=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span clas]]>
-    </summary>
-    
-      <category term="Linux" scheme="http://xjliao.me/tags/Linux/"/>
-    
-      <category term="Nginx" scheme="http://xjliao.me/tags/Nginx/"/>
-    
-      <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
-    
-      <category term="Nginx" scheme="http://xjliao.me/categories/Linux/Nginx/"/>
     
   </entry>
   
