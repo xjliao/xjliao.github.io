@@ -1,4 +1,4 @@
-title: Deloy shadowsocks-goalang server
+title: Deploy shadowsocks-goalang server
 date: 2015-08-27 11:55:49
 tags:
 - Linux
