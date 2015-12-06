@@ -172,6 +172,77 @@
           
           
             
+              <a class="post-title-link" href="/2015/03/23/safari-develop.html">
+                Enable the Safari debug menu  Web Browsers
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-03-23
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Safari/">Safari</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code, I found there is a hidden Debug menu. Type the following command in Terminal (while Safari is NOT running):<br> % defaults write com.apple.Safari IncludeDebugMenu 1<br>Then launch Safari, and enjoy the new Debug menu. </p>
+<p>[Editor’s note: The debug menu has some useful options on it, so you may find this a very useful hack. If you ever wish to disable it again, just repeat the command with a “0” instead of a “1”.]</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/03/19/lua-install.html">
                 macos install lua
               </a>
@@ -2404,78 +2475,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/09/20/pod_installorupdate_slow.html">
-                pod install/update 速度慢 解决方案
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-09-20
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Ios/">Ios</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>最近使用CocoaPods来添加第三方类库，无论是执行pod install还是pod update都卡在了Analyzing dependencies不动了，令人甚是DT。  </p>
-<p>查了好多的资料，原因在于当执行以上两个命令的时候会升级CocoaPods的spec仓库，加一个参数可以省略这一步，然后速度就会提升不少。加参数的命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xjl:aa xjliao$ pod install --verbose --no-repo-update</span><br><span class="line">xjl:aa xjliao$ pod update --verbose --no-repo-update</span><br></pre></td></tr></table></figure>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -2514,7 +2513,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">85</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

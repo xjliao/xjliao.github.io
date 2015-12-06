@@ -24,7 +24,7 @@
 
 
 
-  <meta name="keywords" content="Cordova," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-  <title> Cordova debugging // xjliao </title>
+  <title> Install Supervisor on CentOS // xjliao </title>
 </head>
 
 <body>
@@ -170,7 +170,7 @@
           
           
             
-              Cordova debugging
+              Install Supervisor on CentOS
             
           
         </h1>
@@ -178,14 +178,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-03-23
+          Posted on 2015-12-06
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Cordova/">Cordova</a>
+              <a href="/categories/Linux/">Linux</a>
 
               
               
@@ -206,34 +206,16 @@
       
 
       
-        <h2 id="Cordova_debugging">Cordova debugging</h2><p>Debugging your Application</p>
-<p>With the desktop browser, you can leverage the browser’s debugging tools. In a WebKit browser, you can open WebInspector to inspect the DOM and debug JavaScript. Most other browsers have an equivalent debugging tool.</p>
-<p>Additional Tools</p>
-<p>PhoneGap Emulator uses Ripple to emulate the PhoneGap API.<br>Ripple Emulator emulates the PhoneGap API.<br>ScreenQueri.es to preview exact device screen sizes.<br>thumbs.js is a TouchEvent polyfill.<br>PhoneGap Desktop is a mocking library for the PhoneGap API.</p>
-<h2 id="Remote_Web_Inspector">Remote Web Inspector</h2><p>After you’ve developed the first stage of your application with your desktop browser, you will want to test it on a mobile device. The main hurdle with testing on a mobile device is that you will not have access to WebInspector. This is where a remote web inspector steps in.</p>
-<h2 id="Safari_Remote_Debugging">Safari Remote Debugging</h2><p>If you are doing iOS PhoneGap debugging and have the Safari Develop Menu enabled, you can access the currently active session through the built-in Safari Web Inspector. To activate, go to Develop -&gt; (iPad || iPhone) Simulator (normally, the third menu item) and click the active session you want to connect to. Voila!</p>
-<h2 id="Chrome_Remote_Debugging">Chrome Remote Debugging</h2><p>If you are doing Android PhoneGap debugging and have an Android 4.4 device and Chrome 30+, you can use the new WebView Debugging tools added in Android 4.4. If you are using Cordova 3.3 or higher, this is already supported, and only requires the Debuggable flag in your AndroidManifest.xml. For Cordova 3.2, you will need to enable WebView debugging using some code, or by use of a plugin.</p>
-<h2 id="GapDebug">GapDebug</h2><p>A complete iOS and Android debugging experience for PhoneGap and Cordova apps, debug on both Windows and Mac platforms. Automated plug-and-go debugging with no requirement to build debug support into your app. GapDebug integrated versions of the Safari Webkit Inspector for iOS debugging and Chrome Dev Tools for Android debugging. GapDebug is maintained by Genuitec and is a always free tool.</p>
-<p>Try GapDebug here.</p>
-<h2 id="Weinre">Weinre</h2><p>Weinre is a remote WebInspector that will debug any browser remotely. It is not quite a full-fledged debugger, but gives you a live view of the DOM and access to the JavaScript lang:bash. Unfortunately, no breakpoints or stack traces are available, but the JavaScript lang:bash can lend clues about errors.</p>
-<p>You can run Weinre locally or use debug.phonegap.com.</p>
-<p>WebKit’s Remote Web Inspector</p>
-<p>WebKit has the ability to connect it’s WebInspector to remote WebKit browsers, although few mobile platform support this feature.</p>
-<p>BlackBerry supports Remote Web Inspector<br>iOS has unofficial support for Remote Web Inspector<br>jsHybugger</p>
-<p>jsHybugger is a (commercially available) tool that lets you debug PhoneGap apps on Android using Chrome DevTools. A plugin for PhoneGap 3.x and library for PhoneGap 2.x is available. Install jsHybugger from GitHub with the following command. This adds the plugin to your PhoneGap 3.x application.</p>
-<p>phonegap local plugin add <a href="https://github.com/jsHybugger/cordova-plugin-jshybugger.git" target="_blank" rel="external">https://github.com/jsHybugger/cordova-plugin-jshybugger.git</a><br>After installing and starting the app on the device, you can use Chrome DevTools on a desktop machine to debug the app.</p>
-<p>Example workflow</p>
-<p>phonegap create <name-of-project><br>cd <name-of-project><br>phonegap local plugin add <a href="https://github.com/jsHybugger/cordova-plugin-jshybugger.git" target="_blank" rel="external">https://github.com/jsHybugger/cordova-plugin-jshybugger.git</a><br>phonegap build android<br>phonegap run android —device<br>See the jsHybugger home page for details.</name-of-project></name-of-project></p>
-<p>Additional Debugging Resources</p>
-<p>JSBin</p>
-<h2 id="Log_Messages">Log Messages</h2><p>When all else fails, you can always use lang:bash.log(‘…’); or alert(‘…’); to mobile web application. I know it’s not pretty, but it can help when you’re in a jam.</p>
-<p>Advanced log message handling can be found on Exception Log Handling.</p>
-<p>Android</p>
-<p>On Android, all lang:bash.log(‘…’); messages will appear as printouts in the command-line tool logcat, which is bundled with the Android SDK and integrated into the Android Eclipse plugin.</p>
-<p>BlackBerry</p>
-<p>On BlackBerry, all lang:bash.log(‘…’); are printed to the BlackBerry’s Event Log. The Event Log can be accessed by pressing ALT + LGLG.</p>
-<p>iOS</p>
-<p>On iOS, all lang:bash.log(‘…’); are output to the Xcode Debug Area lang:bash.</p>
+        <p>CentOS default repository is very limited, and even if you install EPEL you will get old packages, in my case I needed to install Supervisor to manage my Django application, after trying to do it manually and through EPEL I ended up with the following setup.</p>
+<h2 id="Install_Needed_Package">Install Needed Package</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install python-setuptools</span><br><span class="line">sudo easy_install pip</span><br><span class="line">sudo pip install supervisor</span><br><span class="line">Setup Supervisor</span><br></pre></td></tr></table></figure>
+<p>We’ve already installed “Supervisor” globally, but we need to create its configuration, luckily it comes with default config:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>_supervisord_conf &gt; supervisord.conf</span><br><span class="line">sudo cp supervisord.conf /etc/supervisord.conf</span><br><span class="line">sudo mkdir /etc/supervisord.d/</span><br><span class="line">sudo vim /etc/supervisord.conf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:</span><br><span class="line">[include]</span><br><span class="line">files = /etc/supervisord.d/*.conf</span><br><span class="line">:</span><br></pre></td></tr></table></figure></p>
+<p>Next we need to set “Supervisor” to run automatically every time you restart your machine, we need to create /etc/rc.d/init.d/supervisord with the following content:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/rc.d/init.d/supervisord</span><br><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># /etc/rc.d/init.d/supervisord</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Supervisor is a client/server system that</span></span><br><span class="line"><span class="comment"># allows its users to monitor and control a</span></span><br><span class="line"><span class="comment"># number of processes on UNIX-like operating</span></span><br><span class="line"><span class="comment"># systems.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># chkconfig: - 64 36</span></span><br><span class="line"><span class="comment"># description: Supervisor Server</span></span><br><span class="line"><span class="comment"># processname: supervisord</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Source init functions</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"></span><br><span class="line">prog=<span class="string">"supervisord"</span></span><br><span class="line"></span><br><span class="line">prefix=<span class="string">"/usr/"</span></span><br><span class="line"><span class="built_in">exec</span>_prefix=<span class="string">"<span class="variable">$&#123;prefix&#125;</span>"</span></span><br><span class="line">prog_bin=<span class="string">"<span class="variable">$&#123;exec_prefix&#125;</span>/bin/supervisord"</span></span><br><span class="line">PIDFILE=<span class="string">"/var/run/<span class="variable">$prog</span>.pid"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">start</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">       <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">       daemon <span class="variable">$prog_bin</span> --pidfile <span class="variable">$PIDFILE</span></span><br><span class="line">       [ <span class="operator">-f</span> <span class="variable">$PIDFILE</span> ] &amp;&amp; success $<span class="string">"<span class="variable">$prog</span> startup"</span> || failure $<span class="string">"<span class="variable">$prog</span> startup"</span></span><br><span class="line">       <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">stop</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">       <span class="built_in">echo</span> -n $<span class="string">"Shutting down <span class="variable">$prog</span>: "</span></span><br><span class="line">       [ <span class="operator">-f</span> <span class="variable">$PIDFILE</span> ] &amp;&amp; killproc <span class="variable">$prog</span> || success $<span class="string">"<span class="variable">$prog</span> shutdown"</span></span><br><span class="line">       <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line"> start)</span><br><span class="line">   start</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> stop)</span><br><span class="line">   stop</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> status)</span><br><span class="line">       status <span class="variable">$prog</span></span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> restart)</span><br><span class="line">   stop</span><br><span class="line">   start</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> *)</span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"Usage: <span class="variable">$0</span> &#123;start|stop|restart|status&#125;"</span></span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+<p>Then make sure CentOS knows about it:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/rc.d/init.d/supervisord</span><br><span class="line">sudo chkconfig --add supervisord</span><br><span class="line">sudo chkconfig supervisord on</span><br><span class="line">sudo service supervisord start</span><br></pre></td></tr></table></figure>
+<h2 id="Sample_Supervisor_App">Sample Supervisor App</h2><p>Here is a sample of Django App to be controlled and monitored by Supervisor, just put it:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/supervisord.conf</span><br><span class="line"></span><br><span class="line">:</span><br><span class="line">[program:shadowsocks-server]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/goworkspace/bin/shadowsocks-server -c /etc/shadowsocks.json</span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[program:nginx-blogserver]</span><br><span class="line"><span class="built_in">command</span>=/home/xjliao/blogserver/sbin/nginx</span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">:</span><br></pre></td></tr></table></figure>
+<p>from:<br><a href="https://rayed.com/wordpress/?p=1496" target="_blank" rel="external">https://rayed.com/wordpress/?p=1496</a></p>
 
       
     </div>
@@ -242,7 +224,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Cordova/"> #Cordova </a>
+            <a href="/tags/Linux/"> #Linux </a>
           
         </div>
       
@@ -251,13 +233,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/24/cordova-frame-helloworld.html">Cordova 初步脚手架</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/23/safari-develop.html">Enable the Safari debug menu  Web Browsers</a>
+              <a href="/2015/08/27/shadowsocks-golang-server.html">Deploy shadowsocks-goalang server</a>
             
           </div>
         </div>
@@ -380,7 +360,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cordova_debugging"><span class="nav-number">1.</span> <span class="nav-text">Cordova debugging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Remote_Web_Inspector"><span class="nav-number">2.</span> <span class="nav-text">Remote Web Inspector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Safari_Remote_Debugging"><span class="nav-number">3.</span> <span class="nav-text">Safari Remote Debugging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome_Remote_Debugging"><span class="nav-number">4.</span> <span class="nav-text">Chrome Remote Debugging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GapDebug"><span class="nav-number">5.</span> <span class="nav-text">GapDebug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Weinre"><span class="nav-number">6.</span> <span class="nav-text">Weinre</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Log_Messages"><span class="nav-number">7.</span> <span class="nav-text">Log Messages</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install_Needed_Package"><span class="nav-number">1.</span> <span class="nav-text">Install Needed Package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Supervisor_App"><span class="nav-number">2.</span> <span class="nav-text">Sample Supervisor App</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
