@@ -130,7 +130,7 @@ deploy:
   repo: git@github.com:xjliao/xjliao.github.io.git 
   branch: master 
 - type: ftpsync
-  host: 133.130.107.154
+  host: 45.32.28.66 
   user: xjliao 
   pass: xjliaoqaz[;. 
   remote: /blogserver/html
