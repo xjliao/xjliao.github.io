@@ -8,8 +8,8 @@ subtitle: xjliao
 description: A app & golang developer guy.
 author: xjliao 
 avatar: /images/avatar.png
-language: default 
-since: 2014
+language: default
+since: 2013
 timezone:
 
 # URL
@@ -43,7 +43,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -111,9 +111,6 @@ baidu_analytics: a5de7a16b42cff0e7c8add36f398ce48
 # Swift search
 # swiftype_key: cy4cAaDcSmFXTgbbgz69 
 
-# 站点起始时间
-since: 2013
-
 feed:
   type: atom
   path: atom.xml
@@ -127,13 +124,13 @@ feed:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: git@github.com:xjliao/xjliao.github.io.git 
-  branch: master 
-- type: ftpsync
-  host: 45.32.28.66 
-  user: xjliao 
-  pass: xjliaoqaz[;. 
-  remote: /blogserver/html
-  port: 21 
-  connections: 10
+  repo: git@github.com:xjliao/xjliao.github.io.git
+  branch: master
+- type: rsync
+  host: 45.32.28.66
+  user: xjliao
+  root: /home/xjliao/blogserver/html
+  port: 22
+  delete: true
   verbose: true
+  ignore_errors: false

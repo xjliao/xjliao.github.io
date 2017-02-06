@@ -10,16 +10,22 @@ tags:
 
 ---
 
-##安装mysql
+
+##安装mysql 
+这里使用5.6，如果需要其他版本，请到[http://dev.mysql.com/downloads/repo/](http://dev.mysql.com/downloads/repo/)下载对应版本后，安装mysql
+
 {% codeblock lang:bash %}
-[xjliao@li539-59 ~] sudo yum -y install mysql-server 
+[xjliao@li539-59 ~] sudo wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
+[xjliao@li539-59 ~] sudo rpm -ivh mysql-community-release-el6-5.noarch.rpm
+[xjliao@li539-59 ~] sudo yum -y install mysql-server
 [xjliao@li539-59 ~] sudo yum -y install mysql-devel
 [xjliao@li539-59 ~] sudo service mysqld start 
 {% endcodeblock %}
 
-##修改root用户默认密码
+##默认设置,修改root用户默认密码
 {% codeblock lang:bash %}
-[xjliao@li539-59 ~]$ mysqladmin -u root password 'root'
+[xjliao@li539-59 ~]$ mysql_secure_installation
+[xjliao@li539-59 ~]$ sudo service mysqld restart
 {% endcodeblock %}
 
 ##开启远程连接权限
@@ -37,27 +43,8 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql> grant all privileges on *.* to root@'%' identified by '1';
+mysql> grant all privileges on *.* to root@'%' identified by 'root';
 mysql> flush privileges;
-{% endcodeblock %}
-
-##Mysql 配置/etc/my.cnf
-{% codeblock lang:bash %}
-[mysqld]
-datadir=/var/lib/mysql
-socket=/var/lib/mysql/mysql.sock
-user=mysql
-# Disabling symbolic-links is recommended to prevent assorted security risks
-symbolic-links=0
-default-character-set = utf8 <-添加这行,设置字符集
-
-[mysql]
-default-character-set = utf8  <-添加这行,设置字符集
-protocol=tcp <-指定是什么协议, 默认是socket
-
-[mysqld_safe]
-log-error=/var/log/mysqld.log
-pid-file=/var/run/mysqld/mysqld.pid
 {% endcodeblock %}
 
 ##设置mysql服务开机启动
