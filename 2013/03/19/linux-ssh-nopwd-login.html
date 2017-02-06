@@ -207,7 +207,7 @@
 
       
         <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="operator">-f</span> ~/.ssh/id_rsa</span><br><span class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@<span class="number">106.186</span>.<span class="number">19.59</span>:/home/xjliao/</span><br><span class="line">xjliao@<span class="number">106.186</span>.<span class="number">19.59</span><span class="string">'s password: </span><br><span class="line">id_rsa.pub                                                                                                                  100% 219</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span><br><span class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</span><br><span class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">[xjliao@li539-59 ~] exit</span><br><span class="line">xjl:~ xjliao$ ssh 106.186.19.59</span><br><span class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="_">-f</span> ~/.ssh/id_rsa</div><div class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@106.186.19.59:/home/xjliao/</div><div class="line">xjliao@106.186.19.59<span class="string">'s password: </span></div><div class="line">id_rsa.pub                                                                                                                  100% 219</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div><div class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</div><div class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~] exit</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div></pre></td></tr></table></figure>
 <p>哦了</p>
 
       
@@ -226,11 +226,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/03/19/jekyll-github.html">jekyll+github 搭建博客</a>
+              <a href="/2013/03/21/hadoop-2.2.0-cluster-setup.html">Centos 6.5 hadoop 2.2.0 全分布式安装</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/03/19/jekyll-github.html">jekyll+github 搭建博客</a>
             
           </div>
         </div>

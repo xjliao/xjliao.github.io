@@ -206,8 +206,8 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fatal error: file <span class="string">'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h'</span> has been modified since the precompiled header <span class="string">'/Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/3DW0I404IQ8ZW/Foundation.pcm'</span> was built</span><br><span class="line">note: after modifying system headers, please delete the module cache at <span class="string">'/Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/3DW0I404IQ8ZW'</span></span><br><span class="line"><span class="number">5</span> warnings and <span class="number">1</span> error generated.</span><br></pre></td></tr></table></figure>
-<p>解决方案:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.rm -rf /Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/*  </span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.Product -&gt; Clean。(这时上述文件夹中将重新生成系统SDK的数据)</span><br></pre></td></tr></table></figure></p>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fatal error: file <span class="string">'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h'</span> has been modified since the precompiled header <span class="string">'/Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/3DW0I404IQ8ZW/Foundation.pcm'</span> was built</div><div class="line">note: after modifying system headers, please delete the module cache at <span class="string">'/Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/3DW0I404IQ8ZW'</span></div><div class="line">5 warnings and 1 error generated.</div></pre></td></tr></table></figure>
+<p>解决方案:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">1.rm -rf /Users/xjliao/Library/Developer/Xcode/DerivedData/ModuleCache/*  </div><div class="line"></div><div class="line">2.Product -&gt; Clean。(这时上述文件夹中将重新生成系统SDK的数据)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -225,13 +225,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/08/07/objective-c-nil-Nil-NULL-NSNull.html">Objective-c nil Nil NULL NSNull</a>
+              <a href="/2013/08/07/objective-c-property.html">Objective-c @property</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/08/07/objective-c-block.html">Objective-c block</a>
+              <a href="/2013/07/26/linux-ddos-defense.html">Linux ddos defense</a>
             
           </div>
         </div>

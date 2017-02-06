@@ -208,7 +208,7 @@
       
         <h2 id="git_book">git book</h2><p><a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">http://git-scm.com/book/zh/v1</a>  </p>
 <p>需求:在服务器上创建一个项目版本库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//在服务器上创建一个裸仓库</span><br><span class="line">git init --bare --shared project.git</span><br><span class="line"></span><br><span class="line">//初始化本地, 加入版本控制</span><br><span class="line">git init</span><br><span class="line">//添加刚刚创建的服务器地址, 使用的ssh命令, 需要在服务器上创建git账户, 推送需要输入git密码,或者将本地公钥上传到服务器git账户下的~/.ssh/authorized_keys授权文件里面,实现无密码提交</span><br><span class="line">git remote add origin  git@gitserver:/home/git/project.git</span><br><span class="line">//加入添加/修改文件</span><br><span class="line">git add -A</span><br><span class="line">//本地提交</span><br><span class="line">git commit -m <span class="string">'init'</span></span><br><span class="line">//推送到服务器</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//在服务器上创建一个裸仓库</div><div class="line">git init --bare --shared project.git</div><div class="line"></div><div class="line">//初始化本地, 加入版本控制</div><div class="line">git init</div><div class="line">//添加刚刚创建的服务器地址, 使用的ssh命令, 需要在服务器上创建git账户, 推送需要输入git密码,或者将本地公钥上传到服务器git账户下的~/.ssh/authorized_keys授权文件里面,实现无密码提交</div><div class="line">git remote add origin  git@gitserver:/home/git/project.git</div><div class="line">//加入添加/修改文件</div><div class="line">git add -A</div><div class="line">//本地提交</div><div class="line">git commit -m <span class="string">'init'</span></div><div class="line">//推送到服务器</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -226,13 +226,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/10/11/mac-tech.html">Mac os 技巧</a>
+              <a href="/2013/10/11/oc-delegate.html">Objective-c delegate</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/10/11/eclipse-codetemplate.html">eclipse 代码注释模板</a>
+              <a href="/2013/10/11/mac-tech.html">Mac os 技巧</a>
             
           </div>
         </div>

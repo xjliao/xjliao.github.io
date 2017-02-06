@@ -206,8 +206,8 @@
       
 
       
-        <h2 id="Error">Error</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AppDelegate.swift:<span class="number">17</span>:<span class="number">10</span>: Objective-C method <span class="string">'application:didFinishLaunchingWithOptions:'</span> provided by method <span class="string">'application(_:didFinishLaunchingWithOptions:)'</span> conflicts with optional requirement method <span class="string">'application(_:didFinishLaunchingWithOptions:)'</span> <span class="keyword">in</span> protocol <span class="string">'UIApplicationDelegate'</span></span><br></pre></td></tr></table></figure>
-<h2 id="Solution">Solution</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">application</span><span class="params">(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!)</span></span> -&gt; <span class="type">Bool</span> &#123;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//replaced to</span></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">application</span><span class="params">(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)</span></span> -&gt; <span class="type">Bool</span> &#123;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="Error">Error</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AppDelegate.swift:17:10: Objective-C method <span class="string">'application:didFinishLaunchingWithOptions:'</span> provided by method <span class="string">'application(_:didFinishLaunchingWithOptions:)'</span> conflicts with optional requirement method <span class="string">'application(_:didFinishLaunchingWithOptions:)'</span> <span class="keyword">in</span> protocol <span class="string">'UIApplicationDelegate'</span></div></pre></td></tr></table></figure>
+<h2 id="Solution">Solution</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!)</span></span> -&gt; <span class="type">Bool</span> &#123;  </div><div class="line">&#125;</div><div class="line"><span class="comment">//replaced to</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)</span></span> -&gt; <span class="type">Bool</span> &#123;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -225,7 +225,7 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/05/2015-7-05-golang-basic-package-var-constant-function-copy.html">Golang 快速入门 基础 包 变量 函数</a>
+              <a href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">Golang 快速入门 流程控制语句</a>
             
           </div>
 

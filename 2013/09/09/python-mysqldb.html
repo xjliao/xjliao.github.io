@@ -207,11 +207,11 @@
 
       
         <p>下载地址<br>使用1.2.4版本<br><a href="http://pypi.python.org/pypi/MySQL-python/1.2.4" target="_blank" rel="external">http://pypi.python.org/pypi/MySQL-python/1.2.4</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xjl:MySQL-python-<span class="number">1.2</span>.<span class="number">4</span> xjliao$ python ./setup.py install</span><br></pre></td></tr></table></figure>
-<p>常见错误<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EnvironmentError: /usr/<span class="built_in">local</span>/bin/mysql_config not found</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xjl:MySQL-python-1.2.4 xjliao$ python ./setup.py install</div></pre></td></tr></table></figure>
+<p>常见错误<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EnvironmentError: /usr/<span class="built_in">local</span>/bin/mysql_config not found  </div></pre></td></tr></table></figure></p>
 <p>解决方案:<br>打开当前目录下的site.cfg, 并去掉#mysql_config = /usr/local/bin/mysql_config,<br>改为安装的mysql目录下的mysql_config,<br>我的目录:/usr/local/mysql/bin/mysql_config</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Referenced from: /Library/Python/<span class="number">2.7</span>/site-packages/MySQL_python-<span class="number">1.2</span>.<span class="number">4</span>-py2.<span class="number">7</span>-macosx-<span class="number">10.9</span>-intel.egg/_mysql.so</span><br><span class="line"> Reason: image not found</span><br></pre></td></tr></table></figure>
-<p>解决方案:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/mysql/lib/libmysqlclient.<span class="number">18</span>.dylib /usr/lib/libmysqlclient.<span class="number">18</span>.dylib</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Referenced from: /Library/Python/2.7/site-packages/MySQL_python-1.2.4-py2.7-macosx-10.9-intel.egg/_mysql.so</div><div class="line"> Reason: image not found</div></pre></td></tr></table></figure>
+<p>解决方案:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln <span class="_">-s</span> /usr/<span class="built_in">local</span>/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib</div></pre></td></tr></table></figure></p>
 
       
     </div>

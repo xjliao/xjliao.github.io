@@ -209,29 +209,29 @@
         <p>在此之前假设你的Golang环境已经设置好了  </p>
 <p>mac 二进制包安装golang默认可以使用linux/windows/freebsd, GOARCH为amd64的交叉编译， 386需要手动添加</p>
 <h2 id=""> </h2><h2 id="准备目标平台的包和工具文件">准备目标平台的包和工具文件</h2><p>以下过程不是重新编译，安装go，而是添加对其他平台的支持。</p>
-<h3 id="方式一">方式一</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/go/src</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=linux GOARCH=<span class="number">386</span> ./make.bash</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=windows GOARCH=<span class="number">386</span> ./make.bash</span><br><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=freebsd GOARCH=<span class="number">386</span> ./make.bash</span><br></pre></td></tr></table></figure>
+<h3 id="方式一">方式一</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/go/src</div><div class="line">$ CGO_ENABLED=0 GOOS=linux GOARCH=386 ./make.bash</div><div class="line">$ CGO_ENABLED=0 GOOS=windows GOARCH=386 ./make.bash</div><div class="line">$ CGO_ENABLED=0 GOOS=freebsd GOARCH=386 ./make.bash</div></pre></td></tr></table></figure>
 <blockquote>
 <p>CGO_ENABLED=0 表示交叉编译禁用cgo<br>如果go文件夹是owner为root， 请使用sudo  </p>
 </blockquote>
-<p>如果需要提高编译速度，加入。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./make.bash --no-clean</span><br></pre></td></tr></table></figure></p>
-<h3 id="方式二">方式二</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cross-compile-all go</span><br></pre></td></tr></table></figure>
+<p>如果需要提高编译速度，加入。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./make.bash --no-clean</div></pre></td></tr></table></figure></p>
+<h3 id="方式二">方式二</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install --cross-compile-all go</div></pre></td></tr></table></figure>
 <p>安装完成后，我们可以看到 Go的安装目录下 多了这个平台特有的几个命令行工具。</p>
 <p>各平台的GOOS和GOARCH参考 </p>
 <table><br><br></table>
 
 <p>OS                   ARCH                          OS version<br>linux                386 / amd64 / arm             &gt;= Linux 2.6<br>darwin               386 / amd64                   OS X (Snow Leopard + Lion)<br>freebsd              386 / amd64                   &gt;= FreeBSD 7<br>windows              386 / amd64                   &gt;= Windows 2000</p>
 <h2 id="编译成对应平台下的执行文件">编译成对应平台下的执行文件</h2><p>到源代码目录下执行:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ CGO_ENABLED=<span class="number">0</span> GOOS=linux GOARCH=amd64 go build</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build</div></pre></td></tr></table></figure>
 <p>不带前面参数的 go build 只是编译出开发环境适用的执行文件。</p>
 <h2 id="golang-crosscompile工具">golang-crosscompile工具</h2><p>下载地址<br><a href="">github.com/davecheney/golang-crosscompile</a><br>使用方法<br><a href="">http://dave.cheney.net/2012/09/08/an-introduction-to-cross-compilation-with-go</a></p>
-<h3 id="下载脚本">下载脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://github.com/davecheney/golang-crosscompile.git</span><br><span class="line">$ <span class="built_in">source</span> golang-crosscompile/crosscompile.bash</span><br></pre></td></tr></table></figure>
-<h3 id="编译支持所有平台">编译支持所有平台</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go-crosscompile-build-all</span><br></pre></td></tr></table></figure>
+<h3 id="下载脚本">下载脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> git://github.com/davecheney/golang-crosscompile.git</div><div class="line">$ <span class="built_in">source</span> golang-crosscompile/crosscompile.bash</div></pre></td></tr></table></figure>
+<h3 id="编译支持所有平台">编译支持所有平台</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ go-crosscompile-build-all</div></pre></td></tr></table></figure>
 <p>这个时间要花个几分钟</p>
-<h3 id="查看平台的包">查看平台的包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span> $(go env GOROOT)/pkg</span><br></pre></td></tr></table></figure>
-<h3 id="使用交叉编译">使用交叉编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go-linux-arm build</span><br></pre></td></tr></table></figure>
+<h3 id="查看平台的包">查看平台的包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls -1 $(go env GOROOT)/pkg</div></pre></td></tr></table></figure>
+<h3 id="使用交叉编译">使用交叉编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ go-linux-arm build</div></pre></td></tr></table></figure>
 <p>要不同平台的编译，替换即可, 如:go-windows-386 build </p>
 <p>为方面以后使用,将下面的加入到.bashrc或.zshrc</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/.golang-crosscomplie</span><br><span class="line">$ cp golang-crosscompile/crosscompile.bash  ~./golang-crosscomplie</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mkdir ~/.golang-crosscomplie</div><div class="line">$ cp golang-crosscompile/crosscompile.bash  ~./golang-crosscomplie</div><div class="line">$ <span class="built_in">source</span> ~/.zshrc</div></pre></td></tr></table></figure>
       
     </div>
 

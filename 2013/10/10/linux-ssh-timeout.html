@@ -206,8 +206,8 @@
       
 
       
-        <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerAliveInterval <span class="number">60</span></span><br></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
-<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClientAliveInterval <span class="number">300</span>  </span><br><span class="line">ClientAliveCountMax <span class="number">3</span></span><br></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/sshd restart</span><br></pre></td></tr></table></figure></p>
+        <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
+<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -225,13 +225,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/10/10/linux-vpn-1.html">vpn 国内外智能分流</a>
+              <a href="/2013/10/10/android-error2.html">The Import android.support.v7 cannot be resolved</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/10/10/android-toast-not-show.html">Android toast 不显示</a>
+              <a href="/2013/10/02/python-execute-shell.html">python执行shell命令</a>
             
           </div>
         </div>

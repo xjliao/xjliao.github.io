@@ -217,7 +217,7 @@
 <li>执行<code>python chnroutes.py</code>，这将生成<code>vpn-up.sh</code>和<code>vpn-down.sh</code>两个文件；</li>
 <li>将这两个文件移入<code>/etc/openvpn/</code>；</li>
 <li><p>在OpenVPN配置文件中加入：</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">script-security <span class="number">2</span></span><br><span class="line"><span class="keyword">up</span> vpn-<span class="keyword">up</span>.<span class="keyword">sh</span></span><br><span class="line">down vpn-down.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">script-security 2</div><div class="line">up vpn-up.sh</div><div class="line">down vpn-down.sh</div></pre></td></tr></table></figure>
 </li>
 <li><p>重新连接VPN，观察日志测试。</p>
 </li>
@@ -267,7 +267,7 @@
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/10/10/linux-ssh-timeout.html">ssh连接闲置超时，被踢出， 解决方案</a>
+              <a href="/2013/10/10/android-q1.html">Activity stack ordering problem when launching application from Android app installer and from Home screen</a>
             
           </div>
         </div>

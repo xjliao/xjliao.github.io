@@ -209,9 +209,9 @@
         <p>官网:<a href="http://www.raspberrypi.org/" target="_blank" rel="external">http://www.raspberrypi.org/</a></p>
 <h2 id="安装">安装</h2><p>下载地址:<a href="http://www.raspberrypi.org/downloads/" target="_blank" rel="external">http://www.raspberrypi.org/downloads/</a><br>推荐下载RASPBIAN版本<br>zip文件下载:<a href="http://downloads.raspberrypi.org/raspbian_latest" target="_blank" rel="external">http://downloads.raspberrypi.org/raspbian_latest</a><br>种子下载:<a href="http://downloads.raspberrypi.org/" target="_blank" rel="external">http://downloads.raspberrypi.org/</a></p>
 <p>需要一个大一点的内存卡(8G以上最好,分区格式为fat32)<br>假如你的内存卡电脑已被识别<br>(在mac上)</p>
-<h3 id="查看设备:">查看设备:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure>
+<h3 id="查看设备:">查看设备:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
 <p>记住设备号,下面的例子假设查看得到的设备为:disk1  </p>
-<h3 id="卸载设备">卸载设备</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmountDisk /dev/disk1</span><br></pre></td></tr></table></figure>
+<h3 id="卸载设备">卸载设备</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil unmountDisk /dev/disk1</div></pre></td></tr></table></figure>
 <h3 id="刻入镜像">刻入镜像</h3><p><code>`bash
 sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替换为rdisk1原始设备号,刻录速度会更快)</code></p>
 <p>等一会吧 刻录完成会有提示信息</p>
@@ -241,7 +241,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/10/11/xcode-arc.html">xcode arc 打开 关闭</a>
+              <a href="/2013/10/11/android-button-sound.html">Android Button 按键音</a>
             
           </div>
         </div>

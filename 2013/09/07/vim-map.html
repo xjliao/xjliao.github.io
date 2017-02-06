@@ -215,13 +215,13 @@
 
       
         <p>Map是Vim强大的一个重要原因，可以自定义各种快捷键，用起来自然得心应手。<br>vim里最基本的map用法也就是  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map c a</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:map c a</div></pre></td></tr></table></figure>
 <p>这里把c映射成了a，在map生效的情况下，按下c就等同于按下了a<br>当然，常用的Ctrl,Shift,Alt自然也是支持的。  </p>
 <p>令Ctrl+a对应到a</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;C<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:map &lt;C<span class="_">-a</span>&gt; a</div></pre></td></tr></table></figure>
 <p>令Alt+a对应到a</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;A<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure>
-<p>令Ctrl+Alt+a对应到a<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map &lt;C-A<span class="operator">-a</span>&gt; a</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:map &lt;A<span class="_">-a</span>&gt; a</div></pre></td></tr></table></figure>
+<p>令Ctrl+Alt+a对应到a<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:map &lt;C-A<span class="_">-a</span>&gt; a</div></pre></td></tr></table></figure></p>
 <p>到此，我们已经可以做很多事情了。<br>但是map命令远不只这一种，在不同的模式下，同一组按键可以被映射到不同的组合上。<br>Vim的模式众多，但是一般被提及的也就是这么几种:  </p>
 <p>Normal Mode<br>也就是最一般的普通模式，默认进入vim之后，处于这种模式。  </p>
 <p>Visual Mode<br>一般译作可视模式，在这种模式下选定一些字符、行、多列。<br>在普通模式下，可以按v进入。  </p>
@@ -235,17 +235,17 @@
 <p>v<br>表示在可视模式下生效  </p>
 <p>i<br>表示在插入模式下生效  </p>
 <p>c<br>表示在命令行模式下生效  </p>
-<p>Recursive Mapping<br>递归的映射。其实很好理解，也就是如果键a被映射成了b，c又被映射成了a，如果映射是递归的，那么c就被映射成了b。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:map a b</span><br><span class="line">:map c a</span><br></pre></td></tr></table></figure><br>对于c效果等同于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:map c b</span><br></pre></td></tr></table></figure><br>默认的map就是递归的。如果遇到[nore]这种前缀，比如:noremap，就表示这种map是非递归的。</p>
-<p>unmap<br>unmap后面跟着一个按键组合，表示删除这个映射。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:unmap c</span><br></pre></td></tr></table></figure></p>
+<p>Recursive Mapping<br>递归的映射。其实很好理解，也就是如果键a被映射成了b，c又被映射成了a，如果映射是递归的，那么c就被映射成了b。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:map a b</div><div class="line">:map c a</div></pre></td></tr></table></figure><br>对于c效果等同于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:map c b</div></pre></td></tr></table></figure><br>默认的map就是递归的。如果遇到[nore]这种前缀，比如:noremap，就表示这种map是非递归的。</p>
+<p>unmap<br>unmap后面跟着一个按键组合，表示删除这个映射。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:unmap c</div></pre></td></tr></table></figure></p>
 <p>那么在map生效模式下，c不再被映射到a上。  </p>
 <p>同样，unmap可以加各种前缀，表示影响到的模式。  </p>
 <p>mapclear<br>mapclear直接清除相关模式下的所有映射。<br>同样，mapclear可以加各种前缀，表示影响到的模式。  </p>
 <p>这里列出常用的一些map命令，默认map命令影响到普通模式和可视模式。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:map :noremap :unmap :mapclear</span><br><span class="line">:nmap :nnoremap :nunmap :nmapclear</span><br><span class="line">:vmap :vnoremap :vunmap :vmapclear</span><br><span class="line">:imap :inoremap :iunmap :imapclear</span><br><span class="line">:cmap :cnoremap :cunmap :cmapclear</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">:map :noremap :unmap :mapclear</div><div class="line">:nmap :nnoremap :nunmap :nmapclear</div><div class="line">:vmap :vnoremap :vunmap :vmapclear</div><div class="line">:imap :inoremap :iunmap :imapclear</div><div class="line">:cmap :cnoremap :cunmap :cmapclear</div></pre></td></tr></table></figure>
 <p>可以试试这些命令  </p>
-<p>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap b a</span><br></pre></td></tr></table></figure></p>
-<p>现在普通模式下，按b，可以进入插入模式，随便输入一些字符<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmap b d</span><br></pre></td></tr></table></figure></p>
-<p>现在普通模式下，按V，进入了可视模式，并且选定了一整行，按下b，可以删除整行<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imap b a</span><br></pre></td></tr></table></figure><br>现在试着给正在编辑的这个文件输入一个字符”b”吧 :p<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmap b c</span><br></pre></td></tr></table></figure><br>命令行模式下， 按下b，会出来一个a<br>好了，到此vim的按键已经被你弄得乱七八糟了，试着用unmap和mapclear清除这些mapping吧。:]</p>
+<p>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap b a </div></pre></td></tr></table></figure></p>
+<p>现在普通模式下，按b，可以进入插入模式，随便输入一些字符<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vmap b d </div></pre></td></tr></table></figure></p>
+<p>现在普通模式下，按V，进入了可视模式，并且选定了一整行，按下b，可以删除整行<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">imap b a </div></pre></td></tr></table></figure><br>现在试着给正在编辑的这个文件输入一个字符”b”吧 :p<br>命令行模式下建一个mapping<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmap b c </div></pre></td></tr></table></figure><br>命令行模式下， 按下b，会出来一个a<br>好了，到此vim的按键已经被你弄得乱七八糟了，试着用unmap和mapclear清除这些mapping吧。:]</p>
 <p><a href="http://haoxiang.org/2011/09/vim-modes-and-mappin/" target="_blank" rel="external">原文地址</a></p>
 
       
@@ -272,7 +272,7 @@
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/08/07/objective-c-property.html">Objective-c @property</a>
+              <a href="/2013/08/07/objective-c-nil-Nil-NULL-NSNull.html">Objective-c nil Nil NULL NSNull</a>
             
           </div>
         </div>

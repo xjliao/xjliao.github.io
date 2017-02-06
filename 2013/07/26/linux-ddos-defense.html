@@ -208,14 +208,14 @@
       
         <p><a href="http://deflate.medialayer.com/" target="_blank" rel="external">官网:http://deflate.medialayer.com/</a></p>
 <h2 id="About">About</h2><p>(D)DoS Deflate is a lightweight bash shell script designed to assist in the process of blocking a denial of service attack. It utilizes the command below to create a list of IP addresses connected to the server, along with their total number of connections. It is one of the simplest and easiest to install solutions at the software level.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntu | awk <span class="string">'&#123;print $5&#125;'</span> | cut <span class="operator">-d</span>: <span class="operator">-f</span>1 | sort | uniq -c | sort -n</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat -ntu | awk <span class="string">'&#123;print $5&#125;'</span> | cut <span class="_">-d</span>: <span class="_">-f</span>1 | sort | uniq -c | sort -n</div></pre></td></tr></table></figure>
 <p>IP addresses with over a pre-configured number of connections are automatically blocked in the server’s firewall, which can be direct iptables or Advanced Policy Firewall (APF). (We highly recommend that you use APF on your server in general, but deflate will work without it.)</p>
 <h2 id="Notable_Features">Notable Features</h2><p>It is possible to whitelist IP addresses, via /usr/local/ddos/ignore.ip.list.<br>Simple configuration file: /usr/local/ddos/ddos.conf<br>IP addresses are automatically unblocked after a preconfigured time limit (default: 600 seconds)<br>The script can run at a chosen frequency via the configuration file (default: 1 minute)<br>You can receive email alerts when IP addresses are blocked.</p>
-<h2 id="Installation">Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.inetbase.com/scripts/ddos/install.sh</span><br><span class="line">chmod <span class="number">0700</span> install.sh</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
-<h2 id="Uninstallation">Uninstallation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.inetbase.com/scripts/ddos/uninstall.ddos</span><br><span class="line">chmod <span class="number">0700</span> uninstall.ddos</span><br><span class="line">./uninstall.ddos</span><br></pre></td></tr></table></figure>
+<h2 id="Installation">Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget http://www.inetbase.com/scripts/ddos/install.sh</div><div class="line">chmod 0700 install.sh</div><div class="line">./install.sh</div></pre></td></tr></table></figure>
+<h2 id="Uninstallation">Uninstallation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget http://www.inetbase.com/scripts/ddos/uninstall.ddos</div><div class="line">chmod 0700 uninstall.ddos</div><div class="line">./uninstall.ddos</div></pre></td></tr></table></figure>
 <h2 id="Questions?">Questions?</h2><p>Although most things are explained on this page, if you have any further questions, you may contact the original developer of the script, Zaf.</p>
-<h2 id="Ban_ping">Ban ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p icmp --icmp-type <span class="number">8</span> <span class="operator">-s</span> <span class="number">0</span>/<span class="number">0</span> -j DROP</span><br></pre></td></tr></table></figure>
-<h2 id="Allow_ping">Allow ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -D INPUT -p icmp --icmp-type <span class="number">8</span> <span class="operator">-s</span> <span class="number">0</span>/<span class="number">0</span> -j DROP</span><br></pre></td></tr></table></figure>
+<h2 id="Ban_ping">Ban ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -p icmp --icmp-type 8 <span class="_">-s</span> 0/0 -j DROP</div></pre></td></tr></table></figure>
+<h2 id="Allow_ping">Allow ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -D INPUT -p icmp --icmp-type 8 <span class="_">-s</span> 0/0 -j DROP</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -232,7 +232,7 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/08/07/objective-c-block.html">Objective-c block</a>
+              <a href="/2013/08/07/objective-c-error1.html">ERROR: after modifying system headers, please delete the module cache at</a>
             
           </div>
 

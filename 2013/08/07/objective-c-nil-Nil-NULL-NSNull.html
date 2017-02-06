@@ -218,11 +218,11 @@
 <p>刚被分配的NSObject的内容被设置为0。也就是说那个对象所有的指向其他对象的指针都从nil开始，所以在init方法中设置self.(association) = nil之类的表达是没有必要的。</p>
 <p>也许nil最显著的行为是，它虽然为零，仍然可以有消息发送给它。</p>
 <p>在其他的语言中，比如C++，这样做会使你的程序崩溃，但在Objective-C中，在nil上调用方法返回一个零值。这大大的简化了表达，因为它避免了在使用nil之前对它的检查：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 举个例子，这个表达...</span></span><br><span class="line"><span class="keyword">if</span> (name != <span class="literal">nil</span> &amp;&amp; [name isEqualToString:<span class="string">@"Steve"</span>]) &#123; ... &#125;</span><br><span class="line"><span class="comment">// …可以被简化为：</span></span><br><span class="line"><span class="keyword">if</span> ([name isEqualToString:<span class="string">@"steve"</span>]) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 举个例子，这个表达...</span></div><div class="line"><span class="keyword">if</span> (name != <span class="literal">nil</span> &amp;&amp; [name isEqualToString:<span class="string">@"Steve"</span>]) &#123; ... &#125;</div><div class="line"><span class="comment">// …可以被简化为：</span></div><div class="line"><span class="keyword">if</span> ([name isEqualToString:<span class="string">@"steve"</span>]) &#123; ... &#125;</div></pre></td></tr></table></figure>
 <p>了解nil如何在Objective-C中工作可以让你将这个便利变成一个功能，而不是潜伏在你的应用中的bug。要确保避免当nil值不需要的情况，要么通过检查或者提前返回来安静的失败，或者通过增加一个NSParameterAssert来抛出异常。</p>
 <p>NSNull：有作没有</p>
 <p>NSNull在Foundation和其它框架中被广泛的使用，以解决如NSArray和NSDictionary之类的集合不能有nil值的缺陷。你可以将NSNull理解为有效的将NULL或者nil值封装boxing，以达到在集合中使用它们的目的：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableDictionary</span> *mutableDictionary = [<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">mutableDictionary[<span class="string">@"someKey"</span>] = [<span class="built_in">NSNull</span> null]; <span class="comment">// Sets value of NSNull singleton for `someKey`</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Keys: %@"</span>, [mutableDictionary allKeys]); <span class="comment">// @[@"someKey"]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableDictionary</span> *mutableDictionary = [<span class="built_in">NSMutableDictionary</span> dictionary];</div><div class="line">mutableDictionary[<span class="string">@"someKey"</span>] = [<span class="built_in">NSNull</span> null]; <span class="comment">// Sets value of NSNull singleton for `someKey`</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Keys: %@"</span>, [mutableDictionary allKeys]); <span class="comment">// @[@"someKey"]</span></div></pre></td></tr></table></figure>
 <p>总的来说，这里的四个表达没有的值是每个Objective-C程序员都应该知道的:</p>
 <table width="auto"><br>    <tr><br>        <th>标志</th><br>        <th>值</th><br>        <th>含义</th><br>    </tr><br>    <tr align="center"><br>        <td>NULL</td><br>        <td>(void *)0</td><br>        <td>C指针的字面零值</td><br>    </tr><br>    <tr align="center"><br>        <td>nil</td><br>        <td>(id)0</td><br>        <td>Objective-C对象的字面零值</td><br>    </tr><br>    <tr align="center"><br>        <td>Nil</td><br>        <td>(Class)0</td><br>        <td>Objective-C类的字面零值</td><br>    </tr><br>    <tr align="center"><br>        <td>NSNull</td><br>        <td>[NSNull null]</td><br>        <td>用来表示零值的单独的对象</td><br>    </tr><br></table>
 
@@ -243,13 +243,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/08/07/objective-c-property.html">Objective-c @property</a>
+              <a href="/2013/09/07/vim-map.html">Vim mode and map</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/08/07/objective-c-error1.html">ERROR: after modifying system headers, please delete the module cache at</a>
+              <a href="/2013/08/07/objective-c-block.html">Objective-c block</a>
             
           </div>
         </div>
