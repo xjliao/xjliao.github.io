@@ -386,6 +386,25 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Enable the Safari debug menu  Web Browsers]]></title>
+    <link href="http://xjliao.me/2015/03/23/safari-develop.html"/>
+    <id>http://xjliao.me/2015/03/23/safari-develop.html</id>
+    <published>2015-03-22T16:00:00.000Z</published>
+    <updated>2015-04-24T05:11:27.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code, I found there is a hidden Debug menu. Type the following command in Terminal (while Safari is NOT running):<br> % defaults write com.apple.Safari IncludeDebugMenu 1<br>Then launch Safari, and enjoy the new Debug menu. </p>
+<p>[Editor’s note: The debug menu has some useful options on it, so you may find this a very useful hack. If you ever wish to disable it again, just repeat the command with a “0” instead of a “1”.]</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code,]]>
+    </summary>
+    
+      <category term="Safari" scheme="http://xjliao.me/tags/Safari/"/>
+    
+      <category term="Safari" scheme="http://xjliao.me/categories/Safari/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Cordova debugging]]></title>
     <link href="http://xjliao.me/2015/03/23/cordova-remote-debug.html"/>
     <id>http://xjliao.me/2015/03/23/cordova-remote-debug.html</id>
@@ -432,25 +451,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Enable the Safari debug menu  Web Browsers]]></title>
-    <link href="http://xjliao.me/2015/03/23/safari-develop.html"/>
-    <id>http://xjliao.me/2015/03/23/safari-develop.html</id>
-    <published>2015-03-22T16:00:00.000Z</published>
-    <updated>2015-04-24T05:11:27.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code, I found there is a hidden Debug menu. Type the following command in Terminal (while Safari is NOT running):<br> % defaults write com.apple.Safari IncludeDebugMenu 1<br>Then launch Safari, and enjoy the new Debug menu. </p>
-<p>[Editor’s note: The debug menu has some useful options on it, so you may find this a very useful hack. If you ever wish to disable it again, just repeat the command with a “0” instead of a “1”.]</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code,]]>
-    </summary>
-    
-      <category term="Safari" scheme="http://xjliao.me/tags/Safari/"/>
-    
-      <category term="Safari" scheme="http://xjliao.me/categories/Safari/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[玩 Raspberry]]></title>
     <link href="http://xjliao.me/2014/10/11/raspberrypi.html"/>
     <id>http://xjliao.me/2014/10/11/raspberrypi.html</id>
@@ -477,6 +477,24 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
       <category term="Raspberry" scheme="http://xjliao.me/tags/Raspberry/"/>
     
       <category term="Raspberry" scheme="http://xjliao.me/categories/Raspberry/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac os 技巧]]></title>
+    <link href="http://xjliao.me/2013/10/11/mac-tech.html"/>
+    <id>http://xjliao.me/2013/10/11/mac-tech.html</id>
+    <published>2013-10-10T16:00:00.000Z</published>
+    <updated>2015-06-29T01:18:46.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">显示：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></div><div class="line">隐藏：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></div></pre></td></tr></table></figure>
+<h2 id="禁用或启用自动生成-DS_STORE文件">禁用或启用自动生成.DS_STORE文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">禁止.DS_store生成：defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</div><div class="line">恢复.DS_store生成：defaults delete com.apple.desktopservices DSDontWriteNetworkStores</div></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2<]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://xjliao.me/tags/Mac/"/>
+    
+      <category term="Mac" scheme="http://xjliao.me/categories/Mac/"/>
     
   </entry>
   
@@ -515,24 +533,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
       <category term="Eclipse" scheme="http://xjliao.me/tags/Eclipse/"/>
     
       <category term="Eclipse" scheme="http://xjliao.me/categories/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mac os 技巧]]></title>
-    <link href="http://xjliao.me/2013/10/11/mac-tech.html"/>
-    <id>http://xjliao.me/2013/10/11/mac-tech.html</id>
-    <published>2013-10-10T16:00:00.000Z</published>
-    <updated>2015-06-29T01:18:46.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">显示：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></div><div class="line">隐藏：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></div></pre></td></tr></table></figure>
-<h2 id="禁用或启用自动生成-DS_STORE文件">禁用或启用自动生成.DS_STORE文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">禁止.DS_store生成：defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</div><div class="line">恢复.DS_store生成：defaults delete com.apple.desktopservices DSDontWriteNetworkStores</div></pre></td></tr></table></figure>]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2<]]>
-    </summary>
-    
-      <category term="Mac" scheme="http://xjliao.me/tags/Mac/"/>
-    
-      <category term="Mac" scheme="http://xjliao.me/categories/Mac/"/>
     
   </entry>
   

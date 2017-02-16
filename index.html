@@ -1268,6 +1268,77 @@
           
           
             
+              <a class="post-title-link" href="/2015/03/23/safari-develop.html">
+                Enable the Safari debug menu  Web Browsers
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-03-23
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Safari/">Safari</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code, I found there is a hidden Debug menu. Type the following command in Terminal (while Safari is NOT running):<br> % defaults write com.apple.Safari IncludeDebugMenu 1<br>Then launch Safari, and enjoy the new Debug menu. </p>
+<p>[Editor’s note: The debug menu has some useful options on it, so you may find this a very useful hack. If you ever wish to disable it again, just repeat the command with a “0” instead of a “1”.]</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/03/23/cordova-remote-debug.html">
                 Cordova debugging
               </a>
@@ -1365,77 +1436,6 @@
           
           
             
-              <a class="post-title-link" href="/2015/03/23/safari-develop.html">
-                Enable the Safari debug menu  Web Browsers
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-03-23
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Safari/">Safari</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Enable_the_Safari_debug_menu_Web_Browsers">Enable the Safari debug menu  Web Browsers</h2><p>While I look around Safari binary code, I found there is a hidden Debug menu. Type the following command in Terminal (while Safari is NOT running):<br> % defaults write com.apple.Safari IncludeDebugMenu 1<br>Then launch Safari, and enjoy the new Debug menu. </p>
-<p>[Editor’s note: The debug menu has some useful options on it, so you may find this a very useful hack. If you ever wish to disable it again, just repeat the command with a “0” instead of a “1”.]</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2014/10/11/raspberrypi.html">
                 玩 Raspberry
               </a>
@@ -1488,6 +1488,76 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 <p>ssh默认开启,这里通过ssh连接上系统.<br>账号:pi   密码:raspberry</p>
 <p>ip查看这里可以通过进入路由器查看dhcp列表,会有一台叫raspberrypi的机器,对应的ip就是了.这样我们就可以连接上了<br>反正不管你用啥办法,都要搞到ip</p>
 
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/11/mac-tech.html">
+                Mac os 技巧
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-11
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Mac/">Mac</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">显示：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></div><div class="line">隐藏：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></div></pre></td></tr></table></figure>
+<h2 id="禁用或启用自动生成-DS_STORE文件">禁用或启用自动生成.DS_STORE文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">禁止.DS_store生成：defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</div><div class="line">恢复.DS_store生成：defaults delete com.apple.desktopservices DSDontWriteNetworkStores</div></pre></td></tr></table></figure>
         
       
     </div>
@@ -1658,76 +1728,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/11/mac-tech.html">
-                Mac os 技巧
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Mac/">Mac</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="显示或隐藏文件">显示或隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">显示：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></div><div class="line">隐藏：defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></div></pre></td></tr></table></figure>
-<h2 id="禁用或启用自动生成-DS_STORE文件">禁用或启用自动生成.DS_STORE文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">禁止.DS_store生成：defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</div><div class="line">恢复.DS_store生成：defaults delete com.apple.desktopservices DSDontWriteNetworkStores</div></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/11/git.html">
                 Git 常用命令
               </a>
@@ -1770,6 +1770,77 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           <h2 id="git_book">git book</h2><p><a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">http://git-scm.com/book/zh/v1</a>  </p>
 <p>需求:在服务器上创建一个项目版本库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//在服务器上创建一个裸仓库</div><div class="line">git init --bare --shared project.git</div><div class="line"></div><div class="line">//初始化本地, 加入版本控制</div><div class="line">git init</div><div class="line">//添加刚刚创建的服务器地址, 使用的ssh命令, 需要在服务器上创建git账户, 推送需要输入git密码,或者将本地公钥上传到服务器git账户下的~/.ssh/authorized_keys授权文件里面,实现无密码提交</div><div class="line">git remote add origin  git@gitserver:/home/git/project.git</div><div class="line">//加入添加/修改文件</div><div class="line">git add -A</div><div class="line">//本地提交</div><div class="line">git commit -m <span class="string">'init'</span></div><div class="line">//推送到服务器</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/10/android-q1.html">
+                Activity stack ordering problem when launching application from Android app installer and from Home screen
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Activity stack ordering problem when launching application from Android app installer and from Home screen  </p>
+<p>参考资料:<br>1.<a href="http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst" target="_blank" rel="external">http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst</a></p>
 
         
       
@@ -1916,77 +1987,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           <p>问题很简单Toast.show()不显示toast，一开始以为是UI线程问题后来检查了发现在oncreate方法里调用也不弹出toast，但其他项目能正常显示很纠结。各种方法找尽了最后定位为手机问题。后来在网友的提醒发现原来是设置里面显示通知关闭了，开启后一切正常。设置见下图</p>
 <p><img src="http://xjliao.qiniudn.com/img/toast_no_show.png" alt="Alt text"></p>
 <p> 参考资料:<a href="http://blog.sina.com.cn/s/blog_783ede030101hj4r.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_783ede030101hj4r.html</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/10/android-q1.html">
-                Activity stack ordering problem when launching application from Android app installer and from Home screen
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Activity stack ordering problem when launching application from Android app installer and from Home screen  </p>
-<p>参考资料:<br>1.<a href="http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst" target="_blank" rel="external">http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst</a></p>
 
         
       
@@ -2195,8 +2195,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-error2.html">
-                The Import android.support.v7 cannot be resolved
+              <a class="post-title-link" href="/2013/10/10/android-error1.html">
+                No resource found that matches the given name '@style/Theme.AppCompat.Light'
               </a>
             
           
@@ -2234,9 +2234,16 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
-<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
-<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
+          <p>what are the steps for that? where is AppCompat located?<br>To download</p>
+<p><a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">http://developer.android.com/tools/support-library/setup.html</a></p>
+<p>If use eclipse</p>
+<p>Goto windows android sdk manager. Under extras check Android Support Library and click install.<br><img src="http://i.stack.imgur.com/vghlq.png" alt="img"><br>enter image description here</p>
+<p>After that the AppCompat Can be found at</p>
+<p>android-sdk/extras/android/support/v7/appcompat<br>You need to reference this AppCompat in your android project.</p>
+<p>Import the library to eclipse.</p>
+<p>Right click on your android project. Goto Properties. goto andorid. Click Add Library and reference the same.</p>
+<p>Clean and Rebuild your project</p>
+<p>解决方案:<br><a href="http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light" target="_blank" rel="external">http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light</a></p>
 
         
       
@@ -2338,8 +2345,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-error1.html">
-                No resource found that matches the given name '@style/Theme.AppCompat.Light'
+              <a class="post-title-link" href="/2013/10/10/android-error2.html">
+                The Import android.support.v7 cannot be resolved
               </a>
             
           
@@ -2377,16 +2384,9 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>what are the steps for that? where is AppCompat located?<br>To download</p>
-<p><a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">http://developer.android.com/tools/support-library/setup.html</a></p>
-<p>If use eclipse</p>
-<p>Goto windows android sdk manager. Under extras check Android Support Library and click install.<br><img src="http://i.stack.imgur.com/vghlq.png" alt="img"><br>enter image description here</p>
-<p>After that the AppCompat Can be found at</p>
-<p>android-sdk/extras/android/support/v7/appcompat<br>You need to reference this AppCompat in your android project.</p>
-<p>Import the library to eclipse.</p>
-<p>Right click on your android project. Goto Properties. goto andorid. Click Add Library and reference the same.</p>
-<p>Clean and Rebuild your project</p>
-<p>解决方案:<br><a href="http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light" target="_blank" rel="external">http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light</a></p>
+          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
+<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
+<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
 
         
       
@@ -2524,14 +2524,14 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
