@@ -172,8 +172,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
-                Failed to initialize Monitor Thread: Unable to establish loopback connection
+              <a class="post-title-link" href="/2013/10/10/android-imageview-q1.html">
+                Android中 ImageView 顶部,底部出现一段空白区间, 不填充
               </a>
             
           
@@ -211,15 +211,11 @@
 
       
         
-          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
-<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
-<p>使用命令:adb devices  </p>
-<ul>
-<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
-<li>failed to start daemon *<br>error: cannot connect to dae  </li>
-</ul>
-<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
-
+          <p>1、在XML文件中设置：  </p>
+<pre><code><span class="label">android:</span>adjustViewBounds=<span class="string">"true"</span>  
+</code></pre><p>2、在Java代码中进行设置：  </p>
+<pre><code>mImageView.setAdjustViewBounds<span class="params">(<span class="literal">true</span>)</span>;
+</code></pre>
         
       
     </div>
@@ -323,8 +319,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
-                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
+              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
+                Linux python 安装或者升级
               </a>
             
           
@@ -340,7 +336,7 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Centos/">Centos</a>
+              <a href="/categories/Python/">Python</a>
 
               
               
@@ -348,15 +344,7 @@
               
 
             
-              <a href="/categories/Centos/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/Django/">Django</a>
+              <a href="/categories/Python/Linux/">Linux</a>
 
               
               
@@ -378,7 +366,10 @@
 
       
         
-          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
+          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
+<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
+<p>修改为原来的版本即可</p>
 
         
       
@@ -568,6 +559,92 @@
           
           
             
+              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
+                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Centos/">Centos</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/Django/">Django</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/01/linode-linux-centos-iptables.html">
                 iptables: Setting chains to policy ACCEPT: security raw nat[FAILED]filter
               </a>
@@ -616,87 +693,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line">\#!/usr/bin/python2.6</div></pre></td></tr></table></figure>
 <p>结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">for i in $tables; do</div><div class="line">    echo -n &quot;$i &quot;</div><div class="line">    case &quot;$i&quot; in</div><div class="line">        security)</div><div class="line">            $IPTABLES -t filter -P INPUT $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t filter -P OUTPUT $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t filter -P FORWARD $policy \</div><div class="line">                || let ret+=1</div><div class="line">            ;;</div><div class="line">        raw)</div><div class="line">            $IPTABLES -t raw -P PREROUTING $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t raw -P OUTPUT $policy \</div><div class="line">                || let ret+=1</div><div class="line">            ;;</div></pre></td></tr></table></figure>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
-                Linux python 安装或者升级
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-01
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Python/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
-<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
-<p>修改为原来的版本即可</p>
 
         
       
