@@ -16,7 +16,7 @@ http://developer.android.com/tools/support-library/setup.html
 If use eclipse
 
 Goto windows android sdk manager. Under extras check Android Support Library and click install.  
-![img](http://i.stack.imgur.com/vghlq.png)
+![vghlq.png](https://ooo.0o0.ooo/2017/02/23/58adb8b4a377f.png)
 enter image description here
 
 After that the AppCompat Can be found at
