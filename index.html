@@ -172,6 +172,87 @@
           
           
             
+              <a class="post-title-link" href="/2017/02/24/charles-https.html">
+                Charles https
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2017-02-24
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Others/">Others</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>环境:</p>
+<blockquote>
+<p>Charles 3.10.1、OS X 10.11.4、IOS 10.2.1</p>
+</blockquote>
+<h2 id="1-安装证书">1.安装证书</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b00a5964b5a.png" alt="QQ20170224-181458@2x.png"></p>
+<h2 id="2-SSL_proxy设置">2.SSL proxy设置</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b00ceb421f3.png" alt="QQ20170224-181716@2x.png"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b00cebb2e3d.png" alt="QQ20170224-181753@2x.png"></p>
+<p>到此为止电脑上浏览器代理设置好后，是能代理https了，但是手机端呢？下面是手机设置</p>
+<h2 id="2-手机端https代理设置">2.手机端https代理设置</h2><blockquote>
+<p>手机已将Charles设置为了代理</p>
+</blockquote>
+<p><img src="https://ooo.0o0.ooo/2017/02/24/58b0106b330c2.png" alt="QQ20170224-183309@2x.png"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b01076ac58f.png" alt="QQ20170224-181458@2x.png"></p>
+<p>用Safari访问<a href="http://charlesproxy.com/getssl" target="_blank" rel="external">http://charlesproxy.com/getssl</a>下载安装证书,如果没有将Charles设置为代理将无法下载安装证书。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2017/02/07/hexo-rsync.html">
                 Hexo deploy rsync
               </a>
@@ -815,80 +896,6 @@
           
           
             
-              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">
-                Golang 快速入门 流程控制语句
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-07-05
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Golang/">Golang</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Golang_快速入门_流程控制语句">Golang 快速入门 流程控制语句</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
-<p>格式说明:</p>
-<blockquote>
-<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
-</blockquote>
-<figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">	<span class="string">"math"</span></div><div class="line">	<span class="string">"runtime"</span></div><div class="line">	<span class="string">"time"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sqrt</span><span class="params">(x <span class="keyword">float64</span>)</span> <span class="title">string</span></span> &#123;</div><div class="line">	<span class="comment">// if</span></div><div class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> &#123;</div><div class="line">		<span class="keyword">return</span> sqrt(-x) + <span class="string">"i"</span></div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		fmt.Printf(<span class="string">"x &lt; 0"</span>)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> fmt.Sprint(math.Sqrt(x))</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// if 便捷语句</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">pow</span><span class="params">(x, n, lim <span class="keyword">float64</span>)</span> <span class="title">float64</span></span> &#123;</div><div class="line">	<span class="keyword">if</span> v := math.Pow(x, n); v &lt; lim &#123;</div><div class="line">		<span class="keyword">return</span> v</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> lim</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="comment">// for</span></div><div class="line">	sum := <span class="number">0</span></div><div class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</div><div class="line">		sum += i</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sum)</div><div class="line"></div><div class="line">	<span class="comment">// for 续</span></div><div class="line">	sumb := <span class="number">1</span></div><div class="line">	<span class="keyword">for</span> sumb &lt; <span class="number">1000</span> &#123;</div><div class="line">		sumb += sumb</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sumb)</div><div class="line"></div><div class="line">	<span class="comment">// while 用for表示， 所以没有while了</span></div><div class="line">	sumc := <span class="number">1</span></div><div class="line">	<span class="keyword">for</span> sumc &lt; <span class="number">1000</span> &#123;</div><div class="line">		sumc += sumc</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sumc)</div><div class="line"></div><div class="line">	<span class="comment">// 无限循环 这里先注释掉， 要不然后面无法执行</span></div><div class="line">	<span class="comment">//for &#123;</span></div><div class="line">	<span class="comment">//</span></div><div class="line">	<span class="comment">//&#125;</span></div><div class="line"></div><div class="line">	<span class="comment">//--&gt;if else</span></div><div class="line">	fmt.Println(sqrt(<span class="number">2</span>))</div><div class="line"></div><div class="line">	<span class="comment">//--&gt;if 便捷语句</span></div><div class="line">	fmt.Println(pow(<span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>))</div><div class="line"></div><div class="line">	<span class="comment">// switch 当符合</span></div><div class="line">	<span class="comment">// fallthrough  这个关键字的作用和java的switch 不加break的</span></div><div class="line">	<span class="comment">// 执行顺序有上而下，匹配成功停止</span></div><div class="line">	fmt.Print(<span class="string">"Go runs on "</span>)</div><div class="line">	<span class="keyword">switch</span> os := runtime.GOOS; os &#123;</div><div class="line">	<span class="keyword">case</span> <span class="string">"linux"</span>:</div><div class="line">		fmt.Println(<span class="string">"Linux."</span>)</div><div class="line">	<span class="keyword">case</span> <span class="string">"darwin"</span>:</div><div class="line">		fmt.Println(<span class="string">"OS X"</span>)</div><div class="line">		<span class="comment">// 当进入这里时，使用fallthrough，还会执行defluat</span></div><div class="line">		<span class="keyword">fallthrough</span></div><div class="line">	<span class="keyword">default</span>:</div><div class="line">		<span class="comment">// freebsd, openbsd,</span></div><div class="line">		fmt.Println(<span class="string">"%s"</span>, os)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 没有条件的switch</span></div><div class="line">	<span class="comment">// 和 switch true &#123;</span></div><div class="line">	<span class="comment">//case:</span></div><div class="line">	<span class="comment">//default:</span></div><div class="line">	<span class="comment">//&#125;</span></div><div class="line">	<span class="comment">// 一样</span></div><div class="line">	t := time.Now()</div><div class="line">	<span class="keyword">switch</span> &#123;</div><div class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</div><div class="line">		fmt.Println(<span class="string">"Good morning."</span>)</div><div class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">17</span>:</div><div class="line">		fmt.Println(<span class="string">"Good afternoon."</span>)</div><div class="line">	<span class="keyword">default</span>:</div><div class="line">		fmt.Println(<span class="string">"Good evening."</span>)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// defer 延迟函数的执行直到上层函数返回</span></div><div class="line">	<span class="comment">// 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用</span></div><div class="line">	<span class="keyword">defer</span> World()</div><div class="line">	fmt.Println(<span class="string">"hello"</span>)</div><div class="line">	<span class="comment">// defer 栈</span></div><div class="line">	fmt.Println(<span class="string">"counting....."</span>)</div><div class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</div><div class="line">		<span class="keyword">defer</span> fmt.Println(i)</div><div class="line">	&#125;</div><div class="line">	fmt.Println(<span class="string">"done"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">World</span><span class="params">()</span></span> &#123;</div><div class="line">	fmt.Println(<span class="string">"world"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-basic-package-var-constant-function-copy.html">
                 Golang 快速入门 基础 包 变量 函数
               </a>
@@ -934,6 +941,80 @@
 <p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
 </blockquote>
 <figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 包</span></div><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="comment">// 导入方式1</span></div><div class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></div><div class="line"></div><div class="line"><span class="comment">// 导入方式2</span></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"math"</span></div><div class="line">	<span class="string">"math/cmplx"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">// 多值返回</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">swap</span><span class="params">(lastname <span class="keyword">string</span>, firstname <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">string</span>, <span class="keyword">string</span>)</span></span> &#123;</div><div class="line">	<span class="keyword">return</span> firstname, lastname</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 命名返回值</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">split</span><span class="params">(sum <span class="keyword">int</span>)</span> <span class="params">(x, y, sm <span class="keyword">int</span>)</span></span> &#123;</div><div class="line">	sm = sum</div><div class="line">	x = sum * <span class="number">4</span> / <span class="number">9</span></div><div class="line">	y = sum - x</div><div class="line">	<span class="keyword">return</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 变量</span></div><div class="line"><span class="keyword">var</span> c, python, java <span class="keyword">bool</span></div><div class="line"><span class="keyword">var</span> x <span class="keyword">int</span></div><div class="line"></div><div class="line"><span class="comment">// 初始化变量</span></div><div class="line"><span class="keyword">var</span> v, u <span class="keyword">int</span> = <span class="number">2</span>, <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">// 变量组</span></div><div class="line"><span class="keyword">var</span> (</div><div class="line">	<span class="comment">// Go 基本数据类型</span></div><div class="line">	<span class="comment">// bool, string, int, int8, int16, int32, int64,</span></div><div class="line">	<span class="comment">// uint, uint8, uint16, uint32, uint64, uintptr,</span></div><div class="line">	<span class="comment">// byte(unit8的别名), rune(int32的别名，代表一个Unicode码)</span></div><div class="line">	<span class="comment">// float32, float64</span></div><div class="line">	ToBe   <span class="keyword">bool</span>       = <span class="literal">false</span></div><div class="line">	MaxInt <span class="keyword">uint64</span>     = <span class="number">1</span>&lt;&lt;<span class="number">64</span> - <span class="number">1</span></div><div class="line">	z      <span class="keyword">complex128</span> = cmplx.Sqrt(<span class="number">-5</span> + <span class="number">12i</span>)</div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">// 常量(常量不能使用 := 语法定义)</span></div><div class="line"><span class="keyword">const</span> Pi = <span class="number">3.14</span></div><div class="line"></div><div class="line"><span class="comment">//-----</span></div><div class="line"><span class="comment">//数值常量(数值常量是高精度的值)</span></div><div class="line"><span class="keyword">const</span> (</div><div class="line">	Big   = <span class="number">1</span> &lt;&lt; <span class="number">100</span></div><div class="line">	Small = Big &gt;&gt; <span class="number">99</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">needInt</span><span class="params">(x <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</div><div class="line">	<span class="keyword">return</span> x*<span class="number">10</span> + <span class="number">1</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">needFloat</span><span class="params">(x <span class="keyword">float64</span>)</span> <span class="title">float64</span></span> &#123;</div><div class="line">	<span class="keyword">return</span> x * <span class="number">0.1</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//-----</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="comment">//--&gt;多值返回&amp;命名返回值</span></div><div class="line">	lastname, firstname := swap(<span class="string">"jian"</span>, <span class="string">"liaoxin"</span>)</div><div class="line">	fmt.Println(lastname, firstname)</div><div class="line">	fmt.Println(split(<span class="number">100</span>))</div><div class="line"></div><div class="line">	<span class="comment">//--&gt;变量</span></div><div class="line">	<span class="keyword">var</span> i <span class="keyword">int</span></div><div class="line">	<span class="keyword">var</span> y <span class="keyword">int</span></div><div class="line">	fmt.Println(i, c, python, java, x, y)</div><div class="line">	fmt.Println(v, u)</div><div class="line"></div><div class="line">	<span class="comment">// 短声明变量，只能在函数内使用，函数外的必须以关键字var, func 等等开头</span></div><div class="line">	k := <span class="number">100</span></div><div class="line">	fmt.Println(k)</div><div class="line">	<span class="comment">//--&gt;Go基本数据类型</span></div><div class="line">	fmt.Println(ToBe, MaxInt, z)</div><div class="line"></div><div class="line">	<span class="comment">//零值</span></div><div class="line">	<span class="keyword">var</span> q <span class="keyword">int</span></div><div class="line">	<span class="keyword">var</span> f <span class="keyword">float64</span></div><div class="line">	<span class="keyword">var</span> w <span class="keyword">bool</span></div><div class="line">	<span class="keyword">var</span> s <span class="keyword">string</span></div><div class="line">	fmt.Printf(<span class="string">"%v %v %v %q\n"</span>, q, f, w, s)</div><div class="line"></div><div class="line">	<span class="comment">// 类型转换</span></div><div class="line">	<span class="keyword">var</span> x, g <span class="keyword">int</span> = <span class="number">3</span>, <span class="number">4</span></div><div class="line">	<span class="keyword">var</span> r <span class="keyword">float64</span> = math.Sqrt(<span class="keyword">float64</span>(x*x + g*g))</div><div class="line">	<span class="keyword">var</span> z <span class="keyword">int</span> = <span class="keyword">int</span>(r)</div><div class="line">	fmt.Println(x, g, z)</div><div class="line"></div><div class="line">	<span class="comment">// 类型推导</span></div><div class="line">	v := <span class="number">42</span></div><div class="line">	fmt.Printf(<span class="string">"v的类型是%T\n"</span>, v)</div><div class="line"></div><div class="line">	<span class="comment">//--&gt;常量</span></div><div class="line">	<span class="keyword">const</span> World = <span class="string">"世界"</span></div><div class="line">	fmt.Println(<span class="string">"你好"</span>, World)</div><div class="line">	fmt.Println(<span class="string">"原周率Pi="</span>, Pi)</div><div class="line">	<span class="keyword">const</span> Truth = <span class="literal">true</span></div><div class="line">	fmt.Println(<span class="string">"Go rules?"</span>, Truth)</div><div class="line"></div><div class="line">	<span class="comment">//--&gt;数值常量</span></div><div class="line">	fmt.Println(needInt(Small))</div><div class="line">	fmt.Println(needFloat(Small))</div><div class="line">	fmt.Println(needFloat(Big))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/05/2015-7-05-golang-flow-control-statements.html">
+                Golang 快速入门 流程控制语句
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-07-05
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Golang/">Golang</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Golang_快速入门_流程控制语句">Golang 快速入门 流程控制语句</h2><p>内容来自<a href="">https://tour.golang.org/</a></p>
+<p>格式说明:</p>
+<blockquote>
+<p>// 正常注释<br>//——-依赖关系<br>//—&gt;关联关系  </p>
+</blockquote>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">	<span class="string">"math"</span></div><div class="line">	<span class="string">"runtime"</span></div><div class="line">	<span class="string">"time"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sqrt</span><span class="params">(x <span class="keyword">float64</span>)</span> <span class="title">string</span></span> &#123;</div><div class="line">	<span class="comment">// if</span></div><div class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> &#123;</div><div class="line">		<span class="keyword">return</span> sqrt(-x) + <span class="string">"i"</span></div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		fmt.Printf(<span class="string">"x &lt; 0"</span>)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> fmt.Sprint(math.Sqrt(x))</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// if 便捷语句</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">pow</span><span class="params">(x, n, lim <span class="keyword">float64</span>)</span> <span class="title">float64</span></span> &#123;</div><div class="line">	<span class="keyword">if</span> v := math.Pow(x, n); v &lt; lim &#123;</div><div class="line">		<span class="keyword">return</span> v</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> lim</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="comment">// for</span></div><div class="line">	sum := <span class="number">0</span></div><div class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</div><div class="line">		sum += i</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sum)</div><div class="line"></div><div class="line">	<span class="comment">// for 续</span></div><div class="line">	sumb := <span class="number">1</span></div><div class="line">	<span class="keyword">for</span> sumb &lt; <span class="number">1000</span> &#123;</div><div class="line">		sumb += sumb</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sumb)</div><div class="line"></div><div class="line">	<span class="comment">// while 用for表示， 所以没有while了</span></div><div class="line">	sumc := <span class="number">1</span></div><div class="line">	<span class="keyword">for</span> sumc &lt; <span class="number">1000</span> &#123;</div><div class="line">		sumc += sumc</div><div class="line">	&#125;</div><div class="line">	fmt.Println(sumc)</div><div class="line"></div><div class="line">	<span class="comment">// 无限循环 这里先注释掉， 要不然后面无法执行</span></div><div class="line">	<span class="comment">//for &#123;</span></div><div class="line">	<span class="comment">//</span></div><div class="line">	<span class="comment">//&#125;</span></div><div class="line"></div><div class="line">	<span class="comment">//--&gt;if else</span></div><div class="line">	fmt.Println(sqrt(<span class="number">2</span>))</div><div class="line"></div><div class="line">	<span class="comment">//--&gt;if 便捷语句</span></div><div class="line">	fmt.Println(pow(<span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>))</div><div class="line"></div><div class="line">	<span class="comment">// switch 当符合</span></div><div class="line">	<span class="comment">// fallthrough  这个关键字的作用和java的switch 不加break的</span></div><div class="line">	<span class="comment">// 执行顺序有上而下，匹配成功停止</span></div><div class="line">	fmt.Print(<span class="string">"Go runs on "</span>)</div><div class="line">	<span class="keyword">switch</span> os := runtime.GOOS; os &#123;</div><div class="line">	<span class="keyword">case</span> <span class="string">"linux"</span>:</div><div class="line">		fmt.Println(<span class="string">"Linux."</span>)</div><div class="line">	<span class="keyword">case</span> <span class="string">"darwin"</span>:</div><div class="line">		fmt.Println(<span class="string">"OS X"</span>)</div><div class="line">		<span class="comment">// 当进入这里时，使用fallthrough，还会执行defluat</span></div><div class="line">		<span class="keyword">fallthrough</span></div><div class="line">	<span class="keyword">default</span>:</div><div class="line">		<span class="comment">// freebsd, openbsd,</span></div><div class="line">		fmt.Println(<span class="string">"%s"</span>, os)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 没有条件的switch</span></div><div class="line">	<span class="comment">// 和 switch true &#123;</span></div><div class="line">	<span class="comment">//case:</span></div><div class="line">	<span class="comment">//default:</span></div><div class="line">	<span class="comment">//&#125;</span></div><div class="line">	<span class="comment">// 一样</span></div><div class="line">	t := time.Now()</div><div class="line">	<span class="keyword">switch</span> &#123;</div><div class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</div><div class="line">		fmt.Println(<span class="string">"Good morning."</span>)</div><div class="line">	<span class="keyword">case</span> t.Hour() &lt; <span class="number">17</span>:</div><div class="line">		fmt.Println(<span class="string">"Good afternoon."</span>)</div><div class="line">	<span class="keyword">default</span>:</div><div class="line">		fmt.Println(<span class="string">"Good evening."</span>)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// defer 延迟函数的执行直到上层函数返回</span></div><div class="line">	<span class="comment">// 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用</span></div><div class="line">	<span class="keyword">defer</span> World()</div><div class="line">	fmt.Println(<span class="string">"hello"</span>)</div><div class="line">	<span class="comment">// defer 栈</span></div><div class="line">	fmt.Println(<span class="string">"counting....."</span>)</div><div class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</div><div class="line">		<span class="keyword">defer</span> fmt.Println(i)</div><div class="line">	&#125;</div><div class="line">	fmt.Println(<span class="string">"done"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">World</span><span class="params">()</span></span> &#123;</div><div class="line">	fmt.Println(<span class="string">"world"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
       
     </div>
@@ -1517,147 +1598,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/11/eclipse-codetemplate.html">
-                eclipse 代码注释模板
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Eclipse/">Eclipse</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>导入或手动设置模板:Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template</p>
-<p>已配置好模板<a href="http://7xi4gg.com1.z0.glb.clouddn.com/codetemplates.xml" target="_blank" rel="external">codetepmplate</a></p>
-<p>自动注释快捷键:选中类,变量,方法, alt＋shift+J</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/11/android-button-sound.html">
-                Android Button 按键音
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> SoundPool sp;<span class="comment">// 声明一个SoundPool</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> music;<span class="comment">// 定义一个整型用load（）；来设置</span></div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.activity_main);</div><div class="line">		<span class="comment">// 第一个参数为同时播放数据流的最大个数，第二数据流类型，第三为声音质量</span></div><div class="line">		sp = <span class="keyword">new</span> SoundPool(<span class="number">10</span>, AudioManager.STREAM_SYSTEM, <span class="number">5</span>);</div><div class="line">		<span class="comment">//把你的声音素材放到res/raw里，第2个参数即为资源文件，第3个为音乐的优先级</span></div><div class="line">		music = sp.load(<span class="keyword">this</span>, R.raw.dot_audio, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 打点操作, 这个方法名要和xml布局文件&lt;Button&gt;属性android:onClick="dotBtnClick"一样</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dotBtnClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		<span class="comment">// 打点声音</span></div><div class="line">		sp.play(music, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onStop();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/11/git.html">
                 Git 常用命令
               </a>
@@ -1800,8 +1740,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-issue.html">
-                android issues
+              <a class="post-title-link" href="/2013/10/11/eclipse-codetemplate.html">
+                eclipse 代码注释模板
               </a>
             
           
@@ -1810,14 +1750,14 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-10-10
+          Posted on 2013-10-11
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Android/">Android</a>
+              <a href="/categories/Eclipse/">Eclipse</a>
 
               
               
@@ -1839,11 +1779,9 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <h2 id="Permission_is_only_granted_to_system_app">Permission is only granted to system app</h2><p>In Eclipse:</p>
-<p>Window -&gt; Preferences -&gt; Android -&gt; Lint Error Checking.<br>In the list find an entry with ID = ProtectedPermission. Set the Severity to something lower than Error. This way you can still compile the project using Eclipse.</p>
-<p>In Android Studio:</p>
-<p>File -&gt; Settings -&gt; Inspections<br>Under Android Lint, locate Using system app permission. Either uncheck the checkbox or choose a Severity lower than Error.</p>
-<p>参考:<a href="http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app" target="_blank" rel="external">http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app</a>  </p>
+          <p>导入或手动设置模板:Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template</p>
+<p>已配置好模板<a href="http://7xi4gg.com1.z0.glb.clouddn.com/codetemplates.xml" target="_blank" rel="external">codetepmplate</a></p>
+<p>自动注释快捷键:选中类,变量,方法, alt＋shift+J</p>
 
         
       
@@ -1874,8 +1812,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-q1.html">
-                Activity stack ordering problem when launching application from Android app installer and from Home screen
+              <a class="post-title-link" href="/2013/10/11/android-button-sound.html">
+                Android Button 按键音
               </a>
             
           
@@ -1884,7 +1822,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-10-10
+          Posted on 2013-10-11
         </span>
 
         
@@ -1913,9 +1851,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>Activity stack ordering problem when launching application from Android app installer and from Home screen  </p>
-<p>参考资料:<br>1.<a href="http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst" target="_blank" rel="external">http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst</a></p>
-
+          <h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> SoundPool sp;<span class="comment">// 声明一个SoundPool</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> music;<span class="comment">// 定义一个整型用load（）；来设置</span></div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.activity_main);</div><div class="line">		<span class="comment">// 第一个参数为同时播放数据流的最大个数，第二数据流类型，第三为声音质量</span></div><div class="line">		sp = <span class="keyword">new</span> SoundPool(<span class="number">10</span>, AudioManager.STREAM_SYSTEM, <span class="number">5</span>);</div><div class="line">		<span class="comment">//把你的声音素材放到res/raw里，第2个参数即为资源文件，第3个为音乐的优先级</span></div><div class="line">		music = sp.load(<span class="keyword">this</span>, R.raw.dot_audio, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 打点操作, 这个方法名要和xml布局文件&lt;Button&gt;属性android:onClick="dotBtnClick"一样</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dotBtnClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		<span class="comment">// 打点声音</span></div><div class="line">		sp.play(music, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onStop();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
       
     </div>
@@ -2017,8 +1953,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-error2.html">
-                The Import android.support.v7 cannot be resolved
+              <a class="post-title-link" href="/2013/10/10/linux-ssh-timeout.html">
+                ssh连接闲置超时，被踢出， 解决方案
               </a>
             
           
@@ -2034,7 +1970,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Android/">Android</a>
+              <a href="/categories/Linux/">Linux</a>
 
               
               
@@ -2056,9 +1992,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
-<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
-<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
+          <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
+<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
 
         
       
@@ -2196,8 +2131,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/linux-ssh-timeout.html">
-                ssh连接闲置超时，被踢出， 解决方案
+              <a class="post-title-link" href="/2013/10/10/android-imageview-q1.html">
+                Android中 ImageView 顶部,底部出现一段空白区间, 不填充
               </a>
             
           
@@ -2213,7 +2148,7 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Android/">Android</a>
 
               
               
@@ -2235,9 +2170,11 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
-<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
-
+          <p>1、在XML文件中设置：  </p>
+<pre><code><span class="label">android:</span>adjustViewBounds=<span class="string">"true"</span>  
+</code></pre><p>2、在Java代码中进行设置：  </p>
+<pre><code>mImageView.setAdjustViewBounds<span class="params">(<span class="literal">true</span>)</span>;
+</code></pre>
         
       
     </div>
@@ -2338,83 +2275,6 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
-                Failed to initialize Monitor Thread: Unable to establish loopback connection
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
-<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
-<p>使用命令:adb devices  </p>
-<ul>
-<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
-<li>failed to start daemon *<br>error: cannot connect to dae  </li>
-</ul>
-<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/10/android-error1.html">
                 No resource found that matches the given name '@style/Theme.AppCompat.Light'
               </a>
@@ -2483,6 +2343,152 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
 
     
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/10/android-error2.html">
+                The Import android.support.v7 cannot be resolved
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
+<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
+<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/10/android-issue.html">
+                android issues
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Permission_is_only_granted_to_system_app">Permission is only granted to system app</h2><p>In Eclipse:</p>
+<p>Window -&gt; Preferences -&gt; Android -&gt; Lint Error Checking.<br>In the list find an entry with ID = ProtectedPermission. Set the Severity to something lower than Error. This way you can still compile the project using Eclipse.</p>
+<p>In Android Studio:</p>
+<p>File -&gt; Settings -&gt; Inspections<br>Under Android Lint, locate Using system app permission. Either uncheck the checkbox or choose a Severity lower than Error.</p>
+<p>参考:<a href="http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app" target="_blank" rel="external">http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app</a>  </p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
   </div>
 
   
@@ -2521,21 +2527,21 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

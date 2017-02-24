@@ -172,8 +172,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-imageview-q1.html">
-                Android中 ImageView 顶部,底部出现一段空白区间, 不填充
+              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
+                Failed to initialize Monitor Thread: Unable to establish loopback connection
               </a>
             
           
@@ -211,11 +211,86 @@
 
       
         
-          <p>1、在XML文件中设置：  </p>
-<pre><code><span class="label">android:</span>adjustViewBounds=<span class="string">"true"</span>  
-</code></pre><p>2、在Java代码中进行设置：  </p>
-<pre><code>mImageView.setAdjustViewBounds<span class="params">(<span class="literal">true</span>)</span>;
-</code></pre>
+          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
+<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
+<p>使用命令:adb devices  </p>
+<ul>
+<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
+<li>failed to start daemon *<br>error: cannot connect to dae  </li>
+</ul>
+<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/10/android-q1.html">
+                Activity stack ordering problem when launching application from Android app installer and from Home screen
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Activity stack ordering problem when launching application from Android app installer and from Home screen  </p>
+<p>参考资料:<br>1.<a href="http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst" target="_blank" rel="external">http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst</a></p>
+
         
       
     </div>
@@ -319,8 +394,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
-                Linux python 安装或者升级
+              <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
+                Linux git install
               </a>
             
           
@@ -336,15 +411,7 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Python/Linux/">Linux</a>
+              <a href="/categories/Linux/">Linux</a>
 
               
               
@@ -366,10 +433,14 @@
 
       
         
-          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
-<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
-<p>修改为原来的版本即可</p>
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ wget https://www.kernel.org/pub/software/scm/git/git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar xJvf ./git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo make &amp;&amp; sudo make install</div></pre></td></tr></table></figure>
+<p>git依赖zlib-devel，openssl-devel，perl，cpio，expat-devel，gettext-devel这些包，如果出错基本上也是这些包造成的。我在安装时出现了如下错误。</p>
+<p>出现错误一：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">usr/bin/perl Makefile.PL PREFIX=<span class="string">'/usr/local/git'</span> INSTALL_BASE=<span class="string">''</span> --localedir=<span class="string">'/usr/local/git/share/locale'</span></div><div class="line">Can<span class="string">'t locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at Makefile.PL line 3.</span></div><div class="line">BEGIN failed--compilation aborted at Makefile.PL line 3.</div><div class="line">make[1]: *** [perl.mak] Error 2</div><div class="line">make: *** [perl/perl.mak] Error 2</div></pre></td></tr></table></figure></p>
+<p>执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
+<p>行进安装  </p>
+<p>出现错误二：<br> /bin/sh: msgfmt: command not found<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gettext-devel</div></pre></td></tr></table></figure></p>
+<p>可解决！</p>
 
         
       
@@ -482,8 +553,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
-                Linux git install
+              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
+                Linux python 安装或者升级
               </a>
             
           
@@ -499,7 +570,15 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Python/Linux/">Linux</a>
 
               
               
@@ -521,14 +600,10 @@
 
       
         
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ wget https://www.kernel.org/pub/software/scm/git/git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar xJvf ./git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo make &amp;&amp; sudo make install</div></pre></td></tr></table></figure>
-<p>git依赖zlib-devel，openssl-devel，perl，cpio，expat-devel，gettext-devel这些包，如果出错基本上也是这些包造成的。我在安装时出现了如下错误。</p>
-<p>出现错误一：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">usr/bin/perl Makefile.PL PREFIX=<span class="string">'/usr/local/git'</span> INSTALL_BASE=<span class="string">''</span> --localedir=<span class="string">'/usr/local/git/share/locale'</span></div><div class="line">Can<span class="string">'t locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at Makefile.PL line 3.</span></div><div class="line">BEGIN failed--compilation aborted at Makefile.PL line 3.</div><div class="line">make[1]: *** [perl.mak] Error 2</div><div class="line">make: *** [perl/perl.mak] Error 2</div></pre></td></tr></table></figure></p>
-<p>执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
-<p>行进安装  </p>
-<p>出现错误二：<br> /bin/sh: msgfmt: command not found<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gettext-devel</div></pre></td></tr></table></figure></p>
-<p>可解决！</p>
+          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
+<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
+<p>修改为原来的版本即可</p>
 
         
       
@@ -1447,78 +1522,6 @@
           
           
             
-              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
-                ssh 无密码登陆
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-03-19
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="_">-f</span> ~/.ssh/id_rsa</div><div class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@106.186.19.59:/home/xjliao/</div><div class="line">xjliao@106.186.19.59<span class="string">'s password: </span></div><div class="line">id_rsa.pub                                                                                                                  100% 219</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div><div class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</div><div class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~] exit</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div></pre></td></tr></table></figure>
-<p>哦了</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/03/19/jekyll-github.html">
                 jekyll+github 搭建博客
               </a>
@@ -1639,6 +1642,78 @@
 
 
     
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
+                ssh 无密码登陆
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-03-19
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="_">-f</span> ~/.ssh/id_rsa</div><div class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@106.186.19.59:/home/xjliao/</div><div class="line">xjliao@106.186.19.59<span class="string">'s password: </span></div><div class="line">id_rsa.pub                                                                                                                  100% 219</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div><div class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</div><div class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~] exit</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div></pre></td></tr></table></figure>
+<p>哦了</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
   </div>
 
   
@@ -1677,21 +1752,21 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
