@@ -215,13 +215,13 @@
 <blockquote>
 <p>Charles 3.10.1、OS X 10.11.4、IOS 10.2.1</p>
 </blockquote>
-<h2 id="1-安装证书">1.安装证书</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b00a5964b5a.png" alt="QQ20170224-181458@2x.png"></p>
-<h2 id="2-SSL_proxy设置">2.SSL proxy设置</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b00ceb421f3.png" alt="QQ20170224-181716@2x.png"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b00cebb2e3d.png" alt="QQ20170224-181753@2x.png"></p>
+<h2 id="1-安装证书">1.安装证书</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b01076ac58f.png" alt="58b01076ac58f"></p>
+<h2 id="2-SSL_proxy设置">2.SSL proxy设置</h2><p><img src="https://ooo.0o0.ooo/2017/02/24/58b0106b330c2.png" alt="58b0106b330c2"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b0106894c82.png" alt="58b0106894c82"></p>
 <p>到此为止电脑上浏览器代理设置好后，是能代理https了，但是手机端呢？下面是手机设置</p>
 <h2 id="2-手机端https代理设置">2.手机端https代理设置</h2><blockquote>
 <p>手机已将Charles设置为了代理</p>
 </blockquote>
-<p><img src="https://ooo.0o0.ooo/2017/02/24/58b0106b330c2.png" alt="QQ20170224-183309@2x.png"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b01076ac58f.png" alt="QQ20170224-181458@2x.png"></p>
+<p><img src="https://ooo.0o0.ooo/2017/02/24/58b010783e27c.png" alt="58b010783e27c"><br><img src="https://ooo.0o0.ooo/2017/02/24/58b0107b29ab7.png" alt="58b0107b29ab7"></p>
 <p>用Safari访问<a href="http://charlesproxy.com/getssl" target="_blank" rel="external">http://charlesproxy.com/getssl</a>下载安装证书,如果没有将Charles设置为代理将无法下载安装证书。</p>
 
         
@@ -1598,6 +1598,147 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
+              <a class="post-title-link" href="/2013/10/11/eclipse-codetemplate.html">
+                eclipse 代码注释模板
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-11
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Eclipse/">Eclipse</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>导入或手动设置模板:Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template</p>
+<p>已配置好模板<a href="http://7xi4gg.com1.z0.glb.clouddn.com/codetemplates.xml" target="_blank" rel="external">codetepmplate</a></p>
+<p>自动注释快捷键:选中类,变量,方法, alt＋shift+J</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/11/android-button-sound.html">
+                Android Button 按键音
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-11
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> SoundPool sp;<span class="comment">// 声明一个SoundPool</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> music;<span class="comment">// 定义一个整型用load（）；来设置</span></div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.activity_main);</div><div class="line">		<span class="comment">// 第一个参数为同时播放数据流的最大个数，第二数据流类型，第三为声音质量</span></div><div class="line">		sp = <span class="keyword">new</span> SoundPool(<span class="number">10</span>, AudioManager.STREAM_SYSTEM, <span class="number">5</span>);</div><div class="line">		<span class="comment">//把你的声音素材放到res/raw里，第2个参数即为资源文件，第3个为音乐的优先级</span></div><div class="line">		music = sp.load(<span class="keyword">this</span>, R.raw.dot_audio, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 打点操作, 这个方法名要和xml布局文件&lt;Button&gt;属性android:onClick="dotBtnClick"一样</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dotBtnClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		<span class="comment">// 打点声音</span></div><div class="line">		sp.play(music, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onStop();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/11/git.html">
                 Git 常用命令
               </a>
@@ -1740,8 +1881,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/11/eclipse-codetemplate.html">
-                eclipse 代码注释模板
+              <a class="post-title-link" href="/2013/10/10/linux-ssh-timeout.html">
+                ssh连接闲置超时，被踢出， 解决方案
               </a>
             
           
@@ -1750,14 +1891,14 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-10-11
+          Posted on 2013-10-10
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Eclipse/">Eclipse</a>
+              <a href="/categories/Linux/">Linux</a>
 
               
               
@@ -1779,79 +1920,9 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>导入或手动设置模板:Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template</p>
-<p>已配置好模板<a href="http://7xi4gg.com1.z0.glb.clouddn.com/codetemplates.xml" target="_blank" rel="external">codetepmplate</a></p>
-<p>自动注释快捷键:选中类,变量,方法, alt＋shift+J</p>
+          <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
+<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
 
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/11/android-button-sound.html">
-                Android Button 按键音
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-11
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> SoundPool sp;<span class="comment">// 声明一个SoundPool</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> music;<span class="comment">// 定义一个整型用load（）；来设置</span></div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.activity_main);</div><div class="line">		<span class="comment">// 第一个参数为同时播放数据流的最大个数，第二数据流类型，第三为声音质量</span></div><div class="line">		sp = <span class="keyword">new</span> SoundPool(<span class="number">10</span>, AudioManager.STREAM_SYSTEM, <span class="number">5</span>);</div><div class="line">		<span class="comment">//把你的声音素材放到res/raw里，第2个参数即为资源文件，第3个为音乐的优先级</span></div><div class="line">		music = sp.load(<span class="keyword">this</span>, R.raw.dot_audio, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 打点操作, 这个方法名要和xml布局文件&lt;Button&gt;属性android:onClick="dotBtnClick"一样</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dotBtnClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		<span class="comment">// 打点声音</span></div><div class="line">		sp.play(music, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onStop();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
       
     </div>
@@ -1953,8 +2024,87 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/linux-ssh-timeout.html">
-                ssh连接闲置超时，被踢出， 解决方案
+              <a class="post-title-link" href="/2013/10/10/android-error1.html">
+                No resource found that matches the given name '@style/Theme.AppCompat.Light'
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>what are the steps for that? where is AppCompat located?<br>To download</p>
+<p><a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">http://developer.android.com/tools/support-library/setup.html</a></p>
+<p>If use eclipse</p>
+<p>Goto windows android sdk manager. Under extras check Android Support Library and click install.<br><img src="https://ooo.0o0.ooo/2017/02/23/58adb8b4a377f.png" alt="vghlq.png"><br>enter image description here</p>
+<p>After that the AppCompat Can be found at</p>
+<p>android-sdk/extras/android/support/v7/appcompat<br>You need to reference this AppCompat in your android project.</p>
+<p>Import the library to eclipse.</p>
+<p>Right click on your android project. Goto Properties. goto andorid. Click Add Library and reference the same.</p>
+<p>Clean and Rebuild your project</p>
+<p>解决方案:<br><a href="http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light" target="_blank" rel="external">http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/10/linux-wget-jdk.html">
+                linux 命令行下载jdk
               </a>
             
           
@@ -1992,8 +2142,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
-<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget --no-cookies --no-check-certificate --header <span class="string">"Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie"</span> <span class="string">"http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.rpm"</span></div></pre></td></tr></table></figure>
+<p>……jdk/7u71-b14/jdk-7u71-linux-x64.rpm这段地址需要根据自己的版本设置</p>
 
         
       
@@ -2131,6 +2281,78 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
+              <a class="post-title-link" href="/2013/10/10/android-error2.html">
+                The Import android.support.v7 cannot be resolved
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
+<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
+<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/10/android-imageview-q1.html">
                 Android中 ImageView 顶部,底部出现一段空白区间, 不填充
               </a>
@@ -2204,79 +2426,8 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
           
           
             
-              <a class="post-title-link" href="/2013/10/10/linux-wget-jdk.html">
-                linux 命令行下载jdk
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget --no-cookies --no-check-certificate --header <span class="string">"Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie"</span> <span class="string">"http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.rpm"</span></div></pre></td></tr></table></figure>
-<p>……jdk/7u71-b14/jdk-7u71-linux-x64.rpm这段地址需要根据自己的版本设置</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/10/android-error1.html">
-                No resource found that matches the given name '@style/Theme.AppCompat.Light'
+              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
+                Failed to initialize Monitor Thread: Unable to establish loopback connection
               </a>
             
           
@@ -2314,162 +2465,14 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
 
       
         
-          <p>what are the steps for that? where is AppCompat located?<br>To download</p>
-<p><a href="http://developer.android.com/tools/support-library/setup.html" target="_blank" rel="external">http://developer.android.com/tools/support-library/setup.html</a></p>
-<p>If use eclipse</p>
-<p>Goto windows android sdk manager. Under extras check Android Support Library and click install.<br><img src="https://ooo.0o0.ooo/2017/02/23/58adb8b4a377f.png" alt="vghlq.png"><br>enter image description here</p>
-<p>After that the AppCompat Can be found at</p>
-<p>android-sdk/extras/android/support/v7/appcompat<br>You need to reference this AppCompat in your android project.</p>
-<p>Import the library to eclipse.</p>
-<p>Right click on your android project. Goto Properties. goto andorid. Click Add Library and reference the same.</p>
-<p>Clean and Rebuild your project</p>
-<p>解决方案:<br><a href="http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light" target="_blank" rel="external">http://stackoverflow.com/questions/21059612/no-resource-found-that-matches-the-given-name-style-theme-appcompat-light</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/10/android-error2.html">
-                The Import android.support.v7 cannot be resolved
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>I tried the answer described here but it doesn´t worked for me. I have the last Android SDK tools ver. 23.0.2 and Android SDK Platform-tools ver. 20</p>
-<p>The support library android-support-v4.jar cause this conflict, just delete the library under /libs folder of your project, don´t be scared, the library is already contained in the library appcompat_v7, clean and build your project, and your project will work like a charm!</p>
-<p>详见资料:<br><a href="http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved" target="_blank" rel="external">http://stackoverflow.com/questions/24998368/the-import-android-support-v7-cannot-be-resolved</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/10/android-issue.html">
-                android issues
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Permission_is_only_granted_to_system_app">Permission is only granted to system app</h2><p>In Eclipse:</p>
-<p>Window -&gt; Preferences -&gt; Android -&gt; Lint Error Checking.<br>In the list find an entry with ID = ProtectedPermission. Set the Severity to something lower than Error. This way you can still compile the project using Eclipse.</p>
-<p>In Android Studio:</p>
-<p>File -&gt; Settings -&gt; Inspections<br>Under Android Lint, locate Using system app permission. Either uncheck the checkbox or choose a Severity lower than Error.</p>
-<p>参考:<a href="http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app" target="_blank" rel="external">http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app</a>  </p>
+          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
+<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
+<p>使用命令:adb devices  </p>
+<ul>
+<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
+<li>failed to start daemon *<br>error: cannot connect to dae  </li>
+</ul>
+<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
 
         
       

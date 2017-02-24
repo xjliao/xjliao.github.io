@@ -172,8 +172,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
-                Failed to initialize Monitor Thread: Unable to establish loopback connection
+              <a class="post-title-link" href="/2013/10/10/android-issue.html">
+                android issues
               </a>
             
           
@@ -211,14 +211,11 @@
 
       
         
-          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
-<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
-<p>使用命令:adb devices  </p>
-<ul>
-<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
-<li>failed to start daemon *<br>error: cannot connect to dae  </li>
-</ul>
-<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
+          <h2 id="Permission_is_only_granted_to_system_app">Permission is only granted to system app</h2><p>In Eclipse:</p>
+<p>Window -&gt; Preferences -&gt; Android -&gt; Lint Error Checking.<br>In the list find an entry with ID = ProtectedPermission. Set the Severity to something lower than Error. This way you can still compile the project using Eclipse.</p>
+<p>In Android Studio:</p>
+<p>File -&gt; Settings -&gt; Inspections<br>Under Android Lint, locate Using system app permission. Either uncheck the checkbox or choose a Severity lower than Error.</p>
+<p>参考:<a href="http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app" target="_blank" rel="external">http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app</a>  </p>
 
         
       
@@ -394,83 +391,6 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
-                Linux git install
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-01
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ wget https://www.kernel.org/pub/software/scm/git/git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar xJvf ./git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo make &amp;&amp; sudo make install</div></pre></td></tr></table></figure>
-<p>git依赖zlib-devel，openssl-devel，perl，cpio，expat-devel，gettext-devel这些包，如果出错基本上也是这些包造成的。我在安装时出现了如下错误。</p>
-<p>出现错误一：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">usr/bin/perl Makefile.PL PREFIX=<span class="string">'/usr/local/git'</span> INSTALL_BASE=<span class="string">''</span> --localedir=<span class="string">'/usr/local/git/share/locale'</span></div><div class="line">Can<span class="string">'t locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at Makefile.PL line 3.</span></div><div class="line">BEGIN failed--compilation aborted at Makefile.PL line 3.</div><div class="line">make[1]: *** [perl.mak] Error 2</div><div class="line">make: *** [perl/perl.mak] Error 2</div></pre></td></tr></table></figure></p>
-<p>执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
-<p>行进安装  </p>
-<p>出现错误二：<br> /bin/sh: msgfmt: command not found<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gettext-devel</div></pre></td></tr></table></figure></p>
-<p>可解决！</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/01/linux-mysql-installandset.html">
                 Linux Mysql yum 安装方式及配置
               </a>
@@ -604,6 +524,83 @@
 <p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
 <p>修改为原来的版本即可</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
+                Linux git install
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ wget https://www.kernel.org/pub/software/scm/git/git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar xJvf ./git-2.1.2.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/git-2.1.2</div><div class="line">[xjliao@li539-59 ~]$ sudo make &amp;&amp; sudo make install</div></pre></td></tr></table></figure>
+<p>git依赖zlib-devel，openssl-devel，perl，cpio，expat-devel，gettext-devel这些包，如果出错基本上也是这些包造成的。我在安装时出现了如下错误。</p>
+<p>出现错误一：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">usr/bin/perl Makefile.PL PREFIX=<span class="string">'/usr/local/git'</span> INSTALL_BASE=<span class="string">''</span> --localedir=<span class="string">'/usr/local/git/share/locale'</span></div><div class="line">Can<span class="string">'t locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at Makefile.PL line 3.</span></div><div class="line">BEGIN failed--compilation aborted at Makefile.PL line 3.</div><div class="line">make[1]: *** [perl.mak] Error 2</div><div class="line">make: *** [perl/perl.mak] Error 2</div></pre></td></tr></table></figure></p>
+<p>执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
+<p>行进安装  </p>
+<p>出现错误二：<br> /bin/sh: msgfmt: command not found<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gettext-devel</div></pre></td></tr></table></figure></p>
+<p>可解决！</p>
 
         
       
