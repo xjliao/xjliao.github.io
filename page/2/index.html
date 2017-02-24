@@ -172,8 +172,8 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/10/linux-ssh-timeout.html">
-                ssh连接闲置超时，被踢出， 解决方案
+              <a class="post-title-link" href="/2013/10/10/android-issue.html">
+                android issues
               </a>
             
           
@@ -189,7 +189,7 @@
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Android/">Android</a>
 
               
               
@@ -211,8 +211,11 @@
 
       
         
-          <h2 id="方案一：在客户端设置">方案一：在客户端设置</h2><p>在客户端电脑上编辑（需要root权限）/etc/ssh/  ssh_config，并添加如下一行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ServerAliveInterval 60</div></pre></td></tr></table></figure><br>此后该系统里的用户连接SSH时，每60秒会发一个KeepAlive请求，避免被踢。  </p>
-<h2 id="方案二：在服务器端设置">方案二：在服务器端设置</h2><p>如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/  sshd_config，并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ClientAliveInterval 300  </div><div class="line">ClientAliveCountMax 3</div></pre></td></tr></table></figure><br>按以上的配置的含义就是 SSH每5分钟秒向客户端发送一次心跳 ，连续发送3次没有收到客户端道应答，则断开客户端。系统默认是ClientAliveInterval为15，ClientAliveCountMax 为3，所以SSH会在45秒之后断开。<br>保存设置并重载配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/sshd restart</div></pre></td></tr></table></figure></p>
+          <h2 id="Permission_is_only_granted_to_system_app">Permission is only granted to system app</h2><p>In Eclipse:</p>
+<p>Window -&gt; Preferences -&gt; Android -&gt; Lint Error Checking.<br>In the list find an entry with ID = ProtectedPermission. Set the Severity to something lower than Error. This way you can still compile the project using Eclipse.</p>
+<p>In Android Studio:</p>
+<p>File -&gt; Settings -&gt; Inspections<br>Under Android Lint, locate Using system app permission. Either uncheck the checkbox or choose a Severity lower than Error.</p>
+<p>参考:<a href="http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app" target="_blank" rel="external">http://stackoverflow.com/questions/13801984/permission-is-only-granted-to-system-app</a>  </p>
 
         
       
@@ -470,6 +473,92 @@
           
           
             
+              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
+                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Centos/">Centos</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/Django/">Django</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
                 Linux git install
               </a>
@@ -598,92 +687,6 @@
 <p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
 <p>修改为原来的版本即可</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
-                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-01
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Centos/">Centos</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/Django/">Django</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
 
         
       

@@ -95,6 +95,31 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Linux yum install last stable version for nginx]]></title>
+    <link href="http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html"/>
+    <id>http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html</id>
+    <published>2015-08-27T03:55:49.000Z</published>
+    <updated>2015-08-27T04:04:15.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/yum.repos.d/nginx.repo</div></pre></td></tr></table></figure>
+<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[nginx]</div><div class="line">name=nginx repo</div><div class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure></p>
+<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[nginx]</div><div class="line">name=nginx repo</div><div class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure></p>
+<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://xjliao.me/tags/Linux/"/>
+    
+      <category term="Nginx" scheme="http://xjliao.me/tags/Nginx/"/>
+    
+      <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
+    
+      <category term="Nginx" scheme="http://xjliao.me/categories/Linux/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Deploy shadowsocks-goalang server]]></title>
     <link href="http://xjliao.me/2015/08/27/shadowsocks-golang-server.html"/>
     <id>http://xjliao.me/2015/08/27/shadowsocks-golang-server.html</id>
@@ -123,31 +148,6 @@
       <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
     
       <category term="shadowsocks" scheme="http://xjliao.me/categories/Linux/shadowsocks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Linux yum install last stable version for nginx]]></title>
-    <link href="http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html"/>
-    <id>http://xjliao.me/2015/08/27/linux-yum-install-last-stable-version-for-nginx.html</id>
-    <published>2015-08-27T03:55:49.000Z</published>
-    <updated>2015-08-27T04:04:15.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/yum.repos.d/nginx.repo</div></pre></td></tr></table></figure>
-<p>Centos<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[nginx]</div><div class="line">name=nginx repo</div><div class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure></p>
-<p>RHEL<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[nginx]</div><div class="line">name=nginx repo</div><div class="line">baseurl=http://nginx.org/packages/rhel/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure></p>
-<p>from:<br><a href="http://wiki.nginx.org/Install" target="_blank" rel="external">http://wiki.nginx.org/Install</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line]]>
-    </summary>
-    
-      <category term="Linux" scheme="http://xjliao.me/tags/Linux/"/>
-    
-      <category term="Nginx" scheme="http://xjliao.me/tags/Nginx/"/>
-    
-      <category term="Linux" scheme="http://xjliao.me/categories/Linux/"/>
-    
-      <category term="Nginx" scheme="http://xjliao.me/categories/Linux/Nginx/"/>
     
   </entry>
   
@@ -535,19 +535,22 @@ sudo dd bs=4m if=2014-09-09-wheezy-raspbian.img of=/dev/risk1(这里第disk1替�
   </entry>
   
   <entry>
-    <title><![CDATA[Android Button 按键音]]></title>
-    <link href="http://xjliao.me/2013/10/11/android-button-sound.html"/>
-    <id>http://xjliao.me/2013/10/11/android-button-sound.html</id>
+    <title><![CDATA[Git 常用命令]]></title>
+    <link href="http://xjliao.me/2013/10/11/git.html"/>
+    <id>http://xjliao.me/2013/10/11/git.html</id>
     <published>2013-10-10T16:00:00.000Z</published>
-    <updated>2015-06-28T05:55:39.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> SoundPool sp;<span class="comment">// 声明一个SoundPool</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> music;<span class="comment">// 定义一个整型用load（）；来设置</span></div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.activity_main);</div><div class="line">		<span class="comment">// 第一个参数为同时播放数据流的最大个数，第二数据流类型，第三为声音质量</span></div><div class="line">		sp = <span class="keyword">new</span> SoundPool(<span class="number">10</span>, AudioManager.STREAM_SYSTEM, <span class="number">5</span>);</div><div class="line">		<span class="comment">//把你的声音素材放到res/raw里，第2个参数即为资源文件，第3个为音乐的优先级</span></div><div class="line">		music = sp.load(<span class="keyword">this</span>, R.raw.dot_audio, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 打点操作, 这个方法名要和xml布局文件&lt;Button&gt;属性android:onClick="dotBtnClick"一样</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dotBtnClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		<span class="comment">// 打点声音</span></div><div class="line">		sp.play(music, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onStop();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    <updated>2015-06-28T10:57:37.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="git_book">git book</h2><p><a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">http://git-scm.com/book/zh/v1</a>  </p>
+<p>需求:在服务器上创建一个项目版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//在服务器上创建一个裸仓库</div><div class="line">git init --bare --shared project.git</div><div class="line"></div><div class="line">//初始化本地, 加入版本控制</div><div class="line">git init</div><div class="line">//添加刚刚创建的服务器地址, 使用的ssh命令, 需要在服务器上创建git账户, 推送需要输入git密码,或者将本地公钥上传到服务器git账户下的~/.ssh/authorized_keys授权文件里面,实现无密码提交</div><div class="line">git remote add origin  git@gitserver:/home/git/project.git</div><div class="line">//加入添加/修改文件</div><div class="line">git add -A</div><div class="line">//本地提交</div><div class="line">git commit -m <span class="string">'init'</span></div><div class="line">//推送到服务器</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Android_Button_按键音">Android Button 按键音</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</di]]>
+    <![CDATA[<h2 id="git_book">git book</h2><p><a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">http://git-scm.com/book/zh/v1</a>  ]]>
     </summary>
     
-      <category term="Android" scheme="http://xjliao.me/tags/Android/"/>
+      <category term="Git" scheme="http://xjliao.me/tags/Git/"/>
     
-      <category term="Android" scheme="http://xjliao.me/categories/Android/"/>
+      <category term="Git" scheme="http://xjliao.me/categories/Git/"/>
     
   </entry>
   
