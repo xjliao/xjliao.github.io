@@ -172,6 +172,83 @@
           
           
             
+              <a class="post-title-link" href="/2013/10/10/android-issue-Failed-to-initialize-Monitor-Thread.html">
+                Failed to initialize Monitor Thread: Unable to establish loopback connection
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-10
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Failed_to_initialize_Monitor_Thread:_Unable_to_establish_loopback_connection">Failed to initialize Monitor Thread: Unable to establish loopback connection</h2><p>出现以下问题：<br>eclipse弹出框错误或者lang:bash报错信息如下:  </p>
+<p>Failed to initialize Monitor Thread: Unable to establish loopback connection  </p>
+<p>使用命令:adb devices  </p>
+<ul>
+<li>daemon not running. starting it now on port 5037 *<br>ADB server didn’t ACK  </li>
+<li>failed to start daemon *<br>error: cannot connect to dae  </li>
+</ul>
+<h2 id="解决方案：">解决方案：</h2><p>关闭防火墙</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/10/10/android-issue.html">
                 android issues
               </a>
@@ -246,77 +323,6 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/10/android-q1.html">
-                Activity stack ordering problem when launching application from Android app installer and from Home screen
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-10
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Android/">Android</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Activity stack ordering problem when launching application from Android app installer and from Home screen  </p>
-<p>参考资料:<br>1.<a href="http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst" target="_blank" rel="external">http://stackoverflow.com/questions/6356467/activity-stack-ordering-problem-when-launching-application-from-android-app-inst</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/02/python-execute-shell.html">
                 python执行shell命令
               </a>
@@ -361,6 +367,87 @@
 <h2 id="commands">commands</h2><p>可以很方便的取得命令的输出（包括标准和错误输出）和执行状态位<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> commands</div><div class="line">a,b = commands.getstatusoutput(<span class="string">'ls'</span>)</div><div class="line">a是退出状态</div><div class="line">b是输出的结果。</div><div class="line"><span class="keyword">import</span> commands</div><div class="line">a,b = commands.getstatusoutput(<span class="string">'ls'</span>)</div><div class="line"><span class="keyword">print</span> a</div><div class="line"><span class="number">0</span></div><div class="line"><span class="keyword">print</span> b</div><div class="line">anaconda-ks.cfg</div><div class="line">install.log</div><div class="line">install.log.syslog</div><div class="line">commands.getstatusoutput(cmd)返回（status,output)</div><div class="line">commands.getoutput(cmd)只返回输出结果</div><div class="line">commands.getstatus(file)返回ls -ld file 的执行结果字符串，调用了getoutput，不建议使用这个方法。  </div></pre></td></tr></table></figure></p>
 <h2 id="subprocess">subprocess</h2><p>使用subprocess模块可以创建新的进程，可以与新建进程的输入/输出/错误管道连通，并可以获得新建进程执行的返回状态。使用subprocess模块的目的是替代os.system()、os.popen<em>()、commands.</em>等旧的函数或模块。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> subprocess</div><div class="line"><span class="number">1</span>、</div><div class="line">subprocess.call(command, shell=<span class="keyword">True</span>)</div><div class="line">会直接打印出结果</div><div class="line"><span class="number">2</span>、</div><div class="line">subprocess.Popen(command, shell=<span class="keyword">True</span>)  </div><div class="line">也可以是</div><div class="line">subprocess.Popen(command, stdout=subprocess.PIPE, shell=<span class="keyword">True</span>&#125;</div></pre></td></tr></table></figure><br>这样就可以输出结果了。<br>如果command不是一个可执行文件，shell=True是不可省略的。<br>shell=True意思是shell下执行command</p>
 <p>这四种方法都可以执行shell命令。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
+                Linux python 安装或者升级
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Python/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
+<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
+<p>修改为原来的版本即可</p>
 
         
       
@@ -473,92 +560,6 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
-                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-01
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Centos/">Centos</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Centos/Python/Django/">Django</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
               <a class="post-title-link" href="/2013/10/01/linux-git-install.html">
                 Linux git install
               </a>
@@ -606,87 +607,6 @@
 <p>行进安装  </p>
 <p>出现错误二：<br> /bin/sh: msgfmt: command not found<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gettext-devel</div></pre></td></tr></table></figure></p>
 <p>可解决！</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/10/01/linux-python-installorupdate.html">
-                Linux python 安装或者升级
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-10-01
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-                , 
-              
-
-            
-              <a href="/categories/Python/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在这里使用最新的2.x版本 在官网下载源码包<br>下载、解压、安装、拷贝执行文件、如果是升级的话，先备份下旧的，然后覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ python --version</div><div class="line">[xjliao@li539-59 ~]$ wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ tar -Jxvf ./Python-2.7.8.tar.xz</div><div class="line">[xjliao@li539-59 ~]$ <span class="built_in">cd</span> ./Python-2.7.8</div><div class="line">[xjliao@li539-59 ~]$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/python-2.7.8/ &amp;&amp; sudo make &amp;&amp; sudo make install</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/bin/python /usr/bin/python_bak</div><div class="line">[xjliao@li539-59 ~]$ sudo cp /usr/<span class="built_in">local</span>/python-2.7.8/bin/python /usr/bin/python</div><div class="line">[xjliao@li539-59 ~]$ python --version</div></pre></td></tr></table></figure></p>
-<p>如果是用得redhat centos之类得Linux操作系统,可能会影响到yum的使用, 需要修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line"><span class="comment">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
-<p>修改为原来的版本即可</p>
 
         
       
@@ -765,6 +685,92 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~] sudo vim /usr/bin/yum</div><div class="line">\#!/usr/bin/python2.6</div></pre></td></tr></table></figure>
 <p>结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">for i in $tables; do</div><div class="line">    echo -n &quot;$i &quot;</div><div class="line">    case &quot;$i&quot; in</div><div class="line">        security)</div><div class="line">            $IPTABLES -t filter -P INPUT $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t filter -P OUTPUT $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t filter -P FORWARD $policy \</div><div class="line">                || let ret+=1</div><div class="line">            ;;</div><div class="line">        raw)</div><div class="line">            $IPTABLES -t raw -P PREROUTING $policy \</div><div class="line">                &amp;&amp; $IPTABLES -t raw -P OUTPUT $policy \</div><div class="line">                || let ret+=1</div><div class="line">            ;;</div></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/10/01/linux-python-sqlite.html">
+                Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named _sqlite3
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-10-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Centos/">Centos</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/">Python</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Centos/Python/Django/">Django</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在安装或升级python之前,安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xjliao@li539-59 ~]$ sudo yum install sqlite-devel</div></pre></td></tr></table></figure></p>
 
         
       
@@ -1519,6 +1525,78 @@
           
           
             
+              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
+                ssh 无密码登陆
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-03-19
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/Linux/">Linux</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="_">-f</span> ~/.ssh/id_rsa</div><div class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@106.186.19.59:/home/xjliao/</div><div class="line">xjliao@106.186.19.59<span class="string">'s password: </span></div><div class="line">id_rsa.pub                                                                                                                  100% 219</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div><div class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</div><div class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~] exit</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div></pre></td></tr></table></figure>
+<p>哦了</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/03/19/jekyll-github.html">
                 jekyll+github 搭建博客
               </a>
@@ -1620,78 +1698,6 @@
 <p>记录类型为A记录，记录值为usrename.github.io的ip，ping下就知道了。<br>然后，就没有然后了，奥，对了，要保存！稍等片刻即可了！  </p>
 <p>访问username.github.io 访问指向了绑定的域名 username.github.com也可以！就这样了</p>
 <p>其他参考资料<br><a href="http://jekyllrb.com/" target="_blank" rel="external">jekyll</a>:<a href="http://jekyllrb.com/" target="_blank" rel="external">http://jekyllrb.com/</a><br><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">markdown</a>:<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a><br><a href="http://pygments.org/" target="_blank" rel="external">pygments</a>:<a href="http://pygments.org/" target="_blank" rel="external">http://pygments.org/</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/03/19/linux-ssh-nopwd-login.html">
-                ssh 无密码登陆
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2013-03-19
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/Linux/">Linux</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>无密码登陆远程主机,需要将本地主机的公钥内容加入到远程主机的authorized_keys文件中<br>本地生成公钥(注:此操作中如果没有相应目录或文件,请手动创建,并且你必须已经知道远程主机的账户密码)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xjl:~ xjliao$ ssh-keygen -t rsa -P <span class="string">''</span> <span class="_">-f</span> ~/.ssh/id_rsa</div><div class="line">xjl:~ xjliao$ scp ./.ssh/id_rsa.pub xjliao@106.186.19.59:/home/xjliao/</div><div class="line">xjliao@106.186.19.59<span class="string">'s password: </span></div><div class="line">id_rsa.pub                                                                                                                  100% 219</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div><div class="line">[xjliao@li539-59 ~]$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~]$ chmod 700 ~/.ssh</div><div class="line">[xjliao@li539-59 ~]$ chmod 600 ~/.ssh/authorized_keys</div><div class="line">[xjliao@li539-59 ~] exit</div><div class="line">xjl:~ xjliao$ ssh 106.186.19.59</div><div class="line">Last login: Wed Oct 22 09:25:00 2014 from 49.65.251.185</div></pre></td></tr></table></figure>
-<p>哦了</p>
 
         
       
