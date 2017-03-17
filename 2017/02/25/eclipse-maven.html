@@ -24,7 +24,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Java,Eclipse," />
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-  <title> Linux ddos defense // xjliao </title>
+  <title> -Dmaven.multiModuleProjectDirectory system property is not set. Check $M2_HOME environment variable and mvn script match // xjliao </title>
 </head>
 
 <body>
@@ -170,7 +170,7 @@
           
           
             
-              Linux ddos defense
+              -Dmaven.multiModuleProjectDirectory system property is not set. Check $M2_HOME environment variable and mvn script match
             
           
         </h1>
@@ -178,14 +178,22 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-07-26
+          Posted on 2017-02-25
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Java/">Java</a>
+
+              
+              
+                , 
+              
+
+            
+              <a href="/categories/Java/Eclipse/">Eclipse</a>
 
               
               
@@ -206,16 +214,11 @@
       
 
       
-        <p><a href="http://deflate.medialayer.com/" target="_blank" rel="external">官网:http://deflate.medialayer.com/</a></p>
-<h2 id="About">About</h2><p>(D)DoS Deflate is a lightweight bash shell script designed to assist in the process of blocking a denial of service attack. It utilizes the command below to create a list of IP addresses connected to the server, along with their total number of connections. It is one of the simplest and easiest to install solutions at the software level.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat -ntu | awk <span class="string">'&#123;print $5&#125;'</span> | cut <span class="_">-d</span>: <span class="_">-f</span>1 | sort | uniq -c | sort -n</div></pre></td></tr></table></figure>
-<p>IP addresses with over a pre-configured number of connections are automatically blocked in the server’s firewall, which can be direct iptables or Advanced Policy Firewall (APF). (We highly recommend that you use APF on your server in general, but deflate will work without it.)</p>
-<h2 id="Notable_Features">Notable Features</h2><p>It is possible to whitelist IP addresses, via /usr/local/ddos/ignore.ip.list.<br>Simple configuration file: /usr/local/ddos/ddos.conf<br>IP addresses are automatically unblocked after a preconfigured time limit (default: 600 seconds)<br>The script can run at a chosen frequency via the configuration file (default: 1 minute)<br>You can receive email alerts when IP addresses are blocked.</p>
-<h2 id="Installation">Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget http://www.inetbase.com/scripts/ddos/install.sh</div><div class="line">chmod 0700 install.sh</div><div class="line">./install.sh</div></pre></td></tr></table></figure>
-<h2 id="Uninstallation">Uninstallation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget http://www.inetbase.com/scripts/ddos/uninstall.ddos</div><div class="line">chmod 0700 uninstall.ddos</div><div class="line">./uninstall.ddos</div></pre></td></tr></table></figure>
-<h2 id="Questions?">Questions?</h2><p>Although most things are explained on this page, if you have any further questions, you may contact the original developer of the script, Zaf.</p>
-<h2 id="Ban_ping">Ban ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -p icmp --icmp-type 8 <span class="_">-s</span> 0/0 -j DROP</div></pre></td></tr></table></figure>
-<h2 id="Allow_ping">Allow ping</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -D INPUT -p icmp --icmp-type 8 <span class="_">-s</span> 0/0 -j DROP</div></pre></td></tr></table></figure>
+        <blockquote>
+<p>-Dmaven.multiModuleProjectDirectory=$M2_HOME</p>
+</blockquote>
+<h2 id="Eclipsse_settings">Eclipsse settings</h2><p><img src="https://ooo.0o0.ooo/2017/02/28/58b515fbacab0.png" alt="QQ20170228-141525@2x.png"></p>
+
       
     </div>
 
@@ -223,7 +226,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/"> #Linux </a>
+            <a href="/tags/Java/"> #Java </a>
+          
+            <a href="/tags/Eclipse/"> #Eclipse </a>
           
         </div>
       
@@ -232,13 +237,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2013/09/07/vim-map.html">Vim mode and map</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/07/11/python-demo-get-nu.html">Python 抓取某通信号码</a>
+              <a href="/2017/02/24/charles-https.html">Charles https</a>
             
           </div>
         </div>
@@ -361,7 +364,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#About"><span class="nav-number">1.</span> <span class="nav-text">About</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notable_Features"><span class="nav-number">2.</span> <span class="nav-text">Notable Features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">3.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstallation"><span class="nav-number">4.</span> <span class="nav-text">Uninstallation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions?"><span class="nav-number">5.</span> <span class="nav-text">Questions?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ban_ping"><span class="nav-number">6.</span> <span class="nav-text">Ban ping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Allow_ping"><span class="nav-number">7.</span> <span class="nav-text">Allow ping</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipsse_settings"><span class="nav-number">1.</span> <span class="nav-text">Eclipsse settings</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
